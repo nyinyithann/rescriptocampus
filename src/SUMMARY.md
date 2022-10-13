@@ -16,5 +16,6 @@
 - [Object](./object.md)
 - [Variant](./variant.md)
     - [Example(blang)](./example_blang.md)
+- [Polymorphic Variant](./polymorphic_variant.md)
 - [Resources](./resources.md)
 
