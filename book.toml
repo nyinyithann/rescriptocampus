@@ -1,0 +1,6 @@
+[book]
+authors = ["Nyi Nyi"]
+language = "en"
+multilingual = false
+src = "src"
+title = "Rescriptocampus"
