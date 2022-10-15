@@ -104,6 +104,16 @@ let o: omega = x
 Js.log(o)
 ```
 
+##### Subtyping
+```reasonml
+type choice = [ #Yes | #No | #Maybe ]
+let yes = #Yes
+let ch1 : choice = yes :> choice
+
+let color : [> #Red ] = #Green
+Js.log(color) // green
+```
+
 #### OCaml
 [My note on OCaml poly-variant](https://github.com/nyinyithann/notes_on_ocaml/blob/main/notes/lang/polymorphic%20variants.ipynb)
 

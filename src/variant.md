@@ -58,20 +58,25 @@ type shape =
   | Rectangle({width: float, height: float})
   | Circle(circle)
 let display_shape = s => {
+  open Js.Float
   switch s {
   | Circle({radius, x, y}) =>
     Js.log(
-      `radius:${Js.Float.toString(radius)}, x:${Js.Float.toString(x)}, y:${Js.Float.toString(y)}`,
+      `radius:${toString(radius)}, x:${toString(x)}, y:${toString(y)}`,
     )
-  | Square(x) => Js.log(`Square of ${Js.Float.toString(x)}`)
+  | Square(x) => Js.log(`Square of ${toString(x)}`)
   | Rectangle({width, height}) =>
-    Js.log(`width:${Js.Float.toString(width)}, height:${Js.Float.toString(height)}`)
+    Js.log(`width:${toString(width)}, height:${toString(height)}`)
   }
 }
 display_shape(Rectangle({width: 1.1, height: 2.2}))
 display_shape(Circle(c))
 
-/* can't do this with inline record */
+/* 
+ Limitation of inline record.
+ The following code will get compile time error - 
+ 'This form is not allowed as the type of the inlined record could escape.'
+*/
 let get_shape = s => {
   switch s {
   | Rectangle(r) => Some(r)

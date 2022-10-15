@@ -4,10 +4,9 @@
 - Char doesn't support Unicode or UTF-8 and is therefore not recommended.
 ```reasonml
 let ch = 'a'
-// convert char to string
-let s = String.make(1, ch)
-// convert string to char
-let x = String.get("a",0)
+
+// char to string
+Char.escaped(ch)
 ```
 
 #### OCaml

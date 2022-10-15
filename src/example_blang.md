@@ -9,12 +9,18 @@ type rec expr<'a> =
   | Not(expr<'a>)
 
 let and_ = l => {
-    if Belt.List.some(l, (x) => switch x { | Const(false) => true | _ => false }) { Const(false) }
+    if Belt.List.some(l, (x) => switch x { 
+        | Const(false) => true 
+        | _ => false }) { 
+        Const(false) 
+    }
     else {
-        switch Belt.List.keep(l, x => switch x { | Const(true) => false | _ => true}) {
-            | list{} => Const(true)
-            | list{x} => x
-            | l => And(l)
+        switch Belt.List.keep(l, x => switch x { 
+            | Const(true) => false 
+            | _ => true}) {
+                | list{} => Const(true)
+                | list{x} => x
+                | l => And(l)
         }
     }
 }
