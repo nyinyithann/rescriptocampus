@@ -25,5 +25,7 @@
 - [Function](./function.md)
     - [Optional Arguments(Rescript)](./optional_arguments_rescript.md)
     - [Optional Arguments(OCaml)](./optional_arguments_ocaml.md)
+    - [Function Cheatsheet](./function_cheatsheet.md)
+- [if else](./if_else.md)
 - [Resources](./resources.md)
 
