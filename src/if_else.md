@@ -48,3 +48,7 @@ abs(-99.9)->Js.log
 ```
 
 #### OCaml
+OCaml doesn't have ternary operator.
+```OCaml
+let max x y = if x > y then x else y ;;
+```
