@@ -61,6 +61,26 @@ mulU(. 10, 10)->log
 // with type annotation
 let addU: (. float, float) => float = (. x, y) => x +. y
 addU(. 1., 2.)->log
+
+// with placeholders
+let add = (x, y, z) => x + y + z
+let addX = add(_, 2, 3)
+let addY = add(1, _, 3)
+let addZ = add(1, 2, _)
+addX(1)->Js.log // 6
+addY(2)->Js.log // 6
+addZ(3)->Js.log // 6
+10->addX->Js.log // 15
+10->addY->Js.log // 14
+10->addZ->Js.log // 13
+
+let addXY = add(_, _, 3)
+addXY(2)->Js.log // 7
+10->addXY->Js.log // 23
+
+let addXYZ = add(_, _, _)
+addXYZ(10)->Js.log // 30
+100->addXYZ->Js.log // 300
 ```
 
 #### ignore() function to ignore the return value of a function

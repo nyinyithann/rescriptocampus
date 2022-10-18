@@ -30,5 +30,12 @@
 - [Exception](./exception.md)
     - [JS Exception](./js_exception.md)
 - [Option, Null, Undefined](./option_null_undefined.md)
+- [Pipe](./pipe.md)
+- [Lazy](./lazy.md)
+- [Patterns](./patterns.md)
+- [Module](./module.md)
+    - [Module Type](./module_type.md)
+    - [Functor](./functor.md)
+    - [First-class Module](./first_class_module.md)
 - [Resources](./resources.md)
 
