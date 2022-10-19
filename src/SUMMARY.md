@@ -37,5 +37,10 @@
     - [Module Type](./module_type.md)
     - [Functor](./functor.md)
     - [First-class Module](./first_class_module.md)
+- [Decorator](./decorator.md)
+- [Binding](./binding.md)
+    - [Global JS Values](./global_js_values.md)
+    - [Import from/Export to JS](./binding_import_export.md)
+    - [Bind to JS Object](./binding_js_object.md)
 - [Resources](./resources.md)
 
