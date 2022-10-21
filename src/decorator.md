@@ -7,8 +7,23 @@
 @inline let nodeEnv = "prod"
 let env = nodeEnv
 
-// JS output
+/* JS output */
 let env = "prod"
+```
+```reasonml
+@val external process: 'a = "process"
+
+@inline
+let mode = "development"
+
+if (process["env"]["mode"] === mode) {
+  Js.log("Dev-only code here!")
+}
+
+/* JS output */
+if (process.env.mode === "development") {
+  console.log("Dev-only code here!");
+}
 ```
 
 #### @unboxed

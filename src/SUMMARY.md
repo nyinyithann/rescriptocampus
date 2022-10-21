@@ -60,5 +60,6 @@
         - [Curry and Uncurry](./binding_curry_uncurry.md)
         - [Modeling this-based callbacks](./binding_this_callback.md)
         - [Bind null or undefined return value to Option](./binding_null_option.md)
+- [JSON](./json.md)
 - [Resources](./resources.md)
 
