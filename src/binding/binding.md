@@ -8,10 +8,11 @@
 [Binding to JS global functions - Js.Global](https://rescript-lang.org/docs/manual/latest/api/js/global)
 
 #### Refs
-[rescript-js](https://github.com/bloodyowl/rescript-js)
-[rescript-webapi](https://github.com/tinymce/rescript-webapi)
+- [rescript-js](https://github.com/bloodyowl/rescript-js)
+- [rescript-webapi](https://github.com/tinymce/rescript-webapi)
 
-### Illegal identifier
+#### Illegal identifier
+Illegal identifiers can be created by prefixing `\`.
 ```reasonml
 let \"orange 🍊" = "🍊"
 \"orange 🍊"->Js.log

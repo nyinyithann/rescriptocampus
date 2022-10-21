@@ -15,7 +15,7 @@
 let numList = list{1, 2, 3}
 let numList2 = list{0, ...numList}
 
-/* multipe spread is not allowed */
+/* multiple spread is not allowed */
 let numList2 = list{0, numList, ...numList2}
 
 let foldLeft = (lst, acc, f) => {

@@ -64,9 +64,9 @@ Js.log(lst)
 let lst: list<[< #Int(int) | #Float(float) | #Not_a_number]> = list{three, four, nan}
 Js.log(lst)
 
-// array is mutable and contravariant. Not allow open variant
 // Rescript won't compile the following line 
-// let arr: array<[> #Int(int) | #Float(float) | #Not_a_number]> = [three, four, nan]
+let arr: array<[> #Int(int) | #Float(float) | #Not_a_number]> = [three, four, nan] // compilation error
+
 
 let arr: array<[< #Int(int) | #Float(float) | #Not_a_number]> = [three, four, nan]
 Js.log(arr)
