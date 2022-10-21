@@ -1,11 +1,12 @@
 # Bind to JS Object
-### 4 use cases of JS Object
-- As a "record" or "struct" in other objects (like Rescript and C)
-- As a hash map (or dictionary)
-- As a class
-- As a module to import/export
 
+#### References
 
-ReScript separates the binding methods for JS object based on the above 4 use-cases.
+- [external](https://rescript-lang.org/docs/manual/latest/external)
+- [@module](https://rescript-lang.org/docs/manual/latest/import-from-export-to-js#import-a-javascript-modules-content)
+- [@as](https://rescript-lang.org/docs/manual/latest/attribute#usage)
+- [@set](https://rescript-lang.org/docs/manual/latest/bind-to-js-object#bind-using-special-bs-getters--setters)
+- [@get](https://rescript-lang.org/docs/manual/latest/bind-to-js-object#bind-using-special-bs-getters--setters)
+- [@set_index](https://rescript-lang.org/docs/manual/latest/bind-to-js-object#bind-using-special-bs-getters--setters)
+- [@get_index](https://rescript-lang.org/docs/manual/latest/bind-to-js-object#bind-using-special-bs-getters--setters)
 
-### Bind to Record-like JS Objects

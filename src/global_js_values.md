@@ -35,7 +35,7 @@ external is: ('a, 'b) => bool = "is"
 is(Js.Float._NaN, Js.Float._NaN)->Js.log
 ```
 
-#### Special global values
+#### Special global values [%external](https://rescript-lang.org/docs/manual/latest/bind-to-global-js-values#special-global-values)
 ```reasonml
 switch %external(__DEV__) {
 | Some(_) => Js.log("dev mode")
