@@ -68,5 +68,13 @@
     - [@deriving({jsConverter: newType})](./generating/converter_newtype.md)
     - [@obj](./generating/at_obj.md)
     - [@deriving(abstract)](./generating/abstract.md)
+- [ReScriptReact (V3)](./rescript_react/rescript_react.md)
+    - [Basic Elements](./rescript_react/basic_elements.md)
+    - [Component](./rescript_react/component.md)
+        - [Low level APIs to create components](./rescript_react/low_level_apis.md)
+        - [Misc](./rescript_react/component_misc.md)
+    - [Arrays and Keys](./rescript_react/arrays_and_keys.md)
+    - [Refs and the DOM](./rescript_react/refs_and_dom.md)
+        - [Manage a list of Refs using a ref callback](./rescript_react/ref_callback.md)
 - [Resources](./resources.md)
 
