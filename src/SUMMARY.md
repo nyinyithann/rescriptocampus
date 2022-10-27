@@ -76,5 +76,7 @@
     - [Arrays and Keys](./rescript_react/arrays_and_keys.md)
     - [Refs and the DOM](./rescript_react/refs_and_dom.md)
         - [Manage a list of Refs using a ref callback](./rescript_react/ref_callback.md)
+    - [Context](./rescript_react/context.md)
+    - [Styling](./rescript_react/styling.md)
 - [Resources](./resources.md)
 
