@@ -1,0 +1,208 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>JS Exception - Rescriptocampus</title>
+        <!-- Custom HTML head -->
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="../introduction.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li class="chapter-item expanded "><a href="../language/language.html"><strong aria-hidden="true">2.</strong> Language Elements</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../language/let_binding_mutation.html"><strong aria-hidden="true">2.1.</strong> let Binding &amp; Mutation</a></li><li class="chapter-item expanded "><a href="../language/type.html"><strong aria-hidden="true">2.2.</strong> Type</a></li><li class="chapter-item expanded "><a href="../language/primitive_types.html"><strong aria-hidden="true">2.3.</strong> Primitive Types</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../language/unit.html"><strong aria-hidden="true">2.3.1.</strong> Unit</a></li><li class="chapter-item expanded "><a href="../language/string.html"><strong aria-hidden="true">2.3.2.</strong> String</a></li><li class="chapter-item expanded "><a href="../language/char.html"><strong aria-hidden="true">2.3.3.</strong> Char</a></li><li class="chapter-item expanded "><a href="../language/boolean.html"><strong aria-hidden="true">2.3.4.</strong> Boolean</a></li><li class="chapter-item expanded "><a href="../language/integer.html"><strong aria-hidden="true">2.3.5.</strong> Integer</a></li><li class="chapter-item expanded "><a href="../language/float.html"><strong aria-hidden="true">2.3.6.</strong> Float</a></li><li class="chapter-item expanded "><a href="../language/regular_expression.html"><strong aria-hidden="true">2.3.7.</strong> Regular Expression</a></li><li class="chapter-item expanded "><a href="../language/conversion.html"><strong aria-hidden="true">2.3.8.</strong> Conversion</a></li></ol></li><li class="chapter-item expanded "><a href="../language/if_else.html"><strong aria-hidden="true">2.4.</strong> if else</a></li><li class="chapter-item expanded "><a href="../language/loops.html"><strong aria-hidden="true">2.5.</strong> Loops</a></li><li class="chapter-item expanded "><a href="../language/function.html"><strong aria-hidden="true">2.6.</strong> Function</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../language/optional_arguments_rescript.html"><strong aria-hidden="true">2.6.1.</strong> Optional Arguments(Rescript)</a></li><li class="chapter-item expanded "><a href="../language/optional_arguments_ocaml.html"><strong aria-hidden="true">2.6.2.</strong> Optional Arguments(OCaml)</a></li><li class="chapter-item expanded "><a href="../language/function_cheatsheet.html"><strong aria-hidden="true">2.6.3.</strong> Function Cheatsheet</a></li></ol></li><li class="chapter-item expanded "><a href="../language/array.html"><strong aria-hidden="true">2.7.</strong> Array</a></li><li class="chapter-item expanded "><a href="../language/list.html"><strong aria-hidden="true">2.8.</strong> List</a></li><li class="chapter-item expanded "><a href="../language/tuple.html"><strong aria-hidden="true">2.9.</strong> Tuple</a></li><li class="chapter-item expanded "><a href="../language/record.html"><strong aria-hidden="true">2.10.</strong> Record</a></li><li class="chapter-item expanded "><a href="../language/object.html"><strong aria-hidden="true">2.11.</strong> Object</a></li><li class="chapter-item expanded "><a href="../language/variant.html"><strong aria-hidden="true">2.12.</strong> Variant</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../language/example_blang.html"><strong aria-hidden="true">2.12.1.</strong> Example(blang)</a></li></ol></li><li class="chapter-item expanded "><a href="../language/polymorphic_variant.html"><strong aria-hidden="true">2.13.</strong> Polymorphic Variant</a></li><li class="chapter-item expanded "><a href="../language/extensible_variant.html"><strong aria-hidden="true">2.14.</strong> Extensible Variant</a></li><li class="chapter-item expanded "><a href="../language/exception.html"><strong aria-hidden="true">2.15.</strong> Exception</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../language/js_exception.html" class="active"><strong aria-hidden="true">2.15.1.</strong> JS Exception</a></li></ol></li><li class="chapter-item expanded "><a href="../language/option_null_undefined.html"><strong aria-hidden="true">2.16.</strong> Option, Null, Undefined</a></li><li class="chapter-item expanded "><a href="../language/pipe.html"><strong aria-hidden="true">2.17.</strong> Pipe</a></li><li class="chapter-item expanded "><a href="../language/lazy.html"><strong aria-hidden="true">2.18.</strong> Lazy</a></li><li class="chapter-item expanded "><a href="../language/patterns.html"><strong aria-hidden="true">2.19.</strong> Patterns</a></li><li class="chapter-item expanded "><a href="../language/module.html"><strong aria-hidden="true">2.20.</strong> Module</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../language/module_type.html"><strong aria-hidden="true">2.20.1.</strong> Module Type</a></li><li class="chapter-item expanded "><a href="../language/functor.html"><strong aria-hidden="true">2.20.2.</strong> Functor</a></li><li class="chapter-item expanded "><a href="../language/first_class_module.html"><strong aria-hidden="true">2.20.3.</strong> First-class Module</a></li></ol></li><li class="chapter-item expanded "><a href="../language/decorator.html"><strong aria-hidden="true">2.21.</strong> Decorator</a></li></ol></li><li class="chapter-item expanded "><a href="../binding/binding.html"><strong aria-hidden="true">3.</strong> Binding</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../binding/global_js_values.html"><strong aria-hidden="true">3.1.</strong> Global JS Values</a></li><li class="chapter-item expanded "><a href="../binding/binding_import_export.html"><strong aria-hidden="true">3.2.</strong> Import from/Export to JS</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../binding/binding_default_named_export.html"><strong aria-hidden="true">3.2.1.</strong> Bind to default or named export</a></li><li class="chapter-item expanded "><a href="../binding/binding_default_named_class_export.html"><strong aria-hidden="true">3.2.2.</strong> Bind to default or named exported JS Class</a></li></ol></li><li class="chapter-item expanded "><a href="../binding/binding_js_object.html"><strong aria-hidden="true">3.3.</strong> Bind to JS Object</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../binding/binding_rescript_record.html"><strong aria-hidden="true">3.3.1.</strong> Bind using Rescript record</a></li><li class="chapter-item expanded "><a href="../binding/binding_js_array_rescript_record.html"><strong aria-hidden="true">3.3.2.</strong> Bind JS array to Rescript record</a></li><li class="chapter-item expanded "><a href="../binding/binding_rescript_object.html"><strong aria-hidden="true">3.3.3.</strong> Bind using Rescript object</a></li><li class="chapter-item expanded "><a href="../binding/binding_getter_setter.html"><strong aria-hidden="true">3.3.4.</strong> Bind with getter/setter</a></li></ol></li><li class="chapter-item expanded "><a href="../binding/binding_js_function.html"><strong aria-hidden="true">3.4.</strong> Bind to JS Function</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../binding/binding_label_arguments.html"><strong aria-hidden="true">3.4.1.</strong> Labeled Arguments</a></li><li class="chapter-item expanded "><a href="../binding/binding_object_method.html"><strong aria-hidden="true">3.4.2.</strong> Object Method</a></li><li class="chapter-item expanded "><a href="../binding/binding_variadic_function.html"><strong aria-hidden="true">3.4.3.</strong> Variadic Function</a></li><li class="chapter-item expanded "><a href="../binding/binding_poly_variant_unwrap.html"><strong aria-hidden="true">3.4.4.</strong> Polymorphic Variant (@unwrrap)</a></li><li class="chapter-item expanded "><a href="../binding/binding_constrain_arguments.html"><strong aria-hidden="true">3.4.5.</strong> Constrain Arguments</a></li><li class="chapter-item expanded "><a href="../binding/binding_event_listener.html"><strong aria-hidden="true">3.4.6.</strong> Special-case: Event Listeners</a></li><li class="chapter-item expanded "><a href="../binding/binding_fixed_arguments.html"><strong aria-hidden="true">3.4.7.</strong> Fixed Arguments</a></li><li class="chapter-item expanded "><a href="../binding/binding_ignore_arguments.html"><strong aria-hidden="true">3.4.8.</strong> Ignore Arguments</a></li><li class="chapter-item expanded "><a href="../binding/binding_curry_uncurry.html"><strong aria-hidden="true">3.4.9.</strong> Curry and Uncurry</a></li><li class="chapter-item expanded "><a href="../binding/binding_this_callback.html"><strong aria-hidden="true">3.4.10.</strong> Modeling this-based callbacks</a></li><li class="chapter-item expanded "><a href="../binding/binding_null_option.html"><strong aria-hidden="true">3.4.11.</strong> Bind null or undefined return value to Option</a></li></ol></li><li class="chapter-item expanded "><a href="../binding/json.html"><strong aria-hidden="true">3.5.</strong> JSON</a></li></ol></li><li class="chapter-item expanded "><a href="../generating/intro.html"><strong aria-hidden="true">4.</strong> Generate Converters &amp; Helpers</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../generating/accessors.html"><strong aria-hidden="true">4.1.</strong> @deriving(accessors)</a></li><li class="chapter-item expanded "><a href="../generating/converter.html"><strong aria-hidden="true">4.2.</strong> @deriving(jsConverter)</a></li><li class="chapter-item expanded "><a href="../generating/converter_newtype.html"><strong aria-hidden="true">4.3.</strong> @deriving({jsConverter: newType})</a></li><li class="chapter-item expanded "><a href="../generating/at_obj.html"><strong aria-hidden="true">4.4.</strong> @obj</a></li><li class="chapter-item expanded "><a href="../generating/abstract.html"><strong aria-hidden="true">4.5.</strong> @deriving(abstract)</a></li></ol></li><li class="chapter-item expanded "><a href="../rescript_react/rescript_react.html"><strong aria-hidden="true">5.</strong> ReScriptReact (V3)</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../rescript_react/basic_elements.html"><strong aria-hidden="true">5.1.</strong> Basic Elements</a></li><li class="chapter-item expanded "><a href="../rescript_react/component.html"><strong aria-hidden="true">5.2.</strong> Component</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../rescript_react/low_level_apis.html"><strong aria-hidden="true">5.2.1.</strong> Low level APIs to create components</a></li><li class="chapter-item expanded "><a href="../rescript_react/component_misc.html"><strong aria-hidden="true">5.2.2.</strong> Misc</a></li></ol></li><li class="chapter-item expanded "><a href="../rescript_react/arrays_and_keys.html"><strong aria-hidden="true">5.3.</strong> Arrays and Keys</a></li><li class="chapter-item expanded "><a href="../rescript_react/refs_and_dom.html"><strong aria-hidden="true">5.4.</strong> Refs and the DOM</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../rescript_react/ref_callback.html"><strong aria-hidden="true">5.4.1.</strong> Manage a list of Refs using a ref callback</a></li><li class="chapter-item expanded "><a href="../rescript_react/forwardRef.html"><strong aria-hidden="true">5.4.2.</strong> Forwarding Refs</a></li></ol></li><li class="chapter-item expanded "><a href="../rescript_react/context.html"><strong aria-hidden="true">5.5.</strong> Context</a></li><li class="chapter-item expanded "><a href="../rescript_react/styling.html"><strong aria-hidden="true">5.6.</strong> Styling</a></li></ol></li><li class="chapter-item expanded "><a href="../resources.html"><strong aria-hidden="true">6.</strong> Resources</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Rescriptocampus</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="js-exception"><a class="header" href="#js-exception">JS Exception</a></h1>
+<ul>
+<li><a href="https://rescript-lang.org/docs/manual/latest/api/js/exn">Js.Exn Doc</a></li>
+<li><a href="https://github.com/rescript-lang/rescript-compiler/blob/master/jscomp/others/js_exn.ml">Js.Exn Source</a></li>
+</ul>
+<h4 id="catching-a-js-exception-in-rescript"><a class="header" href="#catching-a-js-exception-in-rescript">Catching a JS Exception in Rescript</a></h4>
+<pre><code class="language-reasonml">@new external make: float =&gt; Js.Array2.t&lt;int&gt; = &quot;Array&quot;
+try {
+  let a = make(111111111111111111111111111.1)
+} catch {
+| Js.Exn.Error(obj) =&gt;
+  switch Js.Exn.message(obj) {
+  | Some(e) =&gt; Js.log(e)
+  | None =&gt; Js.log(&quot;No message&quot;)
+  }
+}
+// Invalid array length
+</code></pre>
+<h4 id="raise-a-js-exception-from-rescript"><a class="header" href="#raise-a-js-exception-from-rescript">Raise a JS Exception from Rescript</a></h4>
+<h5 id="raising-from-rescript-site"><a class="header" href="#raising-from-rescript-site">Raising from Rescript site</a></h5>
+<pre><code class="language-reasonml">let myTest = () =&gt; {
+  Js.Exn.raiseError(&quot;Hello!&quot;)
+}
+</code></pre>
+<h5 id="catching-it-from-js-side"><a class="header" href="#catching-it-from-js-side">Catching it from JS side</a></h5>
+<pre><code class="language-reasonml">// after importing `myTest`...
+try {
+  myTest()
+} catch (e) {
+  console.log(e.message) // &quot;Hello!&quot;
+}
+</code></pre>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../language/exception.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                            <a rel="next" href="../language/option_null_undefined.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../language/exception.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                    <a rel="next" href="../language/option_null_undefined.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+    </body>
+</html>

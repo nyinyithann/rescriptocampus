@@ -1,0 +1,4575 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Rescriptocampus</title>
+        <meta name="robots" content="noindex" />
+        <!-- Custom HTML head -->
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="introduction.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li class="chapter-item expanded "><a href="language/language.html"><strong aria-hidden="true">2.</strong> Language Elements</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="language/let_binding_mutation.html"><strong aria-hidden="true">2.1.</strong> let Binding &amp; Mutation</a></li><li class="chapter-item expanded "><a href="language/type.html"><strong aria-hidden="true">2.2.</strong> Type</a></li><li class="chapter-item expanded "><a href="language/primitive_types.html"><strong aria-hidden="true">2.3.</strong> Primitive Types</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="language/unit.html"><strong aria-hidden="true">2.3.1.</strong> Unit</a></li><li class="chapter-item expanded "><a href="language/string.html"><strong aria-hidden="true">2.3.2.</strong> String</a></li><li class="chapter-item expanded "><a href="language/char.html"><strong aria-hidden="true">2.3.3.</strong> Char</a></li><li class="chapter-item expanded "><a href="language/boolean.html"><strong aria-hidden="true">2.3.4.</strong> Boolean</a></li><li class="chapter-item expanded "><a href="language/integer.html"><strong aria-hidden="true">2.3.5.</strong> Integer</a></li><li class="chapter-item expanded "><a href="language/float.html"><strong aria-hidden="true">2.3.6.</strong> Float</a></li><li class="chapter-item expanded "><a href="language/regular_expression.html"><strong aria-hidden="true">2.3.7.</strong> Regular Expression</a></li><li class="chapter-item expanded "><a href="language/conversion.html"><strong aria-hidden="true">2.3.8.</strong> Conversion</a></li></ol></li><li class="chapter-item expanded "><a href="language/if_else.html"><strong aria-hidden="true">2.4.</strong> if else</a></li><li class="chapter-item expanded "><a href="language/loops.html"><strong aria-hidden="true">2.5.</strong> Loops</a></li><li class="chapter-item expanded "><a href="language/function.html"><strong aria-hidden="true">2.6.</strong> Function</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="language/optional_arguments_rescript.html"><strong aria-hidden="true">2.6.1.</strong> Optional Arguments(Rescript)</a></li><li class="chapter-item expanded "><a href="language/optional_arguments_ocaml.html"><strong aria-hidden="true">2.6.2.</strong> Optional Arguments(OCaml)</a></li><li class="chapter-item expanded "><a href="language/function_cheatsheet.html"><strong aria-hidden="true">2.6.3.</strong> Function Cheatsheet</a></li></ol></li><li class="chapter-item expanded "><a href="language/array.html"><strong aria-hidden="true">2.7.</strong> Array</a></li><li class="chapter-item expanded "><a href="language/list.html"><strong aria-hidden="true">2.8.</strong> List</a></li><li class="chapter-item expanded "><a href="language/tuple.html"><strong aria-hidden="true">2.9.</strong> Tuple</a></li><li class="chapter-item expanded "><a href="language/record.html"><strong aria-hidden="true">2.10.</strong> Record</a></li><li class="chapter-item expanded "><a href="language/object.html"><strong aria-hidden="true">2.11.</strong> Object</a></li><li class="chapter-item expanded "><a href="language/variant.html"><strong aria-hidden="true">2.12.</strong> Variant</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="language/example_blang.html"><strong aria-hidden="true">2.12.1.</strong> Example(blang)</a></li></ol></li><li class="chapter-item expanded "><a href="language/polymorphic_variant.html"><strong aria-hidden="true">2.13.</strong> Polymorphic Variant</a></li><li class="chapter-item expanded "><a href="language/extensible_variant.html"><strong aria-hidden="true">2.14.</strong> Extensible Variant</a></li><li class="chapter-item expanded "><a href="language/exception.html"><strong aria-hidden="true">2.15.</strong> Exception</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="language/js_exception.html"><strong aria-hidden="true">2.15.1.</strong> JS Exception</a></li></ol></li><li class="chapter-item expanded "><a href="language/option_null_undefined.html"><strong aria-hidden="true">2.16.</strong> Option, Null, Undefined</a></li><li class="chapter-item expanded "><a href="language/pipe.html"><strong aria-hidden="true">2.17.</strong> Pipe</a></li><li class="chapter-item expanded "><a href="language/lazy.html"><strong aria-hidden="true">2.18.</strong> Lazy</a></li><li class="chapter-item expanded "><a href="language/patterns.html"><strong aria-hidden="true">2.19.</strong> Patterns</a></li><li class="chapter-item expanded "><a href="language/module.html"><strong aria-hidden="true">2.20.</strong> Module</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="language/module_type.html"><strong aria-hidden="true">2.20.1.</strong> Module Type</a></li><li class="chapter-item expanded "><a href="language/functor.html"><strong aria-hidden="true">2.20.2.</strong> Functor</a></li><li class="chapter-item expanded "><a href="language/first_class_module.html"><strong aria-hidden="true">2.20.3.</strong> First-class Module</a></li></ol></li><li class="chapter-item expanded "><a href="language/decorator.html"><strong aria-hidden="true">2.21.</strong> Decorator</a></li></ol></li><li class="chapter-item expanded "><a href="binding/binding.html"><strong aria-hidden="true">3.</strong> Binding</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="binding/global_js_values.html"><strong aria-hidden="true">3.1.</strong> Global JS Values</a></li><li class="chapter-item expanded "><a href="binding/binding_import_export.html"><strong aria-hidden="true">3.2.</strong> Import from/Export to JS</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="binding/binding_default_named_export.html"><strong aria-hidden="true">3.2.1.</strong> Bind to default or named export</a></li><li class="chapter-item expanded "><a href="binding/binding_default_named_class_export.html"><strong aria-hidden="true">3.2.2.</strong> Bind to default or named exported JS Class</a></li></ol></li><li class="chapter-item expanded "><a href="binding/binding_js_object.html"><strong aria-hidden="true">3.3.</strong> Bind to JS Object</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="binding/binding_rescript_record.html"><strong aria-hidden="true">3.3.1.</strong> Bind using Rescript record</a></li><li class="chapter-item expanded "><a href="binding/binding_js_array_rescript_record.html"><strong aria-hidden="true">3.3.2.</strong> Bind JS array to Rescript record</a></li><li class="chapter-item expanded "><a href="binding/binding_rescript_object.html"><strong aria-hidden="true">3.3.3.</strong> Bind using Rescript object</a></li><li class="chapter-item expanded "><a href="binding/binding_getter_setter.html"><strong aria-hidden="true">3.3.4.</strong> Bind with getter/setter</a></li></ol></li><li class="chapter-item expanded "><a href="binding/binding_js_function.html"><strong aria-hidden="true">3.4.</strong> Bind to JS Function</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="binding/binding_label_arguments.html"><strong aria-hidden="true">3.4.1.</strong> Labeled Arguments</a></li><li class="chapter-item expanded "><a href="binding/binding_object_method.html"><strong aria-hidden="true">3.4.2.</strong> Object Method</a></li><li class="chapter-item expanded "><a href="binding/binding_variadic_function.html"><strong aria-hidden="true">3.4.3.</strong> Variadic Function</a></li><li class="chapter-item expanded "><a href="binding/binding_poly_variant_unwrap.html"><strong aria-hidden="true">3.4.4.</strong> Polymorphic Variant (@unwrrap)</a></li><li class="chapter-item expanded "><a href="binding/binding_constrain_arguments.html"><strong aria-hidden="true">3.4.5.</strong> Constrain Arguments</a></li><li class="chapter-item expanded "><a href="binding/binding_event_listener.html"><strong aria-hidden="true">3.4.6.</strong> Special-case: Event Listeners</a></li><li class="chapter-item expanded "><a href="binding/binding_fixed_arguments.html"><strong aria-hidden="true">3.4.7.</strong> Fixed Arguments</a></li><li class="chapter-item expanded "><a href="binding/binding_ignore_arguments.html"><strong aria-hidden="true">3.4.8.</strong> Ignore Arguments</a></li><li class="chapter-item expanded "><a href="binding/binding_curry_uncurry.html"><strong aria-hidden="true">3.4.9.</strong> Curry and Uncurry</a></li><li class="chapter-item expanded "><a href="binding/binding_this_callback.html"><strong aria-hidden="true">3.4.10.</strong> Modeling this-based callbacks</a></li><li class="chapter-item expanded "><a href="binding/binding_null_option.html"><strong aria-hidden="true">3.4.11.</strong> Bind null or undefined return value to Option</a></li></ol></li><li class="chapter-item expanded "><a href="binding/json.html"><strong aria-hidden="true">3.5.</strong> JSON</a></li></ol></li><li class="chapter-item expanded "><a href="generating/intro.html"><strong aria-hidden="true">4.</strong> Generate Converters &amp; Helpers</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="generating/accessors.html"><strong aria-hidden="true">4.1.</strong> @deriving(accessors)</a></li><li class="chapter-item expanded "><a href="generating/converter.html"><strong aria-hidden="true">4.2.</strong> @deriving(jsConverter)</a></li><li class="chapter-item expanded "><a href="generating/converter_newtype.html"><strong aria-hidden="true">4.3.</strong> @deriving({jsConverter: newType})</a></li><li class="chapter-item expanded "><a href="generating/at_obj.html"><strong aria-hidden="true">4.4.</strong> @obj</a></li><li class="chapter-item expanded "><a href="generating/abstract.html"><strong aria-hidden="true">4.5.</strong> @deriving(abstract)</a></li></ol></li><li class="chapter-item expanded "><a href="rescript_react/rescript_react.html"><strong aria-hidden="true">5.</strong> ReScriptReact (V3)</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="rescript_react/basic_elements.html"><strong aria-hidden="true">5.1.</strong> Basic Elements</a></li><li class="chapter-item expanded "><a href="rescript_react/component.html"><strong aria-hidden="true">5.2.</strong> Component</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="rescript_react/low_level_apis.html"><strong aria-hidden="true">5.2.1.</strong> Low level APIs to create components</a></li><li class="chapter-item expanded "><a href="rescript_react/component_misc.html"><strong aria-hidden="true">5.2.2.</strong> Misc</a></li></ol></li><li class="chapter-item expanded "><a href="rescript_react/arrays_and_keys.html"><strong aria-hidden="true">5.3.</strong> Arrays and Keys</a></li><li class="chapter-item expanded "><a href="rescript_react/refs_and_dom.html"><strong aria-hidden="true">5.4.</strong> Refs and the DOM</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="rescript_react/ref_callback.html"><strong aria-hidden="true">5.4.1.</strong> Manage a list of Refs using a ref callback</a></li><li class="chapter-item expanded "><a href="rescript_react/forwardRef.html"><strong aria-hidden="true">5.4.2.</strong> Forwarding Refs</a></li></ol></li><li class="chapter-item expanded "><a href="rescript_react/context.html"><strong aria-hidden="true">5.5.</strong> Context</a></li><li class="chapter-item expanded "><a href="rescript_react/styling.html"><strong aria-hidden="true">5.6.</strong> Styling</a></li></ol></li><li class="chapter-item expanded "><a href="resources.html"><strong aria-hidden="true">6.</strong> Resources</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Rescriptocampus</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <p><strong>Hippocampus</strong>:
+A brain region that helps people to remember by linking different parts of a memory together.</p>
+<p><strong>Rescriptocampus</strong>:
+Notes that helps me to remember ReScript.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="rescript"><a class="header" href="#rescript">ReScript</a></h1>
+<ul>
+<li>ReScript covers only a curated subet of JavaScript</li>
+<li>ReScript emphasizes 
+<ul>
+<li>sound and reliable type system</li>
+<li>plain data + functions over classes</li>
+<li>clean pattern matching over fragile <code>if</code>s and virtual dispatch</li>
+<li>proper data modeling over string abuse</li>
+</ul>
+</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="let-binding"><a class="header" href="#let-binding">let Binding</a></h1>
+<h4 id="rescript-1"><a class="header" href="#rescript-1">Rescript</a></h4>
+<pre><code class="language-reasonml">let a = 10
+let b = 10
+let c = a + b
+
+let x = 1 and y = 2
+Js.log(x + y) // 3
+
+// block scope
+// z = 3
+let z = {
+  let x = 1
+  let y = 2
+  x + y
+}
+
+// shadow
+let x = 1
+let x = 2
+let x = 3
+Js.log(x) // 3
+</code></pre>
+<h4 id="ocaml"><a class="header" href="#ocaml">OCaml</a></h4>
+<pre><code class="language-ocaml">let z = let x = 1 and y = 2 in x + y ;;
+let z = let x = 1 in let y = 2 in x + y;;
+</code></pre>
+<h1 id="mutable-binding"><a class="header" href="#mutable-binding">Mutable binding</a></h1>
+<h4 id="rescript-2"><a class="header" href="#rescript-2">Rescript</a></h4>
+<pre><code class="language-reasonml">let x = ref (10)
+x := x.contents + 1
+x.contents = x.contents + 1 /* x is 12 */
+
+
+type box&lt;'a&gt; = {mutable contents: 'a}
+let box = v =&gt; {contents: v}
+
+let r = box(10)
+r.contents = r.contents + 1
+</code></pre>
+<h4 id="ocaml-1"><a class="header" href="#ocaml-1">OCaml</a></h4>
+<pre><code class="language-ocaml">let x = ref 10 in
+x := !x + 1 ;;
+x.contents &lt;- x.contents + 1;;
+!x ;; (* x is 12 *)
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="type"><a class="header" href="#type">Type</a></h1>
+<p>Rescript type system is strong, static, sound, fast and inferred.</p>
+<h4 id="rescript-3"><a class="header" href="#rescript-3">Rescript</a></h4>
+<h5 id="type-inference"><a class="header" href="#type-inference">Type Inference</a></h5>
+<pre><code class="language-reasonml">let a = 10
+let f = 10.
+let add = (a, b) =&gt; a + b
+</code></pre>
+<h5 id="type-annotation"><a class="header" href="#type-annotation">Type annotation</a></h5>
+<pre><code class="language-reasonml">let a: int = 10
+let f: float = 10.
+let add: (int, int) =&gt; int = (a, b) =&gt; a + b
+Js.log(add(a, a)) // 20
+// or
+let add = (a: int, b: int): int =&gt; a + b
+Js.log(add(a, a)) // 20
+</code></pre>
+<h5 id="type-alias"><a class="header" href="#type-alias">Type alias</a></h5>
+<pre><code class="language-reasonml">type kg = float
+let weight: kg = 88.
+
+type pair = (string, int)
+let kv: pair = (&quot;Key&quot;, 100)
+Js.log(kv) // [ 'key', 100 ]
+</code></pre>
+<h5 id="mutually-recursive-type"><a class="header" href="#mutually-recursive-type">Mutually recursive type</a></h5>
+<pre><code class="language-reasonml">type rec person = {
+  name: string,
+  friends: list&lt;person&gt;,
+}
+
+type rec room = {building: building}
+and building = {rooms: array&lt;room&gt;}
+</code></pre>
+<h5 id="generic-type"><a class="header" href="#generic-type">Generic type</a></h5>
+<pre><code class="language-reasonml">type gpair&lt;'a, 'b&gt; = ('a, 'b)
+let x: gpair&lt;string, int&gt; = (&quot;Counter&quot;, 128)
+Js.log(x) // [ 'Counter', 128 ]
+
+type result&lt;'a, 'e&gt; = 
+    | Ok('a) 
+    | Error('e)
+let v = Ok(100)
+let e = Error(&quot;Not Found Error&quot;)
+</code></pre>
+<h5 id="type-escape-hatch"><a class="header" href="#type-escape-hatch">Type escape hatch</a></h5>
+<pre><code class="language-reasonml">external convertToString: char =&gt; string = &quot;%identity&quot;
+let ch = 'a'
+let str = convertToString(ch) ++ &quot;bc&quot;
+Js.log(str) // 97bc
+</code></pre>
+<h4 id="ocaml-2"><a class="header" href="#ocaml-2">OCaml</a></h4>
+<pre><code class="language-OCaml">(* type inference *)
+let a = 10 ;;
+let b = (&quot;hello&quot;, 123) ;;
+let add a b = a + b ;;
+
+(* type annotation *)
+let add (a:int) (b:int) : int = a + b ;;
+
+(* type alias *)
+type kg = float ;;
+let weight : kg = 88.3 ;;
+type pair = (string * int)
+let p : pair = (&quot;hello&quot;, 123) ;;
+
+(* mutually recursive types *)
+type person = {
+  name: string;
+  friends: person list;
+}
+
+type room = {building: building}
+and building = {rooms: room array}
+
+(* type paramater *)
+type ('a, 'b) t = ('a * 'b) ;;
+let p : (string, int) t = (&quot;hello&quot;, 123) ;; 
+
+type ('a, 'b) either = Left of 'a | Right of 'b ;;
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="primitive-types"><a class="header" href="#primitive-types">Primitive Types</a></h1>
+<h4 id="rescript-4"><a class="header" href="#rescript-4">Rescript</a></h4>
+<ul>
+<li>unit</li>
+<li>bool</li>
+<li>int</li>
+<li>float</li>
+<li>string</li>
+<li>char</li>
+</ul>
+<h4 id="javascript"><a class="header" href="#javascript">JavaScript</a></h4>
+<ul>
+<li>undefined</li>
+<li>null</li>
+<li>boolean</li>
+<li>number</li>
+<li>bigint</li>
+<li>string</li>
+<li>symbol</li>
+</ul>
+<h4 id="ocaml-3"><a class="header" href="#ocaml-3">OCaml</a></h4>
+<ul>
+<li>unit</li>
+<li>bool</li>
+<li>int</li>
+<li>float</li>
+<li>string</li>
+<li>char</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="unit"><a class="header" href="#unit">Unit</a></h1>
+<h4 id="rescript-5"><a class="header" href="#rescript-5">Rescript</a></h4>
+<ul>
+<li>has a single value <code>()</code></li>
+<li>compiles to JS's <code>undefined</code></li>
+</ul>
+<pre><code class="language-reasonml">let x = ()
+Js.log(x) // undefined in js
+</code></pre>
+<h4 id="ocaml-4"><a class="header" href="#ocaml-4">OCaml</a></h4>
+<ul>
+<li><a href="https://v2.ocaml.org/api/Unit.html">Unit Module</a></li>
+</ul>
+<pre><code class="language-Ocaml">let x = () ;;
+Unit.equal x x ;; (* true *)
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="string"><a class="header" href="#string">String</a></h1>
+<h4 id="rescript-6"><a class="header" href="#rescript-6">Rescript</a></h4>
+<ul>
+<li><a href="https://rescript-lang.org/docs/manual/latest/api/js/string-2">Js.String2 Doc</a></li>
+<li><a href="https://github.com/rescript-lang/rescript-compiler/blob/master/jscomp/others/js_string2.ml">Js.String2 Source</a></li>
+</ul>
+<pre><code class="language-reasonml">let name = &quot;Ryan&quot;
+
+/* string concatenation */
+let name = name ++ &quot; Zan&quot;
+
+/* string interpolation */
+let greeting1 = `Hello ${name}`
+let greeting2 = j`Hola $name`
+
+/* multiline string */
+let greeting3 = `hello
+${name},
+sup?`
+
+/* Js.String2 module to deal with String type */
+let replaced = &quot;testing&quot;.Js.String2.replate(&quot;t&quot;, &quot;R&quot;)
+let len = Js.String2.length(&quot;abc&quot;)
+let sub = &quot;hello world&quot;-&gt;Js.String2.substring(~from=0, ~to_=5) // hello
+</code></pre>
+<h4 id="ocaml-5"><a class="header" href="#ocaml-5">OCaml</a></h4>
+<pre><code class="language-OCaml">let name = &quot;Ryan&quot; ;;
+
+(* string concatenation *)
+let name = name ^ &quot; Zan&quot; ;;
+
+(* string interpolation *)
+let greeting = Printf.sprintf &quot;hello, %s&quot; name ;;
+
+(* multiline string *)
+let greeting3 = {|hello
+Baloo
+sup?|} ;;
+(* same as *)
+let greeting3 = &quot;hello\nBaloo\nsup?&quot;
+
+(* wrapped long line *)
+let wrapline = &quot;hello \
+Baloo \
+sup?&quot; ;;
+(* same as *)
+let wrapline = &quot;hello Baloo sup?&quot;
+
+(* String, StringLabels module to deal with string *)
+String.sub &quot;Hello World&quot; 0 5 (* hello *)
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="char"><a class="header" href="#char">Char</a></h1>
+<h4 id="rescript-7"><a class="header" href="#rescript-7">Rescript</a></h4>
+<ul>
+<li>Char doesn't support Unicode or UTF-8 and is therefore not recommended.</li>
+</ul>
+<pre><code class="language-reasonml">let ch = 'a'
+
+// char to string
+Char.escaped(ch)
+</code></pre>
+<h4 id="ocaml-6"><a class="header" href="#ocaml-6">OCaml</a></h4>
+<pre><code class="language-OCaml">let ch = 'a' ;;
+(* convert char to string *)
+let s = String.make 1 ch ;;
+let s = Char.escaped ch ;;
+let s = Printf.sprintf &quot;%c&quot; ch ;;
+(* convert string to char *)
+let ch = String.get &quot;a&quot; 0 ;;
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="boolean"><a class="header" href="#boolean">Boolean</a></h1>
+<h4 id="rescript-8"><a class="header" href="#rescript-8">Rescript</a></h4>
+<pre><code class="language-reasonml">true, false /* boolean value */
+&amp;&amp; || !     /* logical and, or, not */
+&lt;= &gt;= &lt; &gt;   /* structural comparison */
+==, !=      /* structural equality/inequality */
+(1,1) == (1,1)  /* true */
+(1,1) != (1,1) /* false */
+
+===, !==    /* referential equality/inequality */
+(1,1) === (1,1)  /* false */
+(1,1) !== (1,1) /* true */
+</code></pre>
+<h4 id="ocaml-7"><a class="header" href="#ocaml-7">OCaml</a></h4>
+<pre><code class="language-OCaml">true, false   (* boolean value *)
+&amp;&amp; || not     (* logical and, or, not *)
+&lt;= &gt;= &lt; &gt;     (* structural comparison *)
+
+=, &lt;&gt;         (* structural equality/inequality *)
+(1,1) = (1,1)  (* true *)
+(1,1) &lt;&gt; (1,1) (* false *)
+
+==, !=    (* referential equality/inequality *)
+(1,1) == (1,1)  (* false *)
+(1,1) != (1,1)  (* true *)
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="integer"><a class="header" href="#integer">Integer</a></h1>
+<h4 id="rescript-9"><a class="header" href="#rescript-9">Rescript</a></h4>
+<ul>
+<li>32-bits, truncated when necessary</li>
+<li>Much smaller range than JS numbers. Use float if bigger number needed.</li>
+<li><a href="https://rescript-lang.org/docs/manual/latest/api/js/int">Js.Int Doc</a></li>
+<li><a href="https://github.com/rescript-lang/rescript-compiler/blob/master/jscomp/others/js_int.ml">Js.Int Source</a></li>
+</ul>
+<pre><code class="language-reasonml">let n = 1_234_456
+let m = n + n * n - n / n
+let x = mod(10, 3) // remainder
+
+Js.log(Js.Int.max) //  2147483647
+Js.log(Js.Int.min) // -2147483648
+Js.log(Js.Int.toFloat(10))
+</code></pre>
+<h4 id="ocaml-8"><a class="header" href="#ocaml-8">OCaml</a></h4>
+<ul>
+<li>31-bits or 63-bits depends on platform. <a href="https://ocaml-tutorial.org/performance_and_profiling">Why?</a></li>
+<li><a href="https://v2.ocaml.org/api/Int.html">Int module</a></li>
+</ul>
+<pre><code class="language-OCaml">let n = 1_234_456 ;;
+let m = n + n * n - n / n ;;
+let x = 10 mod 3 ;; 
+let x = (mod) 10 3 ;;
+
+Int.add 1 1 (* 2 *)
+Int.of_float 10.2 (* 10 *)
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="float"><a class="header" href="#float">Float</a></h1>
+<h4 id="rescript-10"><a class="header" href="#rescript-10">Rescript</a></h4>
+<ul>
+<li><a href="https://rescript-lang.org/docs/manual/latest/api/js/float">Js.Float Doc</a></li>
+<li><a href="https://github.com/rescript-lang/rescript-compiler/blob/master/jscomp/others/js_float.ml">Js.Float Source</a></li>
+</ul>
+<pre><code class="language-reasonml">let n = 1_23.45_56
+let m = n +. n *. n -. n /. n
+Js.log(m) // 15363.74077136
+
+
+Js.Float.fromString(&quot;123.23&quot;)-&gt;Js.log // 123.23
+</code></pre>
+<h4 id="ocaml-9"><a class="header" href="#ocaml-9">OCaml</a></h4>
+<ul>
+<li><a href="https://v2.ocaml.org/api/Float.html">Float Module</a></li>
+</ul>
+<pre><code class="language-OCaml">let n = 1_23.45_56 ;;
+let m = n +. n *. n -. n /. n ;; (* 15363.74077136 *)
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="regular-expression"><a class="header" href="#regular-expression">Regular Expression</a></h1>
+<h4 id="rescript-11"><a class="header" href="#rescript-11">Rescript</a></h4>
+<ul>
+<li>ReScript regular expressions compile cleanly to their JavaScript counterpart:</li>
+<li><a href="https://rescript-lang.org/docs/manual/latest/api/js/re">Js.Re Doc</a></li>
+<li><a href="https://github.com/rescript-lang/rescript-compiler/blob/master/jscomp/others/js_re.ml">Js.Re Source</a></li>
+</ul>
+<pre><code class="language-reasonml">let re = %re(&quot;/^ryan.*myat$/i&quot;) // starts with ryan .. ends with myat
+Js.log(Js.Re.test_(re, &quot;Ryanzanthumyat&quot;)) // true
+</code></pre>
+<h4 id="ocaml-10"><a class="header" href="#ocaml-10">OCaml</a></h4>
+<pre><code class="language-ocaml">(* using Re package *)
+let re = Re.Perl.re {|^ryan.*myat$|} |&gt; Re.no_case |&gt; Re.compile ;;
+Re.execp re &quot;RyanzanthumyaT&quot; (* true *)
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="conversion"><a class="header" href="#conversion">Conversion</a></h1>
+<h5 id="rescript-12"><a class="header" href="#rescript-12">Rescript</a></h5>
+<pre><code class="language-js">open Js
+
+// string to bool
+bool_of_string(&quot;true&quot;)-&gt;log // true
+bool_of_string(&quot;false&quot;)-&gt;log // false
+bool_of_string_opt(&quot;maybe&quot;)-&gt;log // undefined
+// error
+// bool_of_string(&quot;maybe&quot;)-&gt;log
+
+string_of_bool(true)-&gt;log // true
+string_of_bool(false)-&gt;log // false
+// string to int
+int_of_string(&quot;100&quot;)-&gt;log // 100
+int_of_string_opt(&quot;abc100&quot;)-&gt;log // undefined
+
+int_of_string(&quot;100_000&quot;)-&gt;log // 100000
+int_of_string(&quot;010&quot;)-&gt;log // 10
+
+// hex literal
+int_of_string(&quot;0xFF_FFF&quot;)-&gt;log // 1048575
+int_of_string(&quot;0xFFFF_FFFF&quot;)-&gt;log // -1 - overflow
+
+// binary literal
+int_of_string(&quot;0b100&quot;)-&gt;log // 4
+int_of_string(&quot;0b100_000&quot;)-&gt;log // 32
+
+// octal literal
+int_of_string(&quot;0o100&quot;)-&gt;log // 64
+int_of_string(&quot;0o100_000&quot;)-&gt;log // 32768
+
+// error
+// int_of_string(&quot; 111&quot;)-&gt;log // error
+// int_of_string(&quot;111 &quot;)-&gt;log // error
+
+// int to string
+1_000-&gt;Int.toString-&gt;log // 1000
+0xff_fff-&gt;Int.toString-&gt;log // 104875
+0b1_100-&gt;Int.toString-&gt;log // 12
+0o1_100-&gt;Int.toString-&gt;log // 576
+
+// string to float
+float_of_string(&quot;1.1&quot;)-&gt;log // 1.1
+float_of_string(&quot;  10. &quot;)-&gt;log // 10
+float_of_string(&quot;1.1e+4&quot;)-&gt;log // 11000
+float_of_string_opt(&quot;a10.&quot;)-&gt;log // undefined
+float_of_string(&quot; 1.11 &quot;)-&gt;log // 1.11
+
+// float to string
+1.1-&gt;Float.toString-&gt;log // 1.1
+
+// int to float
+(float_of_int(10) +. 10.)-&gt;log // 20
+10-&gt;Int.toFloat-&gt;log // 10
+
+// float to int
+int_of_float(1.111)-&gt;log //
+
+// char to string
+Char.escaped('a')-&gt;log
+
+// char to int
+Char.code('a')-&gt;log
+// int to char
+(Char.chr(65) == 'A')-&gt;log
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="if-else"><a class="header" href="#if-else">if else</a></h1>
+<h4 id="rescript-13"><a class="header" href="#rescript-13">Rescript</a></h4>
+<p>if statements are expression.</p>
+<pre><code class="language-reasonml">let max = (x, y) =&gt;
+  if x &gt; y {
+    x
+  } else {
+    y
+  }
+
+let f = (x, y) =&gt;
+  x + if y &gt; 0 {
+    y
+  } else {
+    0
+  }
+f(11, 0)-&gt;Js.log // 11
+
+let rec range = (x, y) =&gt; {
+  if x &gt; y {
+    list{}
+  } else {
+    list{x, ...range(x + 1, y)}
+  }
+}
+range(1, 10)-&gt;Js.log
+
+// unit aka () is return for implicit else branch
+let a = if true {
+  ()
+}
+</code></pre>
+<pre><code class="language-reasonml">/* error here cause if branch returns integer whereas else branch returns unit
+let a = if true {
+  10
+}
+*/
+</code></pre>
+<pre><code class="language-reasonml">// ternary operator
+let abs = (x: float) =&gt; x &gt;= 0. ? x : x *. -1.
+abs(-99.9)-&gt;Js.log
+</code></pre>
+<h4 id="ocaml-11"><a class="header" href="#ocaml-11">OCaml</a></h4>
+<p>OCaml doesn't have ternary operator.</p>
+<pre><code class="language-OCaml">let max x y = if x &gt; y then x else y ;;
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="loops"><a class="header" href="#loops">loops</a></h1>
+<h4 id="rescript-14"><a class="header" href="#rescript-14">Rescript</a></h4>
+<pre><code class="language-reasonml">for i in 1 to 10 {
+  i-&gt;Js.log
+}
+
+for i in 10 downto 1 {
+  i-&gt;Js.log
+}
+
+let i = ref(1)
+while i.contents &lt;= 10 {
+  i-&gt;Js.log
+  incr(i)
+}
+
+/* breaking loop */
+exception Break_the_loop
+let break_loop = () =&gt; {
+  try {
+    for i in 1 to 100 {
+      if i &gt; 10 {
+        raise(Break_the_loop)
+      }
+      i-&gt;Js.log
+    }
+  } catch {
+  | Break_the_loop =&gt; ()
+  }
+}
+break_loop()
+
+let break = ref(false)
+let i = ref(10)
+while !break.contents {
+  if i.contents &lt;= 20 {
+    i-&gt;Js.log
+    incr(i)
+  } else {
+    break := true
+  }
+}
+
+</code></pre>
+<h4 id="ocaml-12"><a class="header" href="#ocaml-12">OCaml</a></h4>
+<pre><code class="language-ocaml">for i = 1 to 10 do print_int i done ;;
+
+for i = 10 downto 1 do print_int i done ;;
+
+let i = ref 1 in
+while !i &lt;= 10 do 
+  print_int !i;
+  incr i
+done ;;
+
+exception Break_the_loop
+let break_loop = 
+try 
+ for i = 1 to 100 do
+   if i &lt;= 10 then print_int i
+   else raise Break_the_loop
+ done;
+ with Break_the_loop -&gt; () ;;
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="function"><a class="header" href="#function">Function</a></h1>
+<h4 id="basic"><a class="header" href="#basic">Basic</a></h4>
+<pre><code class="language-reasonml">open Js
+let add = (a, b) =&gt; a + b
+log(add(1, 2))
+
+let add_float: (float, float) =&gt; float = (x, y) =&gt; x +. y
+log(add_float(1., 2.))
+</code></pre>
+<h4 id="recursive-function"><a class="header" href="#recursive-function">Recursive function</a></h4>
+<pre><code class="language-reasonml">open Js
+let rec neverTerminate = () =&gt; neverTerminate()
+
+let fold = (l, acc, f) =&gt; {
+  let rec loop = (l, acc) =&gt; {
+    switch l {
+    | list{} =&gt; acc
+    | list{h, ...t} =&gt; loop(t, f(acc, h))
+    }
+  }
+  loop(l, acc)
+}
+fold(list{1, 2, 3, 4, 5, 6, 7, 8, 9, 10}, 0, add)-&gt;log // 55
+</code></pre>
+<h4 id="mutually-recursive-function"><a class="header" href="#mutually-recursive-function">Mutually recursive function</a></h4>
+<pre><code class="language-reasonml">open Js
+let rec isOdd = n =&gt;
+  if n == 0 {
+    false
+  } else {
+    isEven(n - 1)
+  }
+and isEven = n =&gt;
+  if n == 0 {
+    true
+  } else {
+    isOdd(n - 1)
+  }
+isOdd(10)-&gt;log
+isOdd(11)-&gt;log
+</code></pre>
+<h4 id="curried-vs-uncuried-function"><a class="header" href="#curried-vs-uncuried-function">Curried vs uncuried function</a></h4>
+<pre><code class="language-reasonml">// Functions in Rescript are curried by default.
+open Js
+let mul = (x, y) =&gt; x * y
+let curried_mul = mul(10)
+curried_mul(10)-&gt;log
+
+// uncurried
+let mulU = (. x, y) =&gt; x * y
+mulU(. 10, 10)-&gt;log
+
+// with type annotation
+let addU: (. float, float) =&gt; float = (. x, y) =&gt; x +. y
+addU(. 1., 2.)-&gt;log
+
+// with placeholders
+let add = (x, y, z) =&gt; x + y + z
+let addX = add(_, 2, 3)
+let addY = add(1, _, 3)
+let addZ = add(1, 2, _)
+addX(1)-&gt;Js.log // 6
+addY(2)-&gt;Js.log // 6
+addZ(3)-&gt;Js.log // 6
+10-&gt;addX-&gt;Js.log // 15
+10-&gt;addY-&gt;Js.log // 14
+10-&gt;addZ-&gt;Js.log // 13
+
+let addXY = add(_, _, 3)
+addXY(2)-&gt;Js.log // 7
+10-&gt;addXY-&gt;Js.log // 23
+
+let addXYZ = add(_, _, _)
+addXYZ(10)-&gt;Js.log // 30
+100-&gt;addXYZ-&gt;Js.log // 300
+</code></pre>
+<h4 id="ignore-function-to-ignore-the-return-value-of-a-function"><a class="header" href="#ignore-function-to-ignore-the-return-value-of-a-function">ignore() function to ignore the return value of a function</a></h4>
+<pre><code class="language-reasonml">mySideEffect()-&gt;Promise.catch(handleError)-&gt;ignore
+Js.Global.setTimeout(myFunc, 1000)-&gt;ignore
+</code></pre>
+<h4 id="label-arguments"><a class="header" href="#label-arguments">Label arguments</a></h4>
+<pre><code class="language-reasonml">open Js
+let range = (~start, ~end) =&gt; Belt.Array.makeBy(end - start, x =&gt; x + start)
+range(~start=0, ~end=10)-&gt;log
+
+/* alias */
+let range = (~start as s, ~end as e) =&gt; Belt.Array.makeBy(e - s, x =&gt; x + s)
+range(~start=0, ~end=10)-&gt;log
+</code></pre>
+<h4 id="labels-and-type-inference"><a class="header" href="#labels-and-type-inference">Labels and type inference</a></h4>
+<p>labeled and optional arguments cannot be inferred completely </p>
+<pre><code class="language-reasonml">open Js
+let bump = (~step=?, x) =&gt;
+  switch step {
+  | Some(s) =&gt; x + s
+  | None =&gt; x
+  }
+
+/* 
+this will get compiler error, bump's signature should be provided
+
+let bumpIt = (bump, x) =&gt; bump(~step=2, x)
+bumpIt(bump, 10)-&gt;log
+*/
+
+let bumpIt = (bump: (~step: int=?, int) =&gt; int, x) =&gt; bump(~step=2, x)
+bumpIt(bump, 10)-&gt;log
+
+
+/* paramaters order */
+let add = (~x, ~y, ()) =&gt; x + y
+let f = g =&gt; g(~x=1, ~y=2, ())
+f(add)-&gt;log // 3
+
+// this won't work, paramaters should be applied in the same order as declaration site
+let f = g =&gt; g(~y=1, ~x=2, ())
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="optional-argumentsrescript"><a class="header" href="#optional-argumentsrescript">Optional Arguments(Rescript)</a></h1>
+<ul>
+<li>labeled arguments can be made optional</li>
+<li>optional arguments can be omitted when calling the function</li>
+<li>if omitted, the optional argument is set <code>None</code></li>
+<li>if provided, the optional argument will be wrapped with a <code>Some</code></li>
+<li>whenever you have an optional argument, you need to ensure that there's also at least one positional argument (aka non-labeled, non-optional argument) after it. If there's none, provide a dummy unit (aka ()) argument.</li>
+</ul>
+<h4 id="optional-arguments"><a class="header" href="#optional-arguments">Optional arguments</a></h4>
+<pre><code class="language-reasonml">open Js
+let concat = (~sep=?, x, y) =&gt; {
+  let sep = switch sep {
+    | Some(s) =&gt; s
+    | None =&gt; &quot;&quot;
+  }
+  x ++ sep ++ y
+}
+concat(~sep=&quot;,&quot;, &quot;hello&quot;, &quot;world&quot;)-&gt;log // hello,world
+concat(&quot;hello&quot;, &quot;world&quot;, ~sep=&quot;,&quot;)-&gt;log // hello,world
+</code></pre>
+<h4 id="need-to-add--if-optional-argument-is-the-last"><a class="header" href="#need-to-add--if-optional-argument-is-the-last">Need to add &quot;()&quot; if optional argument is the last</a></h4>
+<pre><code class="language-reasonml">open Js
+let concat = (x, y, ~sep=?, ()) =&gt; {
+  let sep = switch sep {
+  | Some(s) =&gt; s
+  | None =&gt; &quot;&quot;
+  }
+  x ++ sep ++ y
+}
+concat(~sep=&quot;:&quot;, &quot;hello&quot;, &quot;world&quot;, ())-&gt;log // hello:world
+concat(&quot;hello&quot;, &quot;world&quot;, ~sep=&quot;:&quot;, ())-&gt;log // hello:world
+</code></pre>
+<h4 id="with-function-type-signature-and-paramater-type-annotation"><a class="header" href="#with-function-type-signature-and-paramater-type-annotation">With function type signature and paramater type annotation</a></h4>
+<pre><code class="language-reasonml">open Js
+let concat: (string, string, ~sep: string=?, unit) =&gt; string = (
+  x,
+  y,
+  ~sep: option&lt;string&gt;=?,
+  (),
+) =&gt; {
+  let sep = switch sep {
+  | Some(s) =&gt; s
+  | None =&gt; &quot;&quot;
+  }
+  x ++ sep ++ y
+}
+concat(&quot;hello&quot;, &quot;world&quot;, ~sep=&quot;-&quot;, ())-&gt;log // hello-world
+</code></pre>
+<h4 id="passing-value-of-option-type-to-optional-paramater"><a class="header" href="#passing-value-of-option-type-to-optional-paramater">Passing value of option type to optional paramater</a></h4>
+<pre><code class="language-reasonml">open Js
+let separator = Some(&quot;/&quot;)
+concat(&quot;hello&quot;, &quot;world&quot;, ~sep=?separator, ())-&gt;log // hello/world
+let sep = None
+concat(&quot;hello&quot;, &quot;world&quot;, ~sep?, ())-&gt;log // helloworld
+</code></pre>
+<h4 id="optioanl-paramater-with-default-value"><a class="header" href="#optioanl-paramater-with-default-value">Optioanl paramater with default value</a></h4>
+<p>if default value is provided, the optional argument is not wrapped in an option type.</p>
+<pre><code class="language-reasonml">open Js
+let concat = (~sep=&quot;, &quot;, x, y) =&gt; x ++ sep ++ y
+concat(&quot;hello&quot;, &quot;world&quot;)-&gt;log // hello, world
+concat(&quot;hello&quot;, &quot;world&quot;, ~sep=&quot;&lt;&gt;&quot;)-&gt;log // hello&lt;&gt;world
+</code></pre>
+<h4 id="partial-application"><a class="header" href="#partial-application">Partial Application</a></h4>
+<pre><code class="language-reasonml">open Js
+let concat = (x, y, ~sep=?, ()) =&gt; {
+  let sep = switch sep {
+  | Some(s) =&gt; s
+  | None =&gt; &quot;&quot;
+  }
+  x ++ sep ++ y
+}
+
+let concatP = concat(&quot;Hello&quot;)
+concatP(&quot;World&quot;, ~sep=&quot;~&quot;, ())-&gt;log
+let concatP = concat(&quot;Hello&quot;, &quot;World&quot;)
+concatP(~sep=&quot;@&quot;, ())-&gt;log
+let concatP = concatP(~sep=&quot;/\\&quot;)
+concatP()-&gt;log
+let concatP = concat(~sep=&quot;&amp;&quot;)
+concatP(&quot;Hello&quot;, &quot;World&quot;, ())-&gt;log
+
+let test: (
+  ~x: int=?,
+  ~y: int=?,
+  unit,
+  ~z: int=?,
+  unit,
+) =&gt; (option&lt;int&gt;, option&lt;int&gt;, option&lt;int&gt;) = (~x=?, ~y=?, (), ~z=?, ()) =&gt; (x, y, z)
+test(~z=3)()()-&gt;log // [ undefined, undefined, 3]
+test()()-&gt;log // [ undefined, undefined, undefined ]
+test(~x=1, ~y=2, (), ())-&gt;log // [ 1, 2, undefined ]
+test(~y=2, (), ~z=3, ())-&gt;log // [ undefined, 2, 3 ]
+test((), (), ~y=2, ~x=1, ~z=3)-&gt;log // [ 1, 2, 3 ]
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="optional-argumentsocaml"><a class="header" href="#optional-argumentsocaml">Optional Arguments(OCaml)</a></h1>
+<p><a href="https://sketch.sh/s/CPiIIfDvGRm4evCGM73TbH/">Run the following code at sketch.sh</a></p>
+<h4 id="optional-arguments-1"><a class="header" href="#optional-arguments-1">Optional arguments</a></h4>
+<pre><code class="language-ocaml">let concat ?sep x y =
+  let sep = match sep with None -&gt; &quot;&quot; | Some s -&gt; s in
+  x ^ sep ^ y ;;
+concat ~sep:&quot;,&quot; &quot;Hello&quot; &quot;World&quot;;;
+</code></pre>
+<h4 id="need-to-add--if-optional-argument-is-the-last-1"><a class="header" href="#need-to-add--if-optional-argument-is-the-last-1">Need to add &quot;()&quot; if optional argument is the last</a></h4>
+<pre><code class="language-ocaml">let concat x y ?sep () =
+  let sep = match sep with None -&gt; &quot;&quot; | Some s -&gt; s in
+  x ^ sep ^ y ;;
+concat ~sep:&quot;,&quot; &quot;hello&quot; &quot;world&quot; () ;;
+</code></pre>
+<h4 id="with-function-type-signature-and-paramater-type-annotation-1"><a class="header" href="#with-function-type-signature-and-paramater-type-annotation-1">With function type signature and paramater type annotation</a></h4>
+<pre><code class="language-ocaml">(* val concat: string -&gt; string -&gt; ?sep:string -&gt; unit -&gt; string *)
+let concat (x: string) (y: string) ?(sep:string option) () =
+  let sep = match sep with None -&gt; &quot;&quot; | Some s -&gt; s in
+    x ^ sep ^ y ;;
+concat ~sep:&quot;,&quot; &quot;hello&quot; &quot;world&quot; () ;;
+</code></pre>
+<h4 id="passing-value-of-option-type-to-optional-paramater-1"><a class="header" href="#passing-value-of-option-type-to-optional-paramater-1">Passing value of option type to optional paramater</a></h4>
+<pre><code class="language-ocaml">let concat ?sep x y =
+  let sep = match sep with None -&gt; &quot;&quot; | Some s -&gt; s in
+  x ^ sep ^ y ;;
+let separator = Some(&quot;/&quot;) in
+concat ?sep:separator &quot;hello&quot; &quot;world&quot; ;;
+let sep = None in
+concat ?sep &quot;hello&quot; &quot;world&quot; ;;
+</code></pre>
+<h4 id="optional-paramater-with-default-value"><a class="header" href="#optional-paramater-with-default-value">Optional paramater with default value</a></h4>
+<pre><code class="language-ocaml">let bump ?(step=1) x = x + step ;;  
+bump 10;;
+</code></pre>
+<h4 id="partial-application-1"><a class="header" href="#partial-application-1">Partial application</a></h4>
+<pre><code class="language-ocaml">let test ?x ?y () ?z () = (x, y, z) ;;
+test () () ~x:1 ~y:2 ~z:3 ;;
+test ()() ;;
+test ~x:1 ~y:2 () () ;;
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="rescript-function-cheatsheet"><a class="header" href="#rescript-function-cheatsheet">Rescript Function Cheatsheet</a></h1>
+<h4 id="anonymous-function"><a class="header" href="#anonymous-function">Anonymous function</a></h4>
+<pre><code class="language-reasonml">(x, y) =&gt; x + y 
+((x, y) =&gt; x + y)(1, 2)-&gt;Js.log // 3
+
+/* with type annotation */
+(x: int, y: int): int =&gt; x + y 
+((x: int, y: int): int =&gt; x + y)(1, 2)-&gt;Js.log // 3
+</code></pre>
+<h4 id="bind-a-function-to-a-name"><a class="header" href="#bind-a-function-to-a-name">Bind a function to a name</a></h4>
+<pre><code class="language-JavaScript">let add = (x, y) =&gt; x + y
+add(1, 2)-&gt;Js.log
+
+/* with function signature */
+let add: (int, int) =&gt; int = (x, y) =&gt; x + y
+add(1, 2)-&gt;Js.log
+
+/* with paramater type annotation */
+let add = (x: int, y: int): int =&gt; x + y
+add(1, 2)-&gt;Js.log 
+
+/* with both function signature and paramater type annotation */
+let add: (int, int) =&gt; int = (x: int, y: int): int =&gt; x + y
+add(1, 2)-&gt;Js.log
+</code></pre>
+<h4 id="labeled-arguments"><a class="header" href="#labeled-arguments">Labeled Arguments</a></h4>
+<pre><code class="language-JavaScript">let add = (~first, ~second) =&gt; first + second
+add(~first=2, ~second=2)-&gt;Js.log
+add(~first=(2: int), ~second=(2: int))-&gt;Js.log
+
+/* with punning */
+let first = 100
+let second = 200
+add(~first, ~second)-&gt;Js.log
+add(~first: int, ~second: int)-&gt;Js.log
+
+/* with function signature */
+let add: (~first: int, ~second: int) =&gt; int = (~first, ~second) =&gt; first + second
+add(~first=2, ~second=2)-&gt;Js.log
+
+/* with paramater type annotation */
+let add = (~first: int, ~second: int): int =&gt; first + second
+add(~first=2, ~second=2)-&gt;Js.log
+
+/* with both function signature and paramater type annotation */
+let add: (~first: int, ~second: int) =&gt; int = (~first: int, ~second: int): int =&gt; first + second
+add(~first=2, ~second=2)-&gt;Js.log
+</code></pre>
+<h4 id="labeled-arguments-with-alias"><a class="header" href="#labeled-arguments-with-alias">Labeled Arguments with alias</a></h4>
+<pre><code class="language-JavaScript">let add = (~first as x, ~second as y) =&gt; x + y
+add(~first=2, ~second=2)-&gt;Js.log
+
+/* with function signature */
+let add: (~first: int, ~second: int) =&gt; int = (~first as x, ~second as y) =&gt; x + y
+add(~first=2, ~second=2)-&gt;Js.log
+
+/* with paramater type annotation */
+let add = (~first as x: int, ~second as y: int): int =&gt; x + y
+add(~first=2, ~second=2)-&gt;Js.log
+
+/* with both function signature and paramater type annotation */
+let add: (~first: int, ~second: int) =&gt; int = (~first as x: int, ~second as y: int): int =&gt; x + y
+add(~first=2, ~second=2)-&gt;Js.log
+</code></pre>
+<h4 id="labeled-arguments-with-default-value"><a class="header" href="#labeled-arguments-with-default-value">labeled arguments with default value</a></h4>
+<pre><code class="language-JavaScript">let add = (~first=111, ~second=222, ()) =&gt; first + second
+add()-&gt;Js.log
+let add = (~first as x=11, ~second as y=22, ()) =&gt; x + y
+add()-&gt;Js.log
+</code></pre>
+<h4 id="optional-arguments-2"><a class="header" href="#optional-arguments-2">Optional arguments</a></h4>
+<pre><code class="language-JavaScript">let bump = (~step=?, x) =&gt;
+  switch step {
+  | Some(s) =&gt; x + s
+  | None =&gt; x
+  }
+bump(~step=10, 1)-&gt;Js.log
+bump(~step=(10: int), 1)-&gt;Js.log
+bump(~step=?Some(111), 1)-&gt;Js.log
+bump(~step=?(Some(111): option&lt;int&gt;), 1)-&gt;Js.log
+bump(~step=?None, 1)-&gt;Js.log
+
+/* with signature and type annotation */
+let bump: (~step: int=?, int) =&gt; int = (~step: option&lt;int&gt;=?, x: int): int =&gt;
+  switch step {
+  | Some(s) =&gt; x + s
+  | None =&gt; x
+  }
+bump(~step=10, 1)-&gt;Js.log
+bump(~step=(10: int), 1)-&gt;Js.log
+bump(~step=?Some(111), 1)-&gt;Js.log
+bump(~step=?(Some(111): option&lt;int&gt;), 1)-&gt;Js.log
+bump(~step=?None, 1)-&gt;Js.log
+
+/* with alias */
+let bump = (~step as s=?, x) =&gt;
+  switch s {
+  | Some(i) =&gt; x + i
+  | None =&gt; x
+  }
+bump(~step=11, 1)-&gt;Js.log
+bump(~step=(11: int), 1)-&gt;Js.log
+
+/* with punning */
+let step = 1111
+bump(~step, 1)-&gt;Js.log
+let step = Some(1111)
+bump(~step?, 1)-&gt;Js.log
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="array"><a class="header" href="#array">Array</a></h1>
+<ul>
+<li>same as JavaScript Array</li>
+<li>ramdom access</li>
+<li>dynamically resized, updated</li>
+</ul>
+<h3 id="rescript-15"><a class="header" href="#rescript-15">Rescript</a></h3>
+<pre><code class="language-reasonml">/*
+need to open Belt to use subscript operator
+Array subscript operator ([]) is just a sugar over Belt.Array.get and Belt.Array.set
+get: (array&lt;'a&gt;, int) =&gt; option&lt;'a&gt;
+set: (array&lt;'a&gt;, int, 'a) =&gt; bool
+*/
+open Belt
+
+let arr = [&quot;a&quot;, &quot;b&quot;]
+let a : option&lt;string&gt; = arr[0]
+(arr[1] = &quot;z&quot;) -&gt; ignore
+arr[1]-&gt;Js.log
+</code></pre>
+<h4 id="shellshort"><a class="header" href="#shellshort">shellshort</a></h4>
+<pre><code class="language-reasonml">let shellShort = (arr, n) =&gt; {
+    let interval = ref (n / 2)
+    while interval.contents &gt; 0 {
+        for i in interval.contents to n - 1 {
+            let temp = Array.getExn(arr, i)
+            let j = ref(i)
+            while j.contents &gt;= interval.contents &amp;&amp; Array.getExn(arr,j.contents - interval.contents) &gt; temp {
+                Array.setExn (arr, j.contents, Array.getExn (arr,j.contents - interval.contents))
+                j := j.contents - interval.contents 
+            }
+            Array.setExn(arr, j.contents, temp)
+        }
+        interval := interval.contents / 2 
+    }
+}
+
+let nums = [ 1, 2, 10, 11, 23, 45, 93, 20, 30, 93]
+shellShort(nums, Array.length( nums))
+Array.forEach(nums, Js.log)
+</code></pre>
+<pre><code class="language-reasonml">/* Belt.Array.blit */
+let arr1 = [1, 2, 3, 4, 5]
+let arr2 = [10, 20, 30, 40, 50]
+Belt.Array.blit(~src=arr1, ~srcOffset=1, ~dst=arr2, ~dstOffset=0, ~len = 3)
+arr2-&gt;Js.log // [2, 3, 4, 40, 50]
+</code></pre>
+<h3 id="ocaml-13"><a class="header" href="#ocaml-13">OCaml</a></h3>
+<pre><code class="language-OCaml">let arr = [| 1; 2; 3|];;
+print_int arr.(0) ;;
+arr.(0) &lt;- 10 ;;
+arr |&gt; Array.iter print_int ;;
+
+let shell_sort arr n =
+  let interval = ref (n / 2) in
+  while !interval &gt; 0 do
+    for i = !interval to n - 1 do
+     let temp = arr.(i) in
+     let j = ref i in
+     while !j &gt;= !interval &amp;&amp; arr.(!j - !interval) &gt; temp do
+       arr.(!j) &lt;- arr.(!j - !interval);
+       j := !j - !interval;
+     done;
+     arr.(!j) &lt;- temp;
+    done;
+    interval := !interval / 2;
+  done
+;; 
+let nums = [| 1; 2; 34; 11; 34; 29; 93; 293; 2020; 22; 43; 2; 0; 11|];;
+shell_sort nums (Array.length nums);;
+nums |&gt; Array.iter (Printf.printf &quot;%d &quot;) ;;
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="list"><a class="header" href="#list">List</a></h1>
+<h3 id="rescript-16"><a class="header" href="#rescript-16">Rescript</a></h3>
+<ul>
+<li>
+<p>immutable</p>
+</li>
+<li>
+<p>fast at prepending items</p>
+</li>
+<li>
+<p>fast at getting the head</p>
+</li>
+<li>
+<p>slow at everything else</p>
+</li>
+<li>
+<p><strong>Use Array for</strong></p>
+<ul>
+<li>accessing random element</li>
+<li>better interop with JavaScript</li>
+<li>better memory usage and performance</li>
+</ul>
+</li>
+</ul>
+<pre><code class="language-reasonml">let numList = list{1, 2, 3}
+let numList2 = list{0, ...numList}
+
+/* multiple spread is not allowed */
+let numList2 = list{0, numList, ...numList2}
+
+let foldLeft = (lst, acc, f) =&gt; {
+  let rec loop = (l, acc) =&gt; {
+    switch l {
+    | list{} =&gt; acc
+    | list{h, ...t} =&gt; loop(t, f(acc, h))
+    }
+  }
+  loop(lst, acc)
+}
+
+let nums = Js.List.init(10, (. x) =&gt; x + 1)
+foldLeft(nums, 0, (x, y) =&gt; x + y)-&gt;Js.log
+
+let letters = Js.List.init(26, (. x) =&gt; String.make(1, Char.chr(x + 65)))
+foldLeft(letters, &quot;&quot;, (x, y) =&gt; x ++ &quot;,&quot; ++ y)-&gt;Js.log
+
+let foldRight = (lst, acc, f) =&gt; {
+  let rec loop = (l, acc) =&gt; {
+    switch l {
+    | list{} =&gt; acc
+    | list{h, ...t} =&gt; f(h, loop(t, acc))
+    }
+  }
+  loop(lst, acc)
+}
+foldRight(letters, &quot;&quot;, (x, y) =&gt; x ++ &quot;,&quot; ++ y)-&gt;Js.log
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="tuple"><a class="header" href="#tuple">Tuple</a></h1>
+<h4 id="rescript-17"><a class="header" href="#rescript-17">Rescript</a></h4>
+<ul>
+<li>immutable </li>
+<li>ordered</li>
+<li>fixed-sized at creation time</li>
+<li>heterogeneous</li>
+</ul>
+<pre><code class="language-reasonml">let pair: (string, int) = (&quot;Number&quot;, 1)
+Js.log(pair) // ['Number', 1]
+let (n, _) = pair
+Js.log(n) // Number
+let (x, y, z) = (1, 2, 3)
+</code></pre>
+<h4 id="ocaml-14"><a class="header" href="#ocaml-14">OCaml</a></h4>
+<pre><code class="language-OCaml">let pair = (&quot;Number&quot;, 1) ;;
+let (n, _) = pair ;;
+let (x, y, z) = (1, 2, 3) ;;
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="record"><a class="header" href="#record">Record</a></h1>
+<h4 id="rescript-18"><a class="header" href="#rescript-18">Rescript</a></h4>
+<ul>
+<li>Immutable by default</li>
+<li>Have fixed fields - not extensible, </li>
+<li>Nominal typing</li>
+</ul>
+<h5 id="type-declaration-mutableimmutable-update-destructuring"><a class="header" href="#type-declaration-mutableimmutable-update-destructuring">Type declaration, mutable/immutable update, destructuring</a></h5>
+<pre><code class="language-reasonml">module Model = {
+  type person = {
+    name: string,
+    age: float,
+  }
+}
+
+let ryan: Model.person = {name: &quot;Ryan&quot;, age: 6.5}
+let zan = {Model.name: &quot;Zan&quot;, age: 6.5}
+
+// destructuring
+let show = ({Model.name: name, age}) =&gt; {
+  Js.log(j`Name: $name, Age : $age`)
+}
+
+// immutable update
+let joe = {...zan, name: &quot;Joe&quot;}
+Js.log(joe)
+
+// mutable update
+module MutableModel = {
+  type person = {
+    name: string,
+    mutable age: float,
+  }
+}
+let ryan: MutableModel.person = {name: &quot;Ryan&quot;, age: 6.5}
+ryan.age = 7.
+</code></pre>
+<h5 id="optional-record-fields"><a class="header" href="#optional-record-fields">Optional record fields</a></h5>
+<pre><code class="language-reasonml">module OpModel = {
+  type person = {
+    name: string,
+    nickName?: string,
+    age: float,
+  }
+}
+
+// None , if optional field is not set
+let p1: OpModel.person = {name: &quot;Ryan&quot;, age: 6.5}
+Js.log(p1.nickName == None) // true
+
+// use ? to set value
+let p1: OpModel.person = {name: &quot;Ryan&quot;, nickName: ?Some(&quot;Horn&quot;), age: 6.5}
+Js.log(p1.nickName) // Horn
+
+// no need to use ? in immutable update
+let p2 = {...p1, nickName: &quot;kcin&quot;}
+Js.log(p2.nickName) // kcin
+
+// if pattern match directly on optional record field, it's an optional
+let hasNickName = switch p2.nickName {
+	| Some(_) =&gt; true
+	| None =&gt; false
+}
+Js.log(hasNickName) // true
+
+// if matching on the field as part of general record structure, it's non-optional value
+let nick = switch p2 {
+	| {nickName: n} if String.length(n) &gt; 0 =&gt; n
+	| _ =&gt; &quot;&quot;
+}
+Js.log(nick) // &quot;kcin&quot;
+
+// check if optional record field has value or not
+let hasNickName = switch p2 {
+	| {nickName: ?None} =&gt; false
+	| {nickName: ?Some(_)} =&gt; true
+}
+Js.log(hasNickName) // true
+
+// destructuring
+let show = ({OpModel.name: name, age, _}) =&gt; {
+  Js.log(j`=&gt; { Name: $name, Age : $age }`)
+}
+show(p2) // =&gt; { Name: Ryan, Age: 6.5 }
+
+// paramaterized record
+module ParamaterizedModel = {
+  type point&lt;'a&gt; = {x: 'a, y: 'a}
+}
+let p1: ParamaterizedModel.point&lt;int&gt; = {
+  x: 1,
+  y: 2,
+}
+Js.log(p1) // { x : 1, y : 2}
+</code></pre>
+<h5 id="ocaml-15"><a class="header" href="#ocaml-15">OCaml</a></h5>
+<p><a href="https://github.com/nyinyithann/notes_on_ocaml/blob/main/notes/lang/record.ipynb">My Note on OCaml record</a><br/>
+OCaml doesn't have optional record field feature.</p>
+<pre><code class="language-ocaml">type car = {
+  mutable color : string ;
+  mutable weight : float ;
+  kind : string ;
+} ;;
+
+let c1 = { color = &quot;black&quot; ; weight = 100.; kind = &quot;sport&quot;} ;;
+
+let c2 = { c1 with color = &quot;pink&quot;} ;;
+
+let show { color = c; weight = w; _ } = Printf.sprintf &quot;color=%s wight=%F&quot; c w ;;
+show c1 ;;
+show c2 ;;
+
+(* mutate color field *)
+c1.color &lt;- &quot;blue&quot; ;;
+show c1 ;;
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="object"><a class="header" href="#object">Object</a></h1>
+<h5 id="rescript-19"><a class="header" href="#rescript-19">Rescript</a></h5>
+<ul>
+<li>Structural typing</li>
+<li>No type declaration needed</li>
+<li>Not supporting updates unless it comes from JS site</li>
+<li>No support for pattern matching</li>
+</ul>
+<pre><code class="language-reasonml">// optional type declaration
+type person = {&quot;name&quot;: string, &quot;age&quot;: int}
+let ryan = {&quot;name&quot;: &quot;Ryan&quot;, &quot;age&quot;: 6.5}
+Js.log(ryan)
+Js.log(ryan[&quot;age&quot;])
+
+// spread object type but not object values
+type point2D = {&quot;x&quot;: float, &quot;y&quot;: float}
+type pooint3D = {...point2D, &quot;z&quot;: float}
+
+// binding to Dom
+@val external document : 'a = &quot;document&quot;
+let loc = document[&quot;location&quot;]
+let href = loc[&quot;href&quot;]
+</code></pre>
+<h5 id="ocaml-16"><a class="header" href="#ocaml-16">OCaml</a></h5>
+<ul>
+<li><a href="https://dev.realworldocaml.org/objects.html">RealworldOCaml Chapter</a></li>
+<li><a href="https://github.com/nyinyithann/notes_on_ocaml/blob/main/notes/lang/objects.ipynb">My notes on OCaml Object</a></li>
+</ul>
+<pre><code class="language-ocaml">let ryan = object
+    val name : string = &quot;Ryan&quot;
+    val mutable age : float = 6.5
+    method get_age = age
+    method set_age n = age &lt;- n
+    method to_string = Printf.sprintf &quot;Name = Ryan, Age = %f&quot; age
+end ;;
+
+let show o = print_string o#to_string ;;
+show ryan ;;
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="variant"><a class="header" href="#variant">Variant</a></h1>
+<h4 id="rescript-20"><a class="header" href="#rescript-20">Rescript</a></h4>
+<pre><code class="language-reasonml">type rec json =
+  | Assoc(list&lt;(string, json)&gt;)
+  | Bool(bool)
+  | Float(float)
+  | Int(int)
+  | List(list&lt;json&gt;)
+  | String(string)
+  | Null
+
+let boy = Assoc(list{(&quot;name&quot;, String(&quot;Ryan&quot;)), (&quot;age&quot;, Float(6.5))})
+</code></pre>
+<h5 id="paramaterised-variant"><a class="header" href="#paramaterised-variant">Paramaterised Variant</a></h5>
+<pre><code class="language-reasonml">type maybe&lt;'a&gt; = Nothing | Just('a)
+
+// list
+type rec list&lt;'a&gt; = Nil | Cons('a, list&lt;'a&gt;)
+
+let lst = Cons(1, Cons(2, Cons(3, Nil)))
+let length = l =&gt; {
+  let rec loop = (l, acc) =&gt; {
+    switch l {
+    | Nil =&gt; acc
+    | Cons(_, t) =&gt; loop(t, acc + 1)
+    }
+  }
+  loop(l, 0)
+}
+Js.log(length(lst)) // 3
+
+// peano number
+type rec peano = Zero | Succ(peano)
+
+let count = p =&gt; {
+  let rec loop = (p, a) =&gt; {
+    switch p {
+    | Zero =&gt; a
+    | Succ(t) =&gt; loop(t, a + 1)
+    }
+  }
+  loop(p, 0)
+}
+
+Js.log(count(Succ(Succ(Succ(Succ(Zero)))))) // 4
+</code></pre>
+<h5 id="variant-with-inline-vs-free-standing-records"><a class="header" href="#variant-with-inline-vs-free-standing-records">Variant with inline vs free standing records</a></h5>
+<pre><code class="language-reasonml">type circle = {radius: float, x: float, y: float}
+let c = {radius: 1.1, x: 10., y: 20.2}
+type shape =
+  | Square(float)
+  | Rectangle({width: float, height: float})
+  | Circle(circle)
+let display_shape = s =&gt; {
+  open Js.Float
+  switch s {
+  | Circle({radius, x, y}) =&gt;
+    Js.log(
+      `radius:${toString(radius)}, x:${toString(x)}, y:${toString(y)}`,
+    )
+  | Square(x) =&gt; Js.log(`Square of ${toString(x)}`)
+  | Rectangle({width, height}) =&gt;
+    Js.log(`width:${toString(width)}, height:${toString(height)}`)
+  }
+}
+display_shape(Rectangle({width: 1.1, height: 2.2}))
+display_shape(Circle(c))
+
+/* 
+ Limitation of inline record.
+ The following code will get compile time error - 
+ 'This form is not allowed as the type of the inlined record could escape.'
+*/
+let get_shape = s =&gt; {
+  switch s {
+  | Rectangle(r) =&gt; Some(r)
+  | _ =&gt; None
+  }
+}
+</code></pre>
+<h5 id="variant-with-multiple-arguments-vs-tuple"><a class="header" href="#variant-with-multiple-arguments-vs-tuple">Variant with multiple arguments vs tuple</a></h5>
+<pre><code class="language-reasonml">type point = Point(float, float)
+let p = Point(1.1, 2.2)
+let Point(x, y) = p
+
+/* varint with tuple can be grabbed as a whole */
+type point = Point((float, float))
+let p = Point((1.1, 2.2))
+let Point(p') = p
+Js.log(p') // [ 1.1, 2.2]
+</code></pre>
+<h5 id="ocaml-17"><a class="header" href="#ocaml-17">OCaml</a></h5>
+<p><a href="https://github.com/nyinyithann/notes_on_ocaml/blob/main/notes/lang/variants.ipynb">My Note Here</a></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="exampleblang"><a class="header" href="#exampleblang">Example(blang)</a></h1>
+<p>Example from <a href="https://dev.realworldocaml.org/variants.html">RealWorldOCaml</a></p>
+<pre><code class="language-reasonml">type rec expr&lt;'a&gt; =
+  | Base('a)
+  | Const(bool)
+  | And(list&lt;expr&lt;'a&gt;&gt;)
+  | Or(list&lt;expr&lt;'a&gt;&gt;)
+  | Not(expr&lt;'a&gt;)
+
+let and_ = l =&gt; {
+    if Belt.List.some(l, (x) =&gt; switch x { 
+        | Const(false) =&gt; true 
+        | _ =&gt; false }) { 
+        Const(false) 
+    }
+    else {
+        switch Belt.List.keep(l, x =&gt; switch x { 
+            | Const(true) =&gt; false 
+            | _ =&gt; true}) {
+                | list{} =&gt; Const(true)
+                | list{x} =&gt; x
+                | l =&gt; And(l)
+        }
+    }
+}
+
+let or_ = l =&gt; {
+   open Belt
+   if List.some(l, x =&gt; switch x { | Const(true) =&gt; true | _ =&gt; false}) { Const(true) }
+   else {
+       switch List.keep(l, x =&gt; switch x { | Const(false) =&gt; false | _ =&gt; true }) {
+           | list{} =&gt; Const(false)
+           | list{x} =&gt; x
+           | l =&gt; Or(l)
+       }
+   }
+}
+
+let not_ = (expr) =&gt; {
+    switch expr {
+        | Const(x) =&gt; Const(!x)
+        | e =&gt; Not(e)
+    }
+}
+
+let rec simplify = (expr) =&gt; {
+    open Belt
+    switch expr {
+        | (Base(_) | Const(_)) as x =&gt; x
+        | And(l) =&gt; and_ (List.map(l, x =&gt; simplify(x)))
+        | Or(l) =&gt; or_ (List.map(l, x =&gt; simplify(x)))
+        | Not(e) =&gt; not_ (simplify(e))
+    }
+}
+
+let rec eval = (expr, base_eval) =&gt; {
+  let eval' = expr =&gt; eval(expr, base_eval)
+  switch expr {
+  | Base(base) =&gt; base_eval(base)
+  | Const(b) =&gt; b
+  | And(exprs) =&gt; Belt.List.every(exprs, eval')
+  | Or(exprs) =&gt; Belt.List.some(exprs, eval')
+  | Not(expr) =&gt; !eval'(expr)
+  }
+}
+
+type mail_field = To | From | CC | Date | Subject
+type mail_predicate = {field: mail_field, contains: string}
+let test = (field, contains) =&gt; Base({field, contains})
+
+let base_eval = ({field, contains}) =&gt; {
+  switch field {
+  | To =&gt; contains == &quot;Ryan&quot;
+  | Subject =&gt; contains == &quot;Maths&quot;
+  | _ =&gt; true
+  }
+}
+
+let expr = And(list{
+        Or(list{test(To, &quot;Ryan&quot;), test(Subject, &quot;Maths&quot;), Const(false)}), 
+        Const(true), 
+        Not(Const(true))
+    })
+
+let result = eval(simplify(expr), base_eval)
+Js.log(result) // false
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="polymorphic-variant"><a class="header" href="#polymorphic-variant">Polymorphic Variant</a></h1>
+<h5 id="rescript-21"><a class="header" href="#rescript-21">Rescript</a></h5>
+<ul>
+<li>explicit type declaration is optional</li>
+<li>type will be inferred automatically</li>
+<li>structural typing</li>
+<li>have leading hash e.g. <code>#A</code></li>
+<li><code>&gt;</code> at the beginning of the variant type means the type is open to combination with other variant types</li>
+<li><code>&gt;</code> means lower bound, <code>&lt;</code> means upper bound. If the same set of tags are both an upper and a lower bound, we end up with an exact polymorphic variant type, which has neither marker.</li>
+</ul>
+<h5 id="basic-1"><a class="header" href="#basic-1">Basic</a></h5>
+<pre><code class="language-reasonml">let b = #Red
+let l = #&quot;aria-hidden&quot;
+let x = #&quot;I am ❌&quot;
+Js.log(b) // Red
+Js.log(l) // aria-hidden
+</code></pre>
+<h5 id="type-declaration-optional"><a class="header" href="#type-declaration-optional">Type Declaration (optional)</a></h5>
+<pre><code class="language-reasonml">type color = [#red | #green | #blue]
+let r: color = #red
+</code></pre>
+<h5 id="inline"><a class="header" href="#inline">Inline</a></h5>
+<pre><code class="language-reasonml">let show = (v: [ #int(int) | #float(float) | #string(string) ]) =&gt; {
+  switch v {
+  | #int(i) =&gt; Js.log(i)
+  | #float(f) =&gt; Js.log(f)
+  | #string(s) =&gt; Js.log(s)
+  }
+}
+show(#float(1.1))
+</code></pre>
+<h5 id="structual-sharing"><a class="header" href="#structual-sharing">structual sharing</a></h5>
+<pre><code class="language-reasonml">type bool_or_char = [#bool(bool) | #char(char)]
+let bc: bool_or_char = #bool(true)
+
+let display = x =&gt; {
+  switch x {
+  | #bool(b) =&gt; Js.log(b)
+  | #char(c) =&gt; Js.log(c)
+  | #unit =&gt; Js.log(&quot;unit&quot;)
+  }
+}
+display(bc)
+display(#unit)
+display(#char('a'))
+</code></pre>
+<h5 id="lower-bound-poly-variant-with-array"><a class="header" href="#lower-bound-poly-variant-with-array">lower bound poly variant with array</a></h5>
+<pre><code class="language-reasonml">let three = #Int(3)
+let four = #Float(4.)
+let nan = #Not_a_number
+Js.log([three, four, nan])
+
+// list is immutable, so both open &amp; close poly variant are allowed
+let lst: list&lt;[&gt; #Int(int) | #Float(float) | #Not_a_number]&gt; = list{three, four, nan}
+Js.log(lst)
+let lst: list&lt;[&lt; #Int(int) | #Float(float) | #Not_a_number]&gt; = list{three, four, nan}
+Js.log(lst)
+
+// Rescript won't compile the following line 
+let arr: array&lt;[&gt; #Int(int) | #Float(float) | #Not_a_number]&gt; = [three, four, nan] // compilation error
+
+
+let arr: array&lt;[&lt; #Int(int) | #Float(float) | #Not_a_number]&gt; = [three, four, nan]
+Js.log(arr)
+</code></pre>
+<h5 id="combine-types-and-pattern-match"><a class="header" href="#combine-types-and-pattern-match">Combine Types and Pattern match</a></h5>
+<pre><code class="language-reasonml">type abc = [#a | #b | #c]
+type def = [#d | #e | #f]
+let show = x =&gt; {
+  switch x {
+  | #...abc =&gt; Js.log(&quot;abc&quot;)
+  | #...def =&gt; Js.log(&quot;def&quot;)
+  }
+}
+show(#a)
+show(#f)
+</code></pre>
+<h5 id="constraints-lower-bound"><a class="header" href="#constraints-lower-bound">Constraints lower bound</a></h5>
+<pre><code class="language-reasonml">type basic_color&lt;'a&gt; = [&gt; #Red | #Green | #Blue] as 'a
+type advanced_color = basic_color&lt;[#Red | #Green | #Blue | #Pink]&gt;
+let bc: basic_color&lt;[&gt; #Red | #Green | #Blue]&gt; = #Blue
+let ac: advanced_color = bc
+Js.log(ac)
+</code></pre>
+<h5 id="constraints-upper-bound"><a class="header" href="#constraints-upper-bound">Constraints upper bound</a></h5>
+<pre><code class="language-reasonml">type xyz&lt;'t&gt; = [&lt; #A | #B | #C] as 't
+type omega = xyz&lt;[#A]&gt;
+let x: xyz&lt;[&lt; #A | #B | #C]&gt; = #A
+let o: omega = x
+Js.log(o)
+</code></pre>
+<h5 id="subtyping"><a class="header" href="#subtyping">Subtyping</a></h5>
+<pre><code class="language-reasonml">type choice = [ #Yes | #No | #Maybe ]
+let yes = #Yes
+let ch1 : choice = yes :&gt; choice
+
+let color : [&gt; #Red ] = #Green
+Js.log(color) // green
+</code></pre>
+<h4 id="ocaml-18"><a class="header" href="#ocaml-18">OCaml</a></h4>
+<p><a href="https://github.com/nyinyithann/notes_on_ocaml/blob/main/notes/lang/polymorphic%20variants.ipynb">My note on OCaml poly-variant</a></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="extensible-variant"><a class="header" href="#extensible-variant">Extensible Variant</a></h1>
+<h4 id="rescript-22"><a class="header" href="#rescript-22">Rescript</a></h4>
+<pre><code class="language-reasonml">module Expr = {
+  type t = ..
+
+  type t += Int(int)
+  type t += Float(float)
+}
+
+type Expr.t += String(string)
+
+let toString = e =&gt; {
+  switch e {
+  | Expr.Int(i) =&gt; Js.log(i)
+  | Expr.Float(f) =&gt; Js.log(f)
+  | String(s) =&gt; Js.log(s)
+  | _ =&gt; Js.log(&quot;other&quot;)
+  }
+}
+
+toString(Expr.Int(10))
+toString(Expr.Float(3.14))
+toString(String(&quot;Hello&quot;))
+</code></pre>
+<h5 id="exceptios-are-extensible-variant"><a class="header" href="#exceptios-are-extensible-variant">exceptios are extensible variant</a></h5>
+<pre><code class="language-reasonml">exception ConnectionError(string)
+// is equivalent to
+type exn += ConnectionError(string)
+</code></pre>
+<h4 id="ocaml-19"><a class="header" href="#ocaml-19">OCaml</a></h4>
+<p><a href="https://github.com/nyinyithann/notes_on_ocaml/blob/main/notes/lang/variants.ipynb">My Notes here</a></p>
+<pre><code class="language-OCaml">module Expr = struct
+    type t = ..
+    
+    type t += Int of int
+    
+    type t += Float of float 
+      
+end ;;
+
+type Expr.t += String of string ;;
+
+let to_string = function
+    | Expr.Int x -&gt; Int.to_string x
+    | Expr.Float x -&gt; Float.to_string x
+    | String x -&gt; x 
+    | _ -&gt; &quot;?&quot; ;;
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="exception"><a class="header" href="#exception">Exception</a></h1>
+<h4 id="rescript-23"><a class="header" href="#rescript-23">Rescript</a></h4>
+<pre><code class="language-reasonml">/* rescript exception */
+exception Empty(string)
+
+type rec series&lt;'a&gt; = [#Nil | #Cons('a, series&lt;'a&gt;)]
+
+let getHeadExn = s =&gt; {
+  switch s {
+  | #Nil =&gt; raise(Empty(&quot;list is empty&quot;))
+  | #Cons(h, _) =&gt; h
+  }
+}
+
+let showFirstItem = s =&gt; {
+  try {
+    let hd = getHeadExn(s)
+    Js.log(hd)
+  } catch {
+  | Empty(e) =&gt; Js.log(e)
+  }
+}
+
+let s = #Cons(0, #Cons(1, #Cons(2, #Cons(3, #Nil))))
+showFirstItem(s) // 0
+showFirstItem(#Nil) // list is empty
+
+/* exception can be pattern-matched */
+switch getHeadExn(#Nil) {
+| #Cons(h, _) =&gt; Js.log(h)
+| exception Empty(e) =&gt; Js.log(e)
+}
+</code></pre>
+<h4 id="catching-rescript-exception-from-js"><a class="header" href="#catching-rescript-exception-from-js">Catching Rescript Exception from JS</a></h4>
+<h5 id="raising-an-exception-from-rescript"><a class="header" href="#raising-an-exception-from-rescript">Raising an exception from Rescript</a></h5>
+<pre><code class="language-reasonml">exception BadArgument({myMessage: string})
+
+let myTest = () =&gt; {
+  raise(BadArgument({myMessage: &quot;Oops!&quot;}))
+}
+</code></pre>
+<h5 id="catching-it-from-javascript"><a class="header" href="#catching-it-from-javascript">Catching it from JavaScript</a></h5>
+<pre><code class="language-javascript">// after importing `myTest`...
+try {
+  myTest()
+} catch (e) {
+  console.log(e.myMessage) // &quot;Oops!&quot;
+  console.log(e.Error.stack) // the stack trace
+}
+</code></pre>
+<h4 id="ocaml-exception"><a class="header" href="#ocaml-exception">OCaml Exception</a></h4>
+<pre><code class="language-OCaml">exception Empty of string ;;
+type 'a series = [ `Nil | `Con of 'a * 'a series ] ;;
+
+let se = `Con (1, `Con(2, `Con(3, `Con (4, `Con (5, `Nil))))) ;; 
+
+let hd = function
+    | `Nil -&gt; raise (Empty &quot;list is empty&quot;) 
+    | `Con (h, _) -&gt; h ;;  
+
+let show_hd s =
+  try
+    let fst = hd s in
+    print_int fst
+  with
+   | Empty e -&gt; print_string e ;;
+   
+show_hd se ;;
+show_hd `Nil ;;
+
+match hd `Nil with | `Con(h, _) -&gt; print_int h | exception Empty e -&gt; print_string e ;;
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="js-exception"><a class="header" href="#js-exception">JS Exception</a></h1>
+<ul>
+<li><a href="https://rescript-lang.org/docs/manual/latest/api/js/exn">Js.Exn Doc</a></li>
+<li><a href="https://github.com/rescript-lang/rescript-compiler/blob/master/jscomp/others/js_exn.ml">Js.Exn Source</a></li>
+</ul>
+<h4 id="catching-a-js-exception-in-rescript"><a class="header" href="#catching-a-js-exception-in-rescript">Catching a JS Exception in Rescript</a></h4>
+<pre><code class="language-reasonml">@new external make: float =&gt; Js.Array2.t&lt;int&gt; = &quot;Array&quot;
+try {
+  let a = make(111111111111111111111111111.1)
+} catch {
+| Js.Exn.Error(obj) =&gt;
+  switch Js.Exn.message(obj) {
+  | Some(e) =&gt; Js.log(e)
+  | None =&gt; Js.log(&quot;No message&quot;)
+  }
+}
+// Invalid array length
+</code></pre>
+<h4 id="raise-a-js-exception-from-rescript"><a class="header" href="#raise-a-js-exception-from-rescript">Raise a JS Exception from Rescript</a></h4>
+<h5 id="raising-from-rescript-site"><a class="header" href="#raising-from-rescript-site">Raising from Rescript site</a></h5>
+<pre><code class="language-reasonml">let myTest = () =&gt; {
+  Js.Exn.raiseError(&quot;Hello!&quot;)
+}
+</code></pre>
+<h5 id="catching-it-from-js-side"><a class="header" href="#catching-it-from-js-side">Catching it from JS side</a></h5>
+<pre><code class="language-reasonml">// after importing `myTest`...
+try {
+  myTest()
+} catch (e) {
+  console.log(e.message) // &quot;Hello!&quot;
+}
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="option-null-undefined"><a class="header" href="#option-null-undefined">Option, Null, Undefined</a></h1>
+<h4 id="option"><a class="header" href="#option">option</a></h4>
+<ul>
+<li>Use option type to deal with nonexistent value</li>
+<li>Use mostly <a href="https://rescript-lang.org/docs/manual/latest/api/belt/option">Js.Belt.Option</a>, 
+or <a href="https://rescript-lang.org/docs/manual/latest/api/js/option">Js.Option</a> </li>
+</ul>
+<h4 id="interoperate-with-js-undefined-and-null"><a class="header" href="#interoperate-with-js-undefined-and-null">Interoperate with JS <code>undefined</code> and <code>null</code></a></h4>
+<ul>
+<li>
+<p><strong>Never, EVER, pass a nested option value (e.g. Some(Some(Some(5)))) into the JS side.</strong></p>
+</li>
+<li>
+<p><strong>Never, EVER, annotate a value coming from JS as <code>option&lt;'a&gt;</code>. Always give the concrete, non-polymorphic type.</strong></p>
+</li>
+<li>
+<p><strong>Use <code>Js.Nullable.null</code> or <code>Js.Nullable.undefined</code> if expecting <code>null</code> or <code>undefined</code> from JS side</strong></p>
+</li>
+</ul>
+<pre><code class="language-reasonml">// consuming JS null 
+@module(&quot;MyConstant&quot;) external myId: Js.Nullable.t&lt;string&gt; = &quot;myId&quot;
+
+// passing Nullable from Rescript to JS
+@module(&quot;MyIdValidator&quot;) external validate: Js.Nullable.t&lt;string&gt; =&gt; bool = &quot;validate&quot;
+let personId: Js.Nullable.t&lt;string&gt; = Js.Nullable.return(&quot;abc123&quot;)
+let result = validate(personId)
+
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="pipe"><a class="header" href="#pipe">Pipe</a></h1>
+<h3 id="rescript-24"><a class="header" href="#rescript-24">Rescript</a></h3>
+<ul>
+<li>pipe &quot;-&gt;&quot; is just a syntactic sugar not like &quot;|&gt;&quot; which is an infix operator</li>
+<li>pipe &quot;-&gt;&quot; is for data-first APIs</li>
+</ul>
+<pre><code class="language-reasonml">// [ 2, 3, 1 ] cause JS.Array is designed for data-last APIs
+[1]-&gt;Js.Array.concat([2, 3])-&gt;Js.log 
+
+// [ 1, 2, 3 ] cause JS.Array2 is designed for data-first APIs
+[1]-&gt;Js.Array2.concat([2, 3])-&gt;Js.log 
+</code></pre>
+<h4 id="pipe-placeholder"><a class="header" href="#pipe-placeholder">pipe-placeholder</a></h4>
+<pre><code class="language-reasonml">
+let add = (x, y, z) =&gt; x + y + z
+let addX = add(_, 2, 3)
+let addY = add(1, _, 3)
+let addZ = add(1, 2, _)
+10-&gt;addX-&gt;Js.log // 15
+10-&gt;addY-&gt;Js.log // 14
+10-&gt;addZ-&gt;Js.log // 13
+
+let addXY = add(_, _, 3)
+10-&gt;addXY-&gt;Js.log // 23
+
+let addXYZ = add(_, _, _)
+100-&gt;addXYZ-&gt;Js.log // 300
+
+open Belt
+let filter = (f, arr) =&gt; {
+  let r = []
+  for i in 0 to Array.length(arr) - 1 {
+    let item = Array.getExn(arr, i) 
+    if f(item) {
+        Belt.Array.push(r, item)
+    }
+  }
+  r
+}
+
+let nums = [1, 2, 3, 4, 5, 9 , 10, 1001]
+filter(x =&gt; mod(x, 2) &gt; 0, nums)-&gt;Js.log
+
+// using pipe-placeholder
+nums -&gt; filter(x =&gt; mod(x, 2) &gt; 0, _ ) -&gt; Js.log
+</code></pre>
+<h4 id="with-labeled-arguments"><a class="header" href="#with-labeled-arguments">with labeled-arguments</a></h4>
+<pre><code class="language-reasonml">let add = (x, ~y, ~z, ()) =&gt; x + y + z
+10 -&gt; add(10,~y=_,~z=10, ())-&gt;Js.log // 30
+10 -&gt; add(10,~y=10,~z=_, ())-&gt;Js.log // 30
+10 -&gt; add(10,~y=_,~z=_, ())-&gt;Js.log // 30
+10 -&gt; add(_,l~y=_,~z=_, ())-&gt;Js.log // 30
+() -&gt; add(10,~y=10,~z=10, _)-&gt;Js.log // 30
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="lazy"><a class="header" href="#lazy">Lazy</a></h1>
+<ul>
+<li>defer and cache</li>
+<li>can't re-trigger the computation after the first <code>Lazy.force</code></li>
+<li>it's not shared data type between Rescript and JavaScript</li>
+</ul>
+<pre><code class="language-reasonml">let rec fib = n =&gt; {
+  switch n {
+  | 0 | 1 =&gt; n
+  | _ =&gt; fib(n - 1) + fib(n - 2)
+  }
+}
+
+/* using Lazy.force */
+let lfib = lazy(fib(20))
+lfib-&gt;Lazy.force-&gt;Js.log
+
+/* pattern match with switch */
+switch lfib {
+    | lazy(result) =&gt; Js.log(result)
+}
+
+/* pattern match with let binding */
+let lazy(n) = lfib
+n-&gt;Js.log
+
+/* with exception handling */
+let n = try {
+        Lazy.force(lazy(fib(22)))
+    } catch {
+     |Some_error =&gt; 0
+    }
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="patterns"><a class="header" href="#patterns">Patterns</a></h1>
+<h4 id="variable-pattern-binding-the-name-to-the-value"><a class="header" href="#variable-pattern-binding-the-name-to-the-value">Variable pattern: binding the name to the value</a></h4>
+<pre><code class="language-reasonml">let (x, y, z) = (1, 2, 3)
+let (x, _, _) = (1, 2, 3)
+let is_sorted = nums =&gt; {
+  switch nums {
+  | (x, y, z) if (x &lt;= y &amp;&amp; y &lt;= z) || (x &gt;= y &amp;&amp; y &gt;= z) =&gt; true
+  | _ =&gt; false
+  }
+}
+is_sorted((1, 2, 3))-&gt;Js.log
+is_sorted((3, 2, 1))-&gt;Js.log
+is_sorted((3, 11, 1))-&gt;Js.log
+</code></pre>
+<h4 id="constant-pattern"><a class="header" href="#constant-pattern">Constant pattern</a></h4>
+<pre><code class="language-reasonml">exception Invalid_argument(string)
+let isOn = x =&gt; {
+  switch x {
+  | &quot;On&quot; =&gt; true
+  | &quot;Off&quot; =&gt; false
+  | _ =&gt; raise(Invalid_argument(&quot;isOn&quot;))
+  }
+}
+isOn(&quot;On&quot;)-&gt;Js.log
+</code></pre>
+<h4 id="alias-pattern"><a class="header" href="#alias-pattern">Alias pattern</a></h4>
+<pre><code class="language-reasonml">let sortPair = ((x, y) as p) =&gt;
+  if x &lt; y {
+    p
+  } else {
+    (y, x)
+  }
+sortPair((1, 2))-&gt;Js.log
+
+let greaterOne = ((x1, y1) as p1, (x2, y2) as p2) =&gt;
+  if x1 &gt; x2 || y1 &gt; y2 {
+    p1
+  } else {
+    p2
+  }
+greaterOne((11, 2), (2, 2))-&gt;Js.log
+
+type rect = {width: float, height: float}
+let r = {width: 1.1, height: 2.2}
+let {width} = r
+let {width: w} = r
+</code></pre>
+<h4 id="or-pattern"><a class="header" href="#or-pattern">Or pattern</a></h4>
+<pre><code class="language-reasonml">let isVowel = v =&gt;
+  switch v {
+  | 'a' | 'e' | 'i' | 'o' | 'u' =&gt; true
+  | _ =&gt; false
+  }
+isVowel('a')-&gt;Js.log
+
+let rects = [{width: 1.1, height: 2.2}, {width: 10.1, height: 2.2}, {width: 2.1, height: 2.2}]
+let smallRects = rects =&gt; {
+  rects-&gt;Belt.Array.keep(x =&gt;
+    switch x {
+    | {width: 1.1 | 2.1} =&gt; true
+    | _ =&gt; false
+    }
+  )
+}
+smallRects(rects)-&gt;Js.log
+
+rects
+-&gt;Belt.Array.keep(x =&gt; {
+  switch x {
+  | {width: w} if w &gt; 10. =&gt; true
+  | _ =&gt; false
+  }
+})
+-&gt;Js.log
+</code></pre>
+<h4 id="variant-pattern"><a class="header" href="#variant-pattern">Variant pattern</a></h4>
+<pre><code class="language-reasonml">type kg = Kg(float)
+let weight = Kg(100.)
+let Kg(w) = weight
+let test = (Kg(w)) =&gt; Js.log(w)
+
+type rec expr = Int(int) | Add(expr, expr)
+let rec eval = expr =&gt;
+  switch expr {
+  | Int(i) =&gt; i
+  | Add(e1, e2) =&gt; eval(e1) + eval(e2)
+  }
+eval(Add(Int(10), Int(20)))-&gt;Js.log
+
+type either&lt;'a, 'b&gt; = Left('a) | Right('b)
+let left = Left(10)
+let Left(l) | Right(l) = left
+let choice = (Left(x) | Right(x)) =&gt; Js.log(x)
+choice(Right(100))
+</code></pre>
+<h4 id="polymorphic-variant-pattern"><a class="header" href="#polymorphic-variant-pattern">Polymorphic variant pattern</a></h4>
+<pre><code class="language-reasonml">let check = s =&gt;
+  switch s {
+  | #Ok(x) =&gt; x
+  | #Error(e) =&gt; e
+  }
+check(#Ok(&quot;hello&quot;))-&gt;Js.log
+check(#Error(404))-&gt;Js.log
+</code></pre>
+<h4 id="polymorphic-variant-abbreviation-pattern"><a class="header" href="#polymorphic-variant-abbreviation-pattern">Polymorphic variant abbreviation pattern</a></h4>
+<pre><code class="language-reasonml">type color = [#Red(int) | #Green(int) | #Blue(int)]
+type more_color = [color | #Pink(int) | #Gray(int)]
+type much_more_color = [more_color | #Slate(int)]
+
+let display = c =&gt;
+  switch c {
+  | #...color =&gt; Js.log(&quot;Basic Color &quot;)
+  | #...more_color =&gt; Js.log(&quot;Advanced Color&quot;)
+  | #...much_more_color =&gt; Js.log(&quot;Fantastic Color&quot;)
+  }
+display(#Green(10))
+display(#Slate(10))
+display(#Gray(10))
+</code></pre>
+<h4 id="tuple-pattern"><a class="header" href="#tuple-pattern">tuple pattern</a></h4>
+<pre><code class="language-reasonml">let choose = ((0, x, _) | (_, _, x)) =&gt; x
+choose((0, 2, 3))-&gt;Js.log // 2
+choose((1, 2, 3))-&gt;Js.log // 3
+let choose = ((x, None) | (_, Some(x))) =&gt; x
+choose((1, None))-&gt;Js.log // 1
+choose((1, Some(10)))-&gt;Js.log // 10
+</code></pre>
+<h4 id="record-pattern"><a class="header" href="#record-pattern">record pattern</a></h4>
+<pre><code class="language-reasonml">type person = {name: string}
+let blonde = {name: &quot;Blondie&quot;}
+let tuco = {name: &quot;Tuco&quot;}
+let eyes = {name: &quot;Eyes&quot;}
+type gunslinger =
+  | Good(person)
+  | Bad(person)
+  | Ugly(person)
+  | TheJazz({name: string})
+
+let who = gs =&gt;
+  switch gs {
+  | Good({name: n}) =&gt; Js.log(n)
+  | Bad({name: n}) =&gt; Js.log(n)
+  | Ugly({name: n}) =&gt; Js.log(n)
+  | TheJazz({name: &quot;Jazz&quot; | &quot;Taltos&quot;} as j) =&gt; Js.log(j.name)
+  | _ =&gt; Js.log(&quot;NPC&quot;)
+  }
+who(TheJazz({name: &quot;Jazz&quot;}))
+who(TheJazz({name: &quot;Taltos&quot;}))
+who(Good(blonde))
+
+</code></pre>
+<h4 id="optional-record-field-pattern"><a class="header" href="#optional-record-field-pattern">Optional record field pattern</a></h4>
+<pre><code class="language-reasonml">type person = {
+    name: string,
+    nickName?: string,
+    age: float,
+}
+let p1 = { name : &quot;jack&quot;, age ; 14 }
+let hasNickName = switch p1 {
+	| {nickName: ?None} =&gt; false
+	| {nickName: ?Some(_)} =&gt; true
+}
+</code></pre>
+<h4 id="array-pattern"><a class="header" href="#array-pattern">array pattern</a></h4>
+<pre><code class="language-reasonml">let arr = Belt.Array.makeBy(3, x =&gt; Belt.Array.makeBy(3, _ =&gt; (x + 1) * 2))
+let dig = arr =&gt;
+  switch arr {
+  | [[x, _, _], [_, y, _], [_, _, z]] =&gt; (x, y, z)
+  | _ =&gt; (0, 0, 0)
+  }
+dig(arr)-&gt;Js.log
+</code></pre>
+<h4 id="range-pattern"><a class="header" href="#range-pattern">range pattern</a></h4>
+<pre><code class="language-reasonml">let classify = ch =&gt;
+  switch ch {
+  | 'A' .. 'Z' =&gt; &quot;uppercase&quot;
+  | 'a' .. 'z' =&gt; &quot;lowercase&quot;
+  | '0' .. '9' =&gt; &quot;digit&quot;
+  | _ =&gt; &quot;other&quot;
+  }
+classify('H')-&gt;Js.log
+classify('3')-&gt;Js.log
+</code></pre>
+<h4 id="lazy-pattern"><a class="header" href="#lazy-pattern">lazy pattern</a></h4>
+<pre><code class="language-reasonml">let l = Lazy.from_fun(() =&gt; 1000 * 100)
+let lazy r = l
+Js.log(r)
+
+switch Lazy.from_fun(() =&gt; 1000 * 1000) {
+| lazy l =&gt; Js.log(l)
+}
+
+switch Some(Lazy.from_fun(() =&gt; 5000 * 1000)) {
+| Some(lazy l) =&gt; Js.log(l)
+| None =&gt; Js.log(0)
+}
+</code></pre>
+<h4 id="exception-pattern"><a class="header" href="#exception-pattern">exception pattern</a></h4>
+<pre><code class="language-reasonml">switch Belt.List.headExn(list{}) {
+| exception _ =&gt; Js.log(&quot;empty error&quot;)
+| n =&gt; Js.log(n)
+}
+</code></pre>
+<h4 id="module-destructuring-pattern"><a class="header" href="#module-destructuring-pattern">module destructuring pattern</a></h4>
+<pre><code class="language-reasonml">module M = {
+    type t = { name : string}
+    let godot = { name : &quot;godot&quot;}
+}
+let gname = ({M.name : n}) =&gt; n
+gname(M.godot)-&gt;Js.log
+</code></pre>
+<h3 id="ocaml-20"><a class="header" href="#ocaml-20">OCaml</a></h3>
+<p><a href="https://github.com/nyinyithann/notes_on_ocaml/blob/main/notes/lang/patterns.ipynb">My OCaml Notes here</a></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="module"><a class="header" href="#module">Module</a></h1>
+<ul>
+<li>Module name must begin with an uppercase letter</li>
+<li>Every .res file is a module. The convention is to capitalize file names.</li>
+<li>Every .resi file is a signature.</li>
+</ul>
+<h3 id="rescript-25"><a class="header" href="#rescript-25">Rescript</a></h3>
+<h4 id="module-definition"><a class="header" href="#module-definition">Module definition</a></h4>
+<pre><code class="language-reasonml">module M = {
+  let x = 17
+  let y = 25
+  %%private(let z = 10)
+}
+</code></pre>
+<h4 id="module-definition-with-signature"><a class="header" href="#module-definition-with-signature">Module definition with signature</a></h4>
+<pre><code class="language-reasonml">module Point: {
+  let x: int
+  let y: int
+} = {
+  let x = 10
+  let y = 20
+  let z = 40
+}
+</code></pre>
+<h4 id="empty-module"><a class="header" href="#empty-module">Empty module</a></h4>
+<pre><code class="language-reasonml">module E = {}
+</code></pre>
+<h4 id="module-nesting"><a class="header" href="#module-nesting">Module nesting</a></h4>
+<pre><code class="language-reasonml">module X = {
+  let x = 10
+  module Y = {
+    let y = 11
+  }
+  module Z = {
+    let z = 12
+  }
+}
+X.Y.y-&gt;Js.log
+X.Z.z-&gt;Js.log
+</code></pre>
+<h4 id="extending-module"><a class="header" href="#extending-module">Extending module</a></h4>
+<pre><code class="language-reasonml">module M1 = {
+  let one = 1
+}
+
+module M2 = {
+  let two = 2
+}
+
+module M3 = {
+  include M1
+  include M2
+  let three = 3
+}
+open Js.Int
+Js.log(`${M3.one-&gt;toString}, ${M3.two-&gt;toString}, ${M3.three-&gt;toString}`)
+
+#### Opening module
+open M3
+one-&gt;Js.log
+two-&gt;Js.log
+</code></pre>
+<h4 id="overriding-open-to-turn-off-shadow-warnings"><a class="header" href="#overriding-open-to-turn-off-shadow-warnings">Overriding open to turn off shadow warnings</a></h4>
+<pre><code class="language-reasonml">module A = {
+  let a = 1
+}
+module Foo = {
+  module A = {
+    let a = &quot;one&quot;
+  }
+}
+open A
+open! Foo.A
+a-&gt;Js.log
+</code></pre>
+<h4 id="destructuring-module"><a class="header" href="#destructuring-module">Destructuring module</a></h4>
+<pre><code class="language-reasonml">/* types cannot be extracted with module destructuring */
+module Point2D = {
+  type t = (float, float)
+  let make = (x, y) =&gt; (x, y)
+  let getX = ((x, _)) =&gt; x
+  let getY = ((_, y)) =&gt; y
+  let add = ((x1, y1), (x2, y2)) =&gt; (x1 +. x2, y1 +. y2)
+  let substract = ((x1, y1), (x2, y2)) =&gt; (x1 -. x2, y1 -. y2)
+}
+
+let {make, add, substract} = module(Point2D)
+let p1 = make(1.1, 2.2)
+let p2 = make(10.1, 20.2)
+add(p1, p2)-&gt;Js.log
+substract(p2, p1)-&gt;Js.log
+</code></pre>
+<h3 id="ocaml-21"><a class="header" href="#ocaml-21">OCaml</a></h3>
+<p><a href="https://github.com/nyinyithann/notes_on_ocaml/blob/main/notes/lang/module.ipynb">My OCaml Notes here</a></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="module-type"><a class="header" href="#module-type">Module Type</a></h1>
+<h3 id="rescript-26"><a class="header" href="#rescript-26">Rescript</a></h3>
+<h4 id="module-type-declaration"><a class="header" href="#module-type-declaration">Module type declaration</a></h4>
+<pre><code class="language-reasonml">module type T = {
+  let x: int
+}
+
+module M = {
+  let x = 10
+}
+
+module MT1: T = M // same as module MT1 = (M : T)
+MT1.x-&gt;Js.log
+</code></pre>
+<h4 id="sealing-module-with-module-type"><a class="header" href="#sealing-module-with-module-type">Sealing module with Module Type</a></h4>
+<pre><code class="language-reasonml">module M2: T = {
+  let x = 10
+}
+module MT2: T = M2
+MT2.x-&gt;Js.log
+
+module Z = {
+  let z = 11.11
+}
+module M3: module type of Z = {
+  let z = 22.22
+}
+</code></pre>
+<h4 id="sharing-constraint-with-with-operator"><a class="header" href="#sharing-constraint-with-with-operator">Sharing constraint with &quot;with&quot; operator</a></h4>
+<pre><code class="language-reasonml">module type TPair = {
+  type t
+  let pair: t
+}
+
+module Pair: TPair = {
+  type t = (float, float)
+  let pair: t = (11., 22.)
+}
+
+let p = Pair.pair // this is ok
+let p': Pair.t = Pair.pair // this is ok
+/* this will throw error cause TPair.t is abstrat type and not compitable with (float, float) */
+// let p: (float, float) = Pair.pair
+
+// use &quot;with&quot; operator
+module APair: TPair with type t = (int, int) = {
+  type t = (int, int)
+  let pair = (1, 2)
+}
+let pp: (int, int) = APair.pair
+
+module type TP = TPair with type t = (float, float)
+module TPPair: TP = {
+  type t = (float, float)
+  let pair = (1.1, 2.2)
+}
+let pt: (float, float) = TPPair.pair
+</code></pre>
+<h4 id="destructive-substitution--replace-abstract-type-with-the-concrete-type-provided-in-constraint"><a class="header" href="#destructive-substitution--replace-abstract-type-with-the-concrete-type-provided-in-constraint">Destructive Substitution (:=) replace abstract type with the concrete type provided in constraint</a></h4>
+<pre><code class="language-reasonml">module type List = {
+  type item
+  type t
+  let data: t
+}
+
+module MList: List with type item := int and type t := list&lt;int&gt; = {
+  type item = int
+  type t = list&lt;item&gt;
+  let data: t = Belt.List.makeBy(10, x =&gt; x + 1)
+}
+let lst: list&lt;int&gt; = MList.data
+</code></pre>
+<h4 id="module-constraint-with-the-with-operator"><a class="header" href="#module-constraint-with-the-with-operator">Module constraint with the &quot;with&quot; operator</a></h4>
+<pre><code class="language-reasonml">module type TXY = {
+  type x
+  type y
+}
+
+module type MType = {
+  module A: TXY
+}
+
+module B = {
+  type x = int
+  type y = int
+  let x = 101
+}
+
+module C: MType with module A = B = {
+  module A = {
+    type x = int
+    type y = int
+    let x = B.x
+  }
+}
+C.A.x-&gt;Js.log // 101
+</code></pre>
+<h5 id="realworld-code-from-darklang-editor"><a class="header" href="#realworld-code-from-darklang-editor"><a href="https://github.com/darklang/dark/blob/main/client/src/prelude/Belt_extended.res">realworld code from darklang editor</a></a></h5>
+<pre><code class="language-reasonml">module Belt = {
+  include (Belt: module type of Belt with module Map := Belt.Map and module Result := Belt.Result)
+
+  module Result = {
+    include Belt.Result
+
+    let pp = (
+      okValueFormatter: (Format.formatter, 'okValue) =&gt; unit,
+      errValueFormatter: (Format.formatter, 'errValue) =&gt; unit,
+      fmt: Format.formatter,
+      value: t&lt;'okValue, 'errValue&gt;,
+    ) =&gt; {
+      switch value {
+      | Ok(value) =&gt;
+        Format.pp_print_string(fmt, &quot;Ok&quot;)
+        okValueFormatter(fmt, value)
+      | Error(value) =&gt;
+        Format.pp_print_string(fmt, &quot;Error&quot;)
+        errValueFormatter(fmt, value)
+      }
+    }
+  }
+
+  module Map = {
+    include (Belt.Map: module type of Belt.Map with module String := Belt.Map.String)
+
+    module String = {
+      include Belt.Map.String
+
+      let pp = (
+        valueFormatter: (Format.formatter, 'value) =&gt; unit,
+        fmt: Format.formatter,
+        map: t&lt;'value&gt;,
+      ) =&gt; {
+        Format.pp_print_string(fmt, &quot;{ &quot;)
+        Belt.Map.String.forEach(map, (key, value) =&gt; {
+          Format.pp_print_string(fmt, key)
+          Format.pp_print_string(fmt, &quot;: &quot;)
+          valueFormatter(fmt, value)
+          Format.pp_print_string(fmt, &quot;,  &quot;)
+        })
+        Format.pp_print_string(fmt, &quot;}&quot;)
+        ()
+      }
+    }
+  }
+}
+</code></pre>
+<h4 id="extendng-module-type"><a class="header" href="#extendng-module-type">Extendng module type</a></h4>
+<pre><code class="language-reasonml">module type TCounter = {
+  type t
+  let counter: t
+}
+module type TUpDown = {
+  include TCounter
+  let up: t =&gt; t
+  let down: t =&gt; t
+}
+module Counter: TUpDown with type t = int = {
+  type t = int
+  let counter = 0
+  let up = c =&gt; c + 1
+  let down = c =&gt; c - 1
+}
+let count = 0
+Counter.up(count)-&gt;Js.log
+Counter.down(count)-&gt;Js.log
+</code></pre>
+<h4 id="recovering-the-type-of-a-module"><a class="header" href="#recovering-the-type-of-a-module">Recovering the type of a module</a></h4>
+<pre><code class="language-reasonml">module Pi = {
+  let pi = 3.14
+}
+
+module type TMaths = {
+  include module type of Pi
+}
+
+module Maths: TMaths = {
+  let pi = 3.141576
+}
+Maths.pi-&gt;Js.log
+</code></pre>
+<h4 id="empty-module-type"><a class="header" href="#empty-module-type">Empty module type</a></h4>
+<p>Empty module type is mainly used to hide the implementation of a module.</p>
+<pre><code class="language-reasonml">/* foo.mli */
+module type S = {}
+
+/* foo.ml */
+module type S = {
+  type t
+  let unsafe_op: t =&gt; t
+}
+
+module M: S = {
+  type t = int
+  let unsafe_op = x =&gt; x + x
+}
+
+module Make = (X: S) =&gt; {
+  let safe_op = x =&gt; X.unsafe_op(x)
+}
+</code></pre>
+<h3 id="ocaml-22"><a class="header" href="#ocaml-22">OCaml</a></h3>
+<p><a href="https://github.com/nyinyithann/notes_on_ocaml/blob/main/notes/lang/module%20type.ipynb">My OCaml Notes here</a></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="functor"><a class="header" href="#functor">Functor</a></h1>
+<h3 id="rescript-27"><a class="header" href="#rescript-27">Rescript</a></h3>
+<ul>
+<li>Functors use the <code>module</code> keyword </li>
+<li>Functors take modules as arguments and return a module</li>
+<li>Funcotrs require annotating arguments</li>
+<li>Functors must start with a capital letter</li>
+</ul>
+<pre><code class="language-reasonml">module type X = {
+  let x: int
+}
+module type Y = {
+  let y: int
+}
+
+module MX = {
+  let x = 10
+}
+module MY = {
+  let y = 10
+}
+
+module type TXY = {
+  let xy: int
+}
+
+module F = (M1: X, M2: Y): TXY =&gt; {
+  let xy = M1.x + M2.y
+}
+
+module XY = F(MX, MY)
+XY.xy-&gt;Js.log
+</code></pre>
+<h4 id="sample-code"><a class="header" href="#sample-code">sample code</a></h4>
+<pre><code class="language-reasonml">module type POINT = {
+  type item
+  type t
+  let make: (item, item) =&gt; t
+  let getX: t =&gt; item
+  let getY: t =&gt; item
+  let add: (t, t) =&gt; t
+  let substract: (t, t) =&gt; t
+}
+
+module type ADD_SUB = {
+  type t
+  let add: (t, t) =&gt; t
+  let substract: (t, t) =&gt; t
+}
+
+module MakePoint = (MP: ADD_SUB): (POINT with type item := MP.t) =&gt; {
+  type item = MP.t
+  type t = (item, item)
+  let make = (x, y) =&gt; (x, y)
+  let getX = ((x, _)) =&gt; x
+  let getY = ((_, y)) =&gt; y
+  let add = ((x1, y1), (x2, y2)) =&gt; (MP.add(x1, x2), MP.add(y1, y2))
+  let substract = ((x1, y1), (x2, y2)) =&gt; (MP.substract(x1, x2), MP.substract(y1, y2))
+}
+
+module Int = {
+  type t = int
+  let add = (x: t, y: t) =&gt; x + y
+  let substract = (x: t, y: t) =&gt; x - y
+}
+
+module Float = {
+  type t = float
+  let add = (x: t, y: t) =&gt; x +. y
+  let substract = (x: t, y: t) =&gt; x -. y
+}
+
+module IntPoint = MakePoint(Int)
+let ip1 = IntPoint.make(10, 10)
+let ip2 = IntPoint.make(11, 11)
+IntPoint.add(ip1, ip2)-&gt;Js.log
+
+module FloatPoint = MakePoint(Float)
+let ip1 = FloatPoint.make(10., 10.)
+let ip2 = FloatPoint.make(11., 11.)
+FloatPoint.add(ip1, ip2)-&gt;Js.log
+</code></pre>
+<h3 id="ocaml-23"><a class="header" href="#ocaml-23">OCaml</a></h3>
+<p><a href="https://github.com/nyinyithann/notes_on_ocaml/blob/main/notes/lang/functor.ipynb">My Ocaml Notes here</a></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="first-class-module"><a class="header" href="#first-class-module">First-class Module</a></h1>
+<h3 id="rescript-28"><a class="header" href="#rescript-28">Rescript</a></h3>
+<h4 id="packing-a-module-as-a-first-class-value-and-unpacking-it-into-a-module"><a class="header" href="#packing-a-module-as-a-first-class-value-and-unpacking-it-into-a-module">Packing a module as a first-class value and unpacking it into a module</a></h4>
+<pre><code class="language-reasonml">module type T = {
+  let x: int
+}
+module M = {
+  let x = 77
+}
+let packed = module(M: T)
+module Unpacked = unpack(packed)
+</code></pre>
+<h4 id="passing-first-class-module-to-a-function-and-unpacking-it-using-pattern-match"><a class="header" href="#passing-first-class-module-to-a-function-and-unpacking-it-using-pattern-match">Passing first-class module to a function and unpacking it using pattern match</a></h4>
+<pre><code class="language-reasonml">let show = (m: module(T)) =&gt;
+  switch m {
+  | (module(UM: T)) =&gt; UM.x-&gt;Js.log
+  }
+show(packed)
+</code></pre>
+<h4 id="returning-a-first-class-module-from-a-function"><a class="header" href="#returning-a-first-class-module-from-a-function">Returning a first-class module from a function</a></h4>
+<pre><code class="language-reasonml">let getM = (x: int): module(T) =&gt; {
+  module(
+    {
+      let x = x
+    }
+  )
+}
+
+module UM = unpack(getM(10))
+UM.x-&gt;Js.log
+</code></pre>
+<h4 id="with-locally-abstract-type"><a class="header" href="#with-locally-abstract-type">With locally abstract type</a></h4>
+<pre><code class="language-reasonml">module type DOUBLE = {
+  type t
+  let double: t =&gt; t
+}
+
+let doubleList = (type a, nums: array&lt;a&gt;, mb: module(DOUBLE with type t = a)) =&gt; {
+  module D = unpack(mb)
+  Belt.Array.map(nums, D.double)
+}
+
+module DInt: DOUBLE with type t = int = {
+  type t = int
+  let double = x =&gt; x * 2
+}
+
+module DFloat: DOUBLE with type t = float = {
+  type t = float
+  let double = x =&gt; x *. 2.
+}
+
+doubleList([1, 2, 3], module(DInt))-&gt;Js.log
+doubleList([4.3, 3.2, 32.2], module(DFloat))-&gt;Js.log
+</code></pre>
+<h4 id="with-module-type-having-abstract-type"><a class="header" href="#with-module-type-having-abstract-type">With module type having abstract type</a></h4>
+<pre><code class="language-reasonml">module type Comparable = {
+  type t
+  let compare: (t, t) =&gt; int
+}
+
+type comparable&lt;'a&gt; = module(Comparable with type t = 'a)
+
+let compare = (type a, x, y, c: comparable&lt;a&gt;) =&gt; {
+  module C = unpack(c)
+  C.compare(x, y)
+}
+
+module IntCmp: Comparable with type t = int = {
+  type t = int
+  let compare = (x, y) =&gt; x - y
+}
+
+module FloatCmp: Comparable with type t = float = {
+  type t = float
+  let compare = (x, y) =&gt; x &gt; y ? 1 : y &gt; x ? -1 : 0
+}
+
+compare(1, 2, module(IntCmp))-&gt;Js.log
+compare(1., 2., module(FloatCmp))-&gt;Js.log
+</code></pre>
+<h4 id="functor-as-first-class-module"><a class="header" href="#functor-as-first-class-module">Functor as first-class module</a></h4>
+<pre><code class="language-reasonml">module type Stringable = {
+  type t
+  let toString: t =&gt; string
+}
+
+module type MakePrinterType = (Item: Stringable) =&gt;
+{
+  let print: Item.t =&gt; string
+}
+
+module MakePrinter = (Item: Stringable) =&gt; {
+  let print = x =&gt; &quot;Printer: &quot; ++ Item.toString(x)
+}
+
+module StringableInt = {
+  type t = int
+  let toString = Js.Int.toString
+}
+
+module StringableFloat = {
+  type t = float
+  let toString = Js.Float.toString
+}
+
+let f = module(MakePrinter: MakePrinterType)
+module IntPrinter = unpack(f)(StringableInt)
+IntPrinter.print(45322)-&gt;Js.log
+
+module FloatPrinter = MakePrinter(StringableFloat)
+FloatPrinter.print(112.211)-&gt;Js.log
+</code></pre>
+<h3 id="ocaml-24"><a class="header" href="#ocaml-24">OCaml</a></h3>
+<p><a href="https://github.com/nyinyithann/notes_on_ocaml/blob/main/notes/lang/first-class%20module.ipynb">My OCaml Notes here</a></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="decorator--extension-points"><a class="header" href="#decorator--extension-points">Decorator &amp; Extension Points</a></h1>
+<h3 id="decorator"><a class="header" href="#decorator">Decorator</a></h3>
+<ul>
+<li>To annotate a piece of code to express extra functionality</li>
+</ul>
+<pre><code class="language-reasonml">@inline let nodeEnv = &quot;prod&quot;
+let env = nodeEnv
+
+/* JS output */
+let env = &quot;prod&quot;
+</code></pre>
+<pre><code class="language-reasonml">@val external process: 'a = &quot;process&quot;
+
+@inline
+let mode = &quot;development&quot;
+
+if (process[&quot;env&quot;][&quot;mode&quot;] === mode) {
+  Js.log(&quot;Dev-only code here!&quot;)
+}
+
+/* JS output */
+if (process.env.mode === &quot;development&quot;) {
+  console.log(&quot;Dev-only code here!&quot;);
+}
+</code></pre>
+<h4 id="unboxed"><a class="header" href="#unboxed">@unboxed</a></h4>
+<p>To unwrap (aka unbox) the JS object wrappers from the output for records with a single field and variants with a single constructor and single payload. </p>
+<pre><code class="language-reasonml">type coordinates = {x: float, y: float}
+@unboxed type localCoordinates = Local(coordinates)
+@unboxed type worldCoordinates = World(coordinates)
+
+let renderDot = (World(coordinates)) =&gt; {
+  Js.log3(&quot;Pretend to draw at:&quot;, coordinates.x, coordinates.y)
+}
+
+let toWorldCoordinates = (Local(coordinates)) =&gt; {
+  World({
+    x: coordinates.x +. 10.,
+    y: coordinates.x +. 20.,
+  })
+}
+
+let playerLocalCoordinates = Local({x: 20.5, y: 30.5})
+
+renderDot(playerLocalCoordinates-&gt;toWorldCoordinates)
+</code></pre>
+<h3 id="extension-point"><a class="header" href="#extension-point">Extension Point</a></h3>
+<ul>
+<li>Extension points are attributes that don't annotate an item; they are the item. </li>
+<li>Extension points start with %. A standalone extension point starts with %%.</li>
+</ul>
+<pre><code class="language-reasonml">let add = %raw(&quot;(a,b) =&gt; a + b&quot;)
+add(2,2)
+
+let pattern = %re(&quot;/^[A-Z]/g&quot;)
+
+let f = (x, y) =&gt; {
+  %debugger
+  x + y
+}
+
+// standalone extension aka top level raw
+%%raw(`import '../style/main.css'`)
+
+%%raw(`
+    var message = &quot;hello&quot;;
+    function greet(m) {
+      console.log(m)
+    }
+`)
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="binding"><a class="header" href="#binding">Binding</a></h1>
+<p><code>external</code> is like a let binding, but:</p>
+<ul>
+<li>The right side of = isn't a value; it's the name of the JS value you're referring to.</li>
+<li>The type for binding is mandatory.</li>
+<li>Can only exist at the top level of a file or module.</li>
+</ul>
+<p><a href="https://rescript-lang.org/docs/manual/latest/api/js/global">Binding to JS global functions - Js.Global</a></p>
+<h4 id="refs"><a class="header" href="#refs">Refs</a></h4>
+<ul>
+<li><a href="https://github.com/bloodyowl/rescript-js">rescript-js</a></li>
+<li><a href="https://github.com/tinymce/rescript-webapi">rescript-webapi</a></li>
+</ul>
+<h4 id="illegal-identifier"><a class="header" href="#illegal-identifier">Illegal identifier</a></h4>
+<p>Illegal identifiers can be created by prefixing <code>\</code>.</p>
+<pre><code class="language-reasonml">let \&quot;orange 🍊&quot; = &quot;🍊&quot;
+\&quot;orange 🍊&quot;-&gt;Js.log
+
+type element = {
+  \&quot;aria-label&quot;: string
+}
+
+let myElement = {
+  \&quot;aria-label&quot;: &quot;close&quot;
+}
+
+let label = myElement.\&quot;aria-label&quot;
+
+let calculate = (~\&quot;Props&quot;) =&gt; {
+  \&quot;Props&quot; + 1
+}
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="global-js-values"><a class="header" href="#global-js-values">Global JS Values</a></h1>
+<h4 id="val-scope"><a class="header" href="#val-scope"><a href="https://rescript-lang.org/docs/manual/latest/bind-to-global-js-values#global-modules">@val</a>, <a href="https://rescript-lang.org/docs/manual/latest/bind-to-global-js-values#global-modules">@scope</a></a></h4>
+<ul>
+<li><a href="https://rescript-lang.org/docs/manual/latest/bind-to-global-js-values#global-modules">Docs</a></li>
+<li><a href="https://rescript-lang.org/try?code=C4TwDgpgBAlgtnCATGBDYECSSBQABAN1QBsoIAPDAJwDsSoBnCYTBZNDALigAoAzYgHt0UALwA+KAFcaMYABooA4cACUYyfEQp0WJGKgAiJizY6Mh-EVIVqdUgGNiEVFVbaOEblva7sG6VlgA0MnFzczT0tnYJgDE3dfDB5yAIApBgA6IQBzFNVFAEYABkLMksLVHGrCejwGB0FIHkMAWXQAC0Mq2whaejA47mURUSMABUxLQYBacQzswRyrel7+0jAQKGGhUaN24A7MyemQOYXcmusoesbmwyRBBylEGmBunDX7KGA5Z23GMAqDAaDkQr9gM5LBDnOcspcVqRbk0IDwWgB3EGPdGGRSGIQOEgAZWAgioqByEG6PUofW+YVc3BkcgCzOCY1CzlclgZVB4VURZFp6ygBOJpPJlIAwlyqEygqyFRyxcQSWSKRBMrzok9xerpbL+dVBV96DAGNweAByVCKK0AI3UEig9sEglIHIA8vaAFYQBzATLmyzmniFeQAJlUcMWy0FyPu3r9AY+ptI5stNrtjoCrvdIWDOFDCwAYrtAwB9AByqCrilL5cy1dr0fm8KW1QYmOADg6UAApGmeBWKwARACiADUR+oAN44AA+UCJgkQw6dkguSxaSAgBCgcEEu4+S6rgho0GdW7yhjAVCPUgDMHPB6PVKqAF9O93ewOhyO+BgZw6EQOdF2XVdUT4DcoGvfgqlPc9L03dsbxoc8ZnQ3cyBoAgYHvGhXneT8AG4gA">Playground Link</a></li>
+</ul>
+<pre><code class="language-reasonml">type immediateId
+@val external setImmediate: (float =&gt; unit, float) =&gt; immediateId = &quot;setImmediate&quot;
+@val external clearImmediate: immediateId =&gt; unit = &quot;clearImmediate&quot;
+// usage
+let id = setImmediate(x =&gt; Js.log(x), 101.101)
+clearImmediate(id)
+
+@val @scope(&quot;Math&quot;)
+external pi : float = &quot;PI&quot;
+pi-&gt;Js.log
+// or
+@val external py : float = &quot;Math.PI&quot;
+py-&gt;Js.log
+
+@val @scope((&quot;window&quot;, &quot;localStorage&quot;))
+external clear: unit =&gt; unit = &quot;clear&quot;
+clear()
+// js =&gt; window.localStorage.clear()
+// Or 
+@val external localStorageClear: unit =&gt; unit = &quot;localStorage.clear&quot;
+localStorageClear()
+// js =&gt; localStorage.clear()
+
+@val external is: ('a, 'b) =&gt; bool = &quot;Object.is&quot;
+is(1,2)-&gt;Js.log
+// Or
+@val @scope(&quot;Object&quot;)
+external is: ('a, 'b) =&gt; bool = &quot;is&quot;
+is(Js.Float._NaN, Js.Float._NaN)-&gt;Js.log
+</code></pre>
+<h4 id="special-global-values-external"><a class="header" href="#special-global-values-external">Special global values <a href="https://rescript-lang.org/docs/manual/latest/bind-to-global-js-values#special-global-values">%external</a></a></h4>
+<pre><code class="language-reasonml">switch %external(__DEV__) {
+| Some(_) =&gt; Js.log(&quot;dev mode&quot;)
+| None =&gt; Js.log(&quot;production mode&quot;)
+}
+
+switch %external(__filename) {
+| Some(f) =&gt; Js.log(f)
+| None =&gt; Js.log(&quot;non-node environment&quot;)
+};
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="import-fromexport-to-js"><a class="header" href="#import-fromexport-to-js">Import from/Export to JS</a></h1>
+<p>Rescript supports 2 JS import/export formats.</p>
+<ul>
+<li>Common JS: <code>require(&quot;MyFile&quot;)</code> and <code>module.exports = ...</code></li>
+<li>ES6 modules: <code>import * from MyFile</code> and <code>export let ...</code></li>
+</ul>
+<p>It can be configured via <code>bsconfig.json</code></p>
+<pre><code class="language-json">{
+  &quot;package-specs&quot;: {
+    &quot;module&quot;: &quot;commonjs&quot;,
+    &quot;in-source&quot;: true
+  }
+}
+</code></pre>
+<p><code>&quot;module&quot;: &quot;es6</code> resolves <code>node_modules</code> using relative paths.</p>
+<h3 id="export-to-javascript"><a class="header" href="#export-to-javascript">Export to JavaScript</a></h3>
+<ul>
+<li>named exporting is already there</li>
+<li>for default export, just <code>let default = 123</code>. </li>
+</ul>
+<p>A JavaScript default export is really just syntax sugar for a named export implicitly called <code>default</code>.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="binding-to-default-or-named-export"><a class="header" href="#binding-to-default-or-named-export">Binding to default or named export</a></h1>
+<h4 id="javascript-1"><a class="header" href="#javascript-1">JavaScript</a></h4>
+<pre><code class="language-javascript">/* utils.js */
+
+function fib(n) {
+  if (n === 0 || n === 1) {
+    return n;
+  }
+  if (n &lt; 0) {
+    return 0;
+  }
+  return fib(n - 1) + fib(n - 2);
+}
+
+function max(x, y) {
+  return x &gt; y ? x : y;
+}
+
+function min(x, y) {
+  return x &lt; y ? x : y;
+}
+
+const lang = {
+  name: 'Rescript',
+  type: 'FP',
+  version: 10.2,
+};
+
+export default lang;
+export { lang, fib, max, min };
+</code></pre>
+<h4 id="rescript-binding"><a class="header" href="#rescript-binding">Rescript Binding</a></h4>
+<pre><code class="language-reasonml">type lang = {
+  name: string,
+  @as(&quot;type&quot;) type_: string,
+  version: float,
+}
+
+@module(&quot;./utils&quot;) external lang: lang = &quot;default&quot;
+@module(&quot;./utils&quot;) external fib: int =&gt; int = &quot;fib&quot;
+@module(&quot;./utils&quot;) external min: (int, int) =&gt; int = &quot;min&quot;
+@module(&quot;./utils&quot;) external max: (int, int) =&gt; int = &quot;min&quot;
+
+/* usage */
+lang.name-&gt;Js.log
+fib(10)-&gt;Js.log
+min(1,2)-&gt;Js.log
+max(2,3)-&gt;Js.log
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="binding-to-default-or-named-exported-js-class"><a class="header" href="#binding-to-default-or-named-exported-js-class">Binding to default or named exported JS Class</a></h1>
+<h4 id="binding-to-default-exported-js-class"><a class="header" href="#binding-to-default-exported-js-class">Binding to default exported JS class</a></h4>
+<h5 id="javascript-2"><a class="header" href="#javascript-2">JavaScript</a></h5>
+<pre><code class="language-JavaScript">/* rectangle.js */
+class Rectangle {
+  constructor(width, height) {
+    this.width = width;
+    this.height = height;
+  }
+
+  get area() {
+    return this.calcArea();
+  }
+
+  calcArea() {
+    return this.width * this.height;
+  }
+}
+export default Rectangle;
+</code></pre>
+<h5 id="rescript-binding-1"><a class="header" href="#rescript-binding-1">Rescript Binding</a></h5>
+<pre><code class="language-reasonml">type rect = {
+  area: float,
+}
+@new @module(&quot;./rectangle&quot;) external createRect: (float, float) =&gt; rect = &quot;default&quot;
+@send external calcArea: rect =&gt; float = &quot;calcArea&quot;
+
+/* usage */
+let r = createRect(1.1, 2.2)
+r.area-&gt;Js.log
+r-&gt;calcArea-&gt;Js.log
+</code></pre>
+<h4 id="binding-to-named-exported-js-class"><a class="header" href="#binding-to-named-exported-js-class">Binding to named exported JS class</a></h4>
+<h5 id="javascript-3"><a class="header" href="#javascript-3">JavaScript</a></h5>
+<pre><code class="language-JavaScript">/* rectangle.js */
+class Rectangle {
+  constructor(width, height) {
+    this.width = width;
+    this.height = height;
+  }
+
+  get area() {
+    return this.calcArea();
+  }
+
+  calcArea() {
+    return this.width * this.height;
+  }
+}
+export { Rectangle };
+</code></pre>
+<h5 id="rescript-binding-2"><a class="header" href="#rescript-binding-2">Rescript Binding</a></h5>
+<pre><code class="language-reasonml">type rect
+@new @module(&quot;./rectangle&quot;)  external createRect: (float, float) =&gt; rect = &quot;Rectangle&quot;
+@get external area: rect =&gt; float = &quot;area&quot;
+@send external calcArea: rect =&gt; float = &quot;calcArea&quot;
+
+/* usage */
+let r = createRect(1.1, 2.2)
+r-&gt;area-&gt;Js.log
+r-&gt;calcArea-&gt;Js.log
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="bind-to-js-object"><a class="header" href="#bind-to-js-object">Bind to JS Object</a></h1>
+<h4 id="references"><a class="header" href="#references">References</a></h4>
+<ul>
+<li><a href="https://rescript-lang.org/docs/manual/latest/external">external</a></li>
+<li><a href="https://rescript-lang.org/docs/manual/latest/import-from-export-to-js#import-a-javascript-modules-content">@module</a></li>
+<li><a href="https://rescript-lang.org/docs/manual/latest/attribute#usage">@as</a></li>
+<li><a href="https://rescript-lang.org/docs/manual/latest/bind-to-js-object#bind-using-special-bs-getters--setters">@set</a></li>
+<li><a href="https://rescript-lang.org/docs/manual/latest/bind-to-js-object#bind-using-special-bs-getters--setters">@get</a></li>
+<li><a href="https://rescript-lang.org/docs/manual/latest/bind-to-js-object#bind-using-special-bs-getters--setters">@set_index</a></li>
+<li><a href="https://rescript-lang.org/docs/manual/latest/bind-to-js-object#bind-using-special-bs-getters--setters">@get_index</a></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="bind-using-rescript-record"><a class="header" href="#bind-using-rescript-record">Bind using Rescript record</a></h1>
+<h5 id="javascript-4"><a class="header" href="#javascript-4">JavaScript</a></h5>
+<pre><code class="language-JavaScript">/* languages.js */
+const rescript = {
+  name: 'Rescript',
+  type: 'FP',
+  version: 10.2,
+};
+
+const ocaml = {
+  name: 'OCaml',
+  type: 'FP',
+  version: 5.0,
+};
+
+const rust = {
+  name: 'Rust',
+  type: 'ML Family',
+  version: 1.5,
+};
+
+export { rescript, ocaml, rust };
+</code></pre>
+<h5 id="rescript-binding-3"><a class="header" href="#rescript-binding-3">Rescript Binding</a></h5>
+<pre><code class="language-reasonml">type lang = {
+  name: string,
+  @as(&quot;type&quot;) type_: string,
+  version: float,
+}
+@module(&quot;./languages&quot;) external rescript: lang = &quot;rescript&quot;
+@module(&quot;./languages&quot;) external ocaml: lang = &quot;ocaml&quot;
+@module(&quot;./languages&quot;) external rust: lang = &quot;rust&quot;
+
+/* usage */
+rescript.name-&gt;Js.log
+ocaml.name-&gt;Js.log
+rust.name-&gt;Js.log
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="bind-js-array-to-rescript-record"><a class="header" href="#bind-js-array-to-rescript-record">Bind JS array to Rescript record</a></h1>
+<h5 id="javascript-5"><a class="header" href="#javascript-5">JavaScript</a></h5>
+<pre><code class="language-JavaScript">/* languages.js */
+const rescript = {
+  name: 'Rescript',
+  type: 'FP',
+  version: 10.2,
+};
+
+const ocaml = {
+  name: 'OCaml',
+  type: 'FP',
+  version: 5.0,
+};
+
+const rust = {
+  name: 'Rust',
+  type: 'ML Family',
+  version: 1.5,
+};
+
+let langs = [ocaml, rust, rescript];
+
+export { langs };
+
+</code></pre>
+<h5 id="rescript-binding-4"><a class="header" href="#rescript-binding-4">Rescript Binding</a></h5>
+<pre><code class="language-reasonml">type lang = {
+  name: string,
+  @as(&quot;type&quot;) type_: string,
+  version: float,
+}
+
+type langMap = {
+  @as(&quot;0&quot;) ocaml: lang,
+  @as(&quot;1&quot;) rust: lang,
+  @as(&quot;2&quot;) rescript: lang,
+}
+
+@module(&quot;./languages&quot;) external langs: langMap = &quot;langs&quot;
+
+/* usage */
+langs.ocaml.name-&gt;Js.log
+langs.rust.name-&gt;Js.log
+langs.rescript.name-&gt;Js.log
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="bind-using-rescript-object"><a class="header" href="#bind-using-rescript-object">Bind using Rescript object</a></h1>
+<h4 id=""><a class="header" href="#"></a></h4>
+<h5 id="javascript-6"><a class="header" href="#javascript-6">JavaScript</a></h5>
+<pre><code class="language-JavaScript">/* languages.js */
+const rescript = {
+  name: 'Rescript',
+  type: 'FP',
+  version: 10.2,
+};
+export { rescript };
+</code></pre>
+<h5 id="rescript-binding-5"><a class="header" href="#rescript-binding-5">Rescript Binding</a></h5>
+<pre><code class="language-reasonml">type langobj = {
+  &quot;name&quot;: string,
+  &quot;type&quot;: string,
+  &quot;version&quot;: float,
+}
+@module(&quot;./languages&quot;) external rescript: langobj = &quot;rescript&quot;
+
+/* usage */
+rescript[&quot;name&quot;]-&gt;Js.log
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="bind-with-gettersetter"><a class="header" href="#bind-with-gettersetter">Bind with getter/setter</a></h1>
+<h5 id="rescript-binding-6"><a class="header" href="#rescript-binding-6">Rescript Binding</a></h5>
+<pre><code class="language-reasonml">@set external setValue: (Dom.element, string) =&gt; unit = &quot;value&quot;
+@get external getValue: Dom.element =&gt; string = &quot;value&quot;
+
+/* @get_index/@set_index to access dynamic property or an index */
+type t
+@new external create: array&lt;float&gt; =&gt; t = &quot;Int32Array&quot;
+@get_index external get: (t, int) =&gt; float = &quot;&quot;
+@set_index external set: (t, int, float) =&gt; unit = &quot;&quot;
+
+/* usage */
+let arr = create([1.,2.,3.])
+arr-&gt;get(0)-&gt;Js.log
+arr-&gt;set(0, 77.7)
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="bind-to-js-function"><a class="header" href="#bind-to-js-function">Bind to JS Function</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="labeled-arguments-1"><a class="header" href="#labeled-arguments-1">Labeled Arguments</a></h1>
+<h4 id="javascript-7"><a class="header" href="#javascript-7">JavaScript</a></h4>
+<pre><code class="language-JavaScript">/* play.js */
+function drawCircle(x, y, color) {
+  const s1 = `drawing circle at (${x},${y})`;
+  return color ? `${s1} with ${color} color.` : s1;
+}
+export { drawCircle };
+</code></pre>
+<h4 id="rescript-binding-7"><a class="header" href="#rescript-binding-7">Rescript Binding</a></h4>
+<pre><code class="language-reasonml">@module(&quot;./play&quot;) external drawCircle: 
+(~x: float, ~y: float, ~color: string=?, unit) =&gt; string = &quot;drawCircle&quot;
+
+/* usage */
+drawCircle(~x=11.11, ~y=12.12, ())-&gt;Js.log
+drawCircle(~x=11.11, ~y=12.12, ~color=?Some(&quot;Red&quot;), ())-&gt;Js.log
+drawCircle(~x=11.11, ~y=12.12, ~color=&quot;Blue&quot;, ())-&gt;Js.log
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="object-method"><a class="header" href="#object-method">Object Method</a></h1>
+<h4 id="javascript-8"><a class="header" href="#javascript-8">JavaScript</a></h4>
+<pre><code class="language-JavaScript">/* play.js */
+let funcObj = {
+  id: (x) =&gt; x,
+};
+
+export { funcObj };
+</code></pre>
+<h4 id="rescript-binding-8"><a class="header" href="#rescript-binding-8">Rescript Binding</a></h4>
+<pre><code class="language-reasonml">type fobj 
+@module(&quot;./play&quot;) external funcObj : fobj = &quot;funcObj&quot;
+@send external id : (fobj, int) =&gt; int = &quot;id&quot; 
+
+/* usage */
+funcObj-&gt; id (25)-&gt;Js.log
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="variadic-function"><a class="header" href="#variadic-function">Variadic Function</a></h1>
+<h4 id="javascript-9"><a class="header" href="#javascript-9">JavaScript</a></h4>
+<pre><code class="language-JavaScript">/* play.js */
+function sum(...args) {
+  return Array.from(args).reduce((x, y) =&gt; x + y);
+}
+export { sum };
+</code></pre>
+<h4 id="rescript-binding-9"><a class="header" href="#rescript-binding-9">Rescript Binding</a></h4>
+<pre><code class="language-reasonml">@module(&quot;./play&quot;) @variadic external sumInts : array&lt;int&gt; =&gt; int = &quot;sum&quot;
+@module(&quot;./play&quot;) @variadic external joinStrings : array&lt;string&gt; =&gt; string = &quot;sum&quot;
+
+/* usage */
+sumInts([1,2,3,4,5])-&gt;Js.log
+joinStrings([&quot;abc&quot;, &quot;def&quot;, &quot;xyz&quot;])-&gt;Js.log
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="polymorphic-variant-unwrrap"><a class="header" href="#polymorphic-variant-unwrrap">Polymorphic Variant (@unwrrap)</a></h1>
+<h4 id="javascript-10"><a class="header" href="#javascript-10">JavaScript</a></h4>
+<pre><code class="language-JavaScript">/* play.js */
+function config(option) {
+  if (typeof option === 'string') {
+    return `set ${option}`;
+  }
+  if (typeof option === 'number') {
+    return `set ${option}`;
+  }
+  if (typeof option === 'object') {
+    return `set ${option.option}`;
+  }
+  if (typeof option === 'function') {
+    return `set ${option()}`;
+  }
+
+  throw new Error('unexpected value');
+}
+
+export { config };
+</code></pre>
+<h4 id="rescript-binding-10"><a class="header" href="#rescript-binding-10">Rescript Binding</a></h4>
+<pre><code class="language-reasonml">/* usage */
+type optType = {option: string}
+@module(&quot;./play&quot;)
+external config: @unwrap
+[
+  | #Int(int)
+  | #String(string)
+  | #Object(optType)
+  | #Function(unit =&gt; string)
+  | #Null(unit) /* this is just for testing error catching */
+] =&gt; string = &quot;config&quot;
+
+/* usage */
+config(#Int(10))-&gt;Js.log
+config(#String(&quot;ten&quot;))-&gt;Js.log
+config(#Object({option: &quot;obj option&quot;}))-&gt;Js.log
+config(#Function(() =&gt; &quot;func option&quot;))-&gt;Js.log
+try {
+  config(#Null())-&gt;Js.log
+} catch {
+| Js.Exn.Error(obj) =&gt;
+  switch Js.Exn.message(obj) {
+  | Some(e) =&gt; Js.log(e)
+  | None =&gt; ()
+  }
+}
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="constrain-arguments"><a class="header" href="#constrain-arguments">Constrain Arguments</a></h1>
+<h4 id="javascript-11"><a class="header" href="#javascript-11">JavaScript</a></h4>
+<pre><code class="language-JavaScript">/* play.js */
+function openWith(browserName) {
+  if (browserName === 'chrome') {
+    return 'opening with chrome ...';
+  }
+  if (browserName === 'safari') {
+    return 'opening with safari ...';
+  }
+  if (browserName === 'firefox') {
+    return 'opening with firefox ...';
+  }
+  if (browserName === 'edge') {
+    return 'opening with edge ...';
+  }
+}
+
+function queueWith(state) {
+  if (state === 0) {
+    return 'task is in the queue with low priority.';
+  }
+  if (state === 6) {
+    return 'task is in the queue with high priority.';
+  }
+  if (state === 7) {
+    return 'task is in the queue with top proirity.';
+  }
+  throw new Error('Unexpected state');
+}
+
+export { openWith, queueWith }
+</code></pre>
+<h4 id="rescript-binding-11"><a class="header" href="#rescript-binding-11">Rescript Binding</a></h4>
+<pre><code class="language-reasonml">@module(&quot;./play&quot;) external openWith: (
+    @string[
+        | #chrome
+        | #safari
+        | #firefox
+        | @as(&quot;edge&quot;) #IE
+    ]
+) =&gt; string = &quot;openWith&quot;
+
+@module(&quot;./play&quot;) external queueWith:(
+    @int[
+        |#low
+        |@as(6) #high
+        |#top
+    ]
+) =&gt; string = &quot;queueWith&quot;
+
+/* usage */
+openWith(#chrome) -&gt; Js.log
+openWith(#safari) -&gt; Js.log
+openWith(#firefox) -&gt; Js.log
+openWith(#IE) -&gt; Js.log
+
+queueWith(#low)-&gt;Js.log
+queueWith(#high)-&gt;Js.log
+queueWith(#top)-&gt;Js.log
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="special-case-event-listeners"><a class="header" href="#special-case-event-listeners">Special-case: Event Listeners</a></h1>
+<h4 id="javascript-12"><a class="header" href="#javascript-12">JavaScript</a></h4>
+<pre><code class="language-JavaScript">/* play.js */
+class Game {
+  #eventMap;
+  #timeOutId;
+
+  constructor() {
+    this.#eventMap = new Map();
+  }
+
+  on(eventName, event) {
+    this.#eventMap.set(eventName, event);
+    return this;
+  }
+
+  play() {
+    console.log('play...');
+    clearTimeout(this.#timeOutId);
+    this.#eventMap.get('play')?.();
+    this.#timeOutId = setTimeout(
+      () =&gt; this.#eventMap.get('completed')?.('You won!'),
+      2000
+    );
+  }
+
+  exit() {
+    clearTimeout(this.#timeOutId);
+    this.#eventMap.get('exit')?.('Bye');
+  }
+}
+
+export { Game };
+</code></pre>
+<h4 id="rescript-binding-12"><a class="header" href="#rescript-binding-12">Rescript Binding</a></h4>
+<pre><code class="language-reasonml">type game
+@new @module(&quot;./play&quot;) external createGame: unit =&gt; game = &quot;Game&quot;
+@send external play: game =&gt; unit = &quot;play&quot; 
+@send external exit: game =&gt; unit = &quot;exit&quot; 
+@send external on: (game, @string [
+    |#play (unit =&gt; unit)
+    |#completed (string =&gt; unit)
+    |#exit (string =&gt; unit)
+]  ) =&gt; game = &quot;on&quot;
+
+/* usage */
+let myGame = createGame()
+myGame
+    -&gt;on(#play (() =&gt; Js.log(&quot;let's start...&quot;)))
+    -&gt;on(#completed (x =&gt; Js.log(x)))
+    -&gt;on(#exit (x =&gt; Js.log(x)))
+    -&gt;ignore
+myGame-&gt;play
+myGame-&gt;exit
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="fixed-arguments"><a class="header" href="#fixed-arguments">Fixed Arguments</a></h1>
+<h1 id="special-case-event-listeners-1"><a class="header" href="#special-case-event-listeners-1">Special-case: Event Listeners</a></h1>
+<h4 id="javascript-13"><a class="header" href="#javascript-13">JavaScript</a></h4>
+<pre><code class="language-JavaScript">/* play.js */
+class Game {
+  #eventMap;
+  #timeOutId;
+
+  constructor() {
+    this.#eventMap = new Map();
+  }
+
+  on(eventName, event) {
+    this.#eventMap.set(eventName, event);
+    return this;
+  }
+
+  play() {
+    console.log('play...');
+    clearTimeout(this.#timeOutId);
+    this.#eventMap.get('play')?.();
+    this.#timeOutId = setTimeout(
+      () =&gt; this.#eventMap.get('completed')?.('You won!'),
+      2000
+    );
+  }
+
+  exit() {
+    clearTimeout(this.#timeOutId);
+    this.#eventMap.get('exit')?.('Bye');
+  }
+}
+
+export { Game };
+</code></pre>
+<h4 id="rescript-binding-13"><a class="header" href="#rescript-binding-13">Rescript Binding</a></h4>
+<pre><code class="language-reasonml">type game
+@new @module(&quot;./play&quot;) external createGame: unit =&gt; game = &quot;Game&quot;
+@send external gameOnPlay: (game, @as(&quot;play&quot;) _, unit =&gt; unit) =&gt; unit = &quot;on&quot;
+@send external gameOnCompleted: (game, @as(&quot;completed&quot;) _, string =&gt; unit) =&gt; unit = &quot;on&quot;
+@send external gameOnExit: (game, @as(&quot;exit&quot;) _, string =&gt; unit) =&gt; unit = &quot;on&quot;
+
+/* usage */
+let myGame = createGame()
+myGame-&gt;gameOnPlay(()=&gt;Js.log(&quot;lets start the game ...&quot;))
+myGame-&gt;gameOnCompleted(x=&gt;Js.log(x))
+myGame-&gt;gameOnExit(x=&gt;Js.log(x))
+myGame-&gt;play
+myGame-&gt;exit
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="ignore-arguments"><a class="header" href="#ignore-arguments">Ignore Arguments</a></h1>
+<h4 id="from-docs"><a class="header" href="#from-docs">From <a href="https://rescript-lang.org/docs/manual/latest/bind-to-js-function#ignore-arguments">Docs</a></a></h4>
+<p>You can also explicitly &quot;hide&quot; external function parameters in the JS output, which may be useful if you want to add type constraints to other parameters without impacting the JS side:</p>
+<h4 id="rescript-29"><a class="header" href="#rescript-29">Rescript</a></h4>
+<pre><code class="language-reasonml">@val external doSomething: (@ignore 'a, 'a) =&gt; unit = &quot;doSomething&quot;
+
+doSomething(&quot;this only shows up in ReScript code&quot;, &quot;test&quot;)
+</code></pre>
+<h4 id="javascript-output"><a class="header" href="#javascript-output">JavaScript Output</a></h4>
+<pre><code class="language-JavaScript">doSomething(&quot;test&quot;);
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="curry-and-uncurry"><a class="header" href="#curry-and-uncurry">Curry and Uncurry</a></h1>
+<h4 id="uncurry-syntax"><a class="header" href="#uncurry-syntax">uncurry syntax</a></h4>
+<pre><code class="language-reasonml">type timerId
+@val external setTimeOut: (((. unit) =&gt; unit), int) =&gt; timerId = &quot;setTimeOut&quot;
+
+setTimeOut((.) =&gt; Js.log(&quot;hello&quot;), 100)-&gt;Js.log
+</code></pre>
+<h4 id="extra-solution-uncurry"><a class="header" href="#extra-solution-uncurry">extra solution (@uncurry)</a></h4>
+<ul>
+<li>you're using external</li>
+<li>the external function takes in an argument that's another function</li>
+<li>you want the user not to need to annotate the call sites with the dot</li>
+</ul>
+<pre><code class="language-reasonml">@val external setTimeOut:(@uncurry (unit =&gt; unit), int) =&gt; timerId = &quot;setTimeOut&quot;
+
+@send external keep: (array&lt;int&gt;, @uncurry (int =&gt; bool)) =&gt; array&lt;int&gt; = &quot;filter&quot;
+[1,2,3]-&gt;keep(x =&gt; mod(x,2) === 0)-&gt;Js.log
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="modeling-this-based-callbacks"><a class="header" href="#modeling-this-based-callbacks">Modeling this-based callbacks</a></h1>
+<h4 id="javascript-14"><a class="header" href="#javascript-14">JavaScript</a></h4>
+<pre><code class="language-JavaScript">x.onload = function(v) {
+  console.log(this.response + v)
+}
+</code></pre>
+<h4 id="rescript-binding-14"><a class="header" href="#rescript-binding-14">Rescript Binding</a></h4>
+<pre><code class="language-reasonml">type x
+@val external x: x = &quot;x&quot;
+@set external setOnload: (x, @this ((x, int) =&gt; unit)) =&gt; unit = &quot;onload&quot;
+@get external resp: x =&gt; int = &quot;response&quot;
+setOnload(x, @this ((o, v) =&gt; Js.log(resp(o) + v)))
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="bind-null-or-undefined-return-value-to-option"><a class="header" href="#bind-null-or-undefined-return-value-to-option">Bind null or undefined return value to Option</a></h1>
+<h4 id="javascript-15"><a class="header" href="#javascript-15">JavaScript</a></h4>
+<pre><code class="language-JavaScript">function getValue(key) {
+  if (key) {
+    return 'value';
+  } else {
+    return undefined;
+  }
+}
+export { getValue };
+</code></pre>
+<h4 id="rescript-30"><a class="header" href="#rescript-30">Rescript</a></h4>
+<pre><code class="language-reasonml">@module(&quot;./play&quot;) @return(nullable) external getValue: string =&gt; option&lt;string&gt; = &quot;getValue&quot;
+
+/* usage */
+let v = getValue(&quot;&quot;)
+switch v {
+  | Some(v') =&gt; Js.log(v')
+  | None =&gt; Js.log(&quot;undefined&quot;)
+}
+
+type doc
+type elm
+@val external document: doc = &quot;document&quot;
+@send @return(nullable) external getElementById: (doc, string) =&gt; option&lt;elm&gt; = &quot;getElementById&quot;
+
+/* usage */
+let element = getElementById(document, &quot;lesson&quot;)
+switch element {
+    |Some(e) =&gt; Js.log(e)
+    |None =&gt; Js.log(&quot;Not Found&quot;)
+}
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="json"><a class="header" href="#json">JSON</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="generate-converters--helpers"><a class="header" href="#generate-converters--helpers">Generate Converters &amp; Helpers</a></h1>
+<ul>
+<li><a href="https://rescript-lang.org/docs/manual/latest/generate-converters-accessors#generate-functions--plain-values-for-variants">@deriving(accessors)</a></li>
+<li><a href="https://rescript-lang.org/docs/manual/latest/generate-converters-accessors#generate-converters-for-js-integer-enums-and-variants">@deriving(jsConverter)</a></li>
+<li><a href="https://rescript-lang.org/docs/manual/latest/generate-converters-accessors#more-safety">@deriving({jsConverter: newType})</a></li>
+<li><a href="https://rescript-lang.org/docs/manual/latest/generate-converters-accessors#usage-example">@deriving(abstract)</a>
+<ul>
+<li><a href="https://rescript-lang.org/docs/manual/latest/generate-converters-accessors#tips--tricks">@optional</a></li>
+<li><a href="https://rescript-lang.org/docs/manual/latest/generate-converters-accessors#convert-external-into-js-object-creation-function">@obj</a></li>
+</ul>
+</li>
+</ul>
+<p>Use <code>@deriving</code> to</p>
+<ul>
+<li>Automatically generate functions that convert between ReScript's internal and JS runtime values (e.g. variants).</li>
+<li>Convert a record type into an abstract type with generated creation, accessor and method functions.</li>
+<li>Generate some other helper functions, such as functions from record attribute names.</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="derivingaccessors"><a class="header" href="#derivingaccessors">@deriving(accessors)</a></h1>
+<h3 id="derivingaccessors-with-variants"><a class="header" href="#derivingaccessors-with-variants"><code>@deriving(accessors)</code> with variants</a></h3>
+<ul>
+<li>create accessor functions for variant constructors </li>
+<li>payload-less constructors generate plain integers</li>
+</ul>
+<pre><code class="language-reasonml">@deriving(accessors)
+type rec json =
+  | Bool(bool)
+  | Float(float)
+  | Int(int)
+  | String(string)
+  | Null
+  | Undefined
+
+/* usage */
+let b : json = bool(true)
+b-&gt;Js.log // {TAG: 0, _0: true}
+let f : json = float(1.1)
+f-&gt;Js.log // {TAG: 1, _0: 1.1}
+let i : json = int(10)
+i-&gt;Js.log // {TAG: 2, _0: 10}
+let s : json = string(&quot;hello&quot;)
+s-&gt;Js.log // {TAG: 3, _0: 'hello'}
+null-&gt;Js.log // 0 
+undefined-&gt;Js.log // 1 
+</code></pre>
+<h3 id="derivingaccessors-with-records"><a class="header" href="#derivingaccessors-with-records"><code>@deriving(accessors)</code> with records</a></h3>
+<ul>
+<li>create accessors with field names</li>
+</ul>
+<pre><code class="language-reasonml">@deriving(accessors)
+type lang = {
+  name: string,
+  \&quot;type&quot;: string,
+  version: float,
+}
+
+let langs = [
+    { name: &quot;ReScript&quot;, \&quot;type&quot; : &quot;fp&quot;, version : 10.2},
+    { name: &quot;OCaml&quot;, \&quot;type&quot; : &quot;fp&quot;, version : 5.0}
+]
+
+/* usage */
+Belt.Array.map(langs, name) -&gt; Js.log // ['ReScript', 'OCaml']
+Belt.Array.map(langs, \&quot;type&quot;) -&gt; Js.log // ['fp', 'fp']
+Belt.Array.map(langs, version) -&gt; Js.log // [10.2, 5.0]
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="derivingjsconverter"><a class="header" href="#derivingjsconverter">@deriving(jsConverter)</a></h1>
+<ul>
+<li>create converter functins the allow back and forth conversion between JS integer enum and ReScript variant values</li>
+</ul>
+<pre><code class="language-reasonml">@deriving(jsConverter)
+type letter =
+  | @as(1) A
+  | B
+  | @as(4) E
+  | F
+
+letterToJs(A)-&gt;Js.log // 1
+letterToJs(B)-&gt;Js.log // 2
+letterToJs(E)-&gt;Js.log // 4
+letterToJs(F)-&gt;Js.log // 5
+
+// print A 
+switch letterFromJs(1) {
+    |Some(A)  =&gt; Js.log(&quot;A&quot;)
+    |_ =&gt; ()
+}
+
+// print None
+switch letterFromJs(3) {
+    |None =&gt; Js.log(&quot;None&quot;) 
+    | _ =&gt; ()
+}
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="derivingjsconverter-newtype"><a class="header" href="#derivingjsconverter-newtype">@deriving({jsConverter: newType})</a></h1>
+<ul>
+<li>create converter functins the allow back and forth conversion between generated abstract type and ReScript variant values</li>
+<li><code>newType</code> hides the fact that JS enum are ints </li>
+</ul>
+<pre><code class="language-reasonml">@deriving({jsConverter: newType})
+type letter =
+  | @as(1) A
+  | B
+  | @as(4) E
+  | F
+
+/* usage */
+
+letterToJs(A)-&gt;Js.log // 1
+letterToJs(B)-&gt;Js.log // 2
+letterToJs(E)-&gt;Js.log // 4
+letterToJs(F)-&gt;Js.log // 5
+
+let f = letterFromJs(letterToJs(F))
+f-&gt;Js.log // print 3 here, that's OK we don't care the value as long as we can check the type
+(f === F)-&gt;Js.log // true
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="obj"><a class="header" href="#obj">@obj</a></h1>
+<p>Use <code>@obj</code> on an external binding to create a function that, when called, will evaluate to a JS object with fields corresponding to the function's parameter labels.</p>
+<pre><code class="language-reasonml">@obj
+external route: (
+  ~\&quot;type&quot;: string,
+  ~path: string,
+  ~action: list&lt;string&gt; =&gt; unit,
+  ~options: {..}=?,
+  unit,
+) =&gt; _ = &quot;&quot;
+
+/* usage */
+
+let homeRoute = route(~\&quot;type&quot;=&quot;GET&quot;, ~path=&quot;/&quot;, ~action=_ =&gt; Js.log(&quot;Home&quot;), ())
+homeRoute-&gt;Js.log // {type: 'GET', path: '/', action: ƒ}
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="derivingabstract"><a class="header" href="#derivingabstract">@deriving(abstract)</a></h1>
+<p>Go and read <a href="https://rescript-lang.org/docs/manual/latest/generate-converters-accessors#convert-record-type-to-abstract-record">here</a> 😄</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="rescriptreact-v3"><a class="header" href="#rescriptreact-v3">ReScriptReact (V3)</a></h1>
+<p>This learning notes is based on ReScriptReact V3.</p>
+<p><a href="https://github.com/rescript-lang/rescript-react/blob/v0.10.3/src/React.res">React.res</a></p>
+<pre><code class="language-reasonml">type element
+
+@val external null: element = &quot;null&quot;
+
+external float: float =&gt; element = &quot;%identity&quot;
+external int: int =&gt; element = &quot;%identity&quot;
+external string: string =&gt; element = &quot;%identity&quot;
+
+external array: array&lt;element&gt; =&gt; element = &quot;%identity&quot;
+
+type componentLike&lt;'props, 'return&gt; = 'props =&gt; 'return
+
+type component&lt;'props&gt; = componentLike&lt;'props, element&gt;
+
+/* this function exists to prepare for making `component` abstract */
+external component: componentLike&lt;'props, element&gt; =&gt; component&lt;'props&gt; = &quot;%identity&quot;
+
+@module(&quot;react&quot;)
+external createElement: (component&lt;'props&gt;, 'props) =&gt; element = &quot;createElement&quot;
+
+@module(&quot;react&quot;)
+external cloneElement: (element, 'props) =&gt; element = &quot;cloneElement&quot;
+
+@variadic @module(&quot;react&quot;)
+external createElementVariadic: (component&lt;'props&gt;, 'props, array&lt;element&gt;) =&gt; element =
+  &quot;createElement&quot;
+
+@module(&quot;react&quot;) @deprecated(&quot;Please use JSX syntax directly.&quot;)
+external jsxKeyed: (component&lt;'props&gt;, 'props, string) =&gt; element = &quot;jsx&quot;
+
+@module(&quot;react&quot;) @deprecated(&quot;Please use JSX syntax directly.&quot;)
+external jsx: (component&lt;'props&gt;, 'props) =&gt; element = &quot;jsx&quot;
+
+@module(&quot;react&quot;) @deprecated(&quot;Please use JSX syntax directly.&quot;)
+external jsxs: (component&lt;'props&gt;, 'props) =&gt; element = &quot;jsxs&quot;
+
+@module(&quot;react&quot;) @deprecated(&quot;Please use JSX syntax directly.&quot;)
+external jsxsKeyed: (component&lt;'props&gt;, 'props, string) =&gt; element = &quot;jsxs&quot;
+
+type ref&lt;'value&gt; = {mutable current: 'value}
+
+module Ref = {
+  @deprecated(&quot;Please use the type React.ref instead&quot;)
+  type t&lt;'value&gt; = ref&lt;'value&gt;
+
+  @deprecated(&quot;Please directly read from ref.current instead&quot;) @get
+  external current: ref&lt;'value&gt; =&gt; 'value = &quot;current&quot;
+
+  @deprecated(&quot;Please directly assign to ref.current instead&quot;) @set
+  external setCurrent: (ref&lt;'value&gt;, 'value) =&gt; unit = &quot;current&quot;
+}
+
+@module(&quot;react&quot;)
+external createRef: unit =&gt; ref&lt;Js.nullable&lt;'a&gt;&gt; = &quot;createRef&quot;
+
+module Children = {
+  @module(&quot;react&quot;) @scope(&quot;Children&quot;)
+  external map: (element, element =&gt; element) =&gt; element = &quot;map&quot;
+  @module(&quot;react&quot;) @scope(&quot;Children&quot;)
+  external mapWithIndex: (element, @uncurry (element, int) =&gt; element) =&gt; element = &quot;map&quot;
+  @module(&quot;react&quot;) @scope(&quot;Children&quot;)
+  external forEach: (element, element =&gt; unit) =&gt; unit = &quot;forEach&quot;
+  @module(&quot;react&quot;) @scope(&quot;Children&quot;)
+  external forEachWithIndex: (element, @uncurry (element, int) =&gt; unit) =&gt; unit = &quot;forEach&quot;
+  @module(&quot;react&quot;) @scope(&quot;Children&quot;)
+  external count: element =&gt; int = &quot;count&quot;
+  @module(&quot;react&quot;) @scope(&quot;Children&quot;)
+  external only: element =&gt; element = &quot;only&quot;
+  @module(&quot;react&quot;) @scope(&quot;Children&quot;)
+  external toArray: element =&gt; array&lt;element&gt; = &quot;toArray&quot;
+}
+
+module Context = {
+  type t&lt;'props&gt;
+
+  @obj
+  external makeProps: (
+    ~value: 'props,
+    ~children: element,
+    unit,
+  ) =&gt; {&quot;value&quot;: 'props, &quot;children&quot;: element} = &quot;&quot;
+
+  @get
+  external provider: t&lt;'props&gt; =&gt; component&lt;{&quot;value&quot;: 'props, &quot;children&quot;: element}&gt; = &quot;Provider&quot;
+}
+
+@module(&quot;react&quot;)
+external createContext: 'a =&gt; Context.t&lt;'a&gt; = &quot;createContext&quot;
+
+@module(&quot;react&quot;)
+external forwardRef: (@uncurry ('props, Js.Nullable.t&lt;ref&lt;'a&gt;&gt;) =&gt; element) =&gt; component&lt;
+  'props,
+&gt; = &quot;forwardRef&quot;
+
+@module(&quot;react&quot;)
+external memo: component&lt;'props&gt; =&gt; component&lt;'props&gt; = &quot;memo&quot;
+
+@module(&quot;react&quot;)
+external memoCustomCompareProps: (
+  component&lt;'props&gt;,
+  @uncurry ('props, 'props) =&gt; bool,
+) =&gt; component&lt;'props&gt; = &quot;memo&quot;
+
+module Fragment = {
+  @obj
+  external makeProps: (~children: element, ~key: 'key=?, unit) =&gt; {&quot;children&quot;: element} = &quot;&quot;
+  @module(&quot;react&quot;)
+  external make: component&lt;{
+    &quot;children&quot;: element,
+  }&gt; = &quot;Fragment&quot;
+}
+
+module StrictMode = {
+  @obj
+  external makeProps: (~children: element, ~key: 'key=?, unit) =&gt; {&quot;children&quot;: element} = &quot;&quot;
+  @module(&quot;react&quot;)
+  external make: component&lt;{
+    &quot;children&quot;: element,
+  }&gt; = &quot;StrictMode&quot;
+}
+
+module Suspense = {
+  @obj
+  external makeProps: (
+    ~children: element=?,
+    ~fallback: element=?,
+    ~key: 'key=?,
+    unit,
+  ) =&gt; {&quot;children&quot;: option&lt;element&gt;, &quot;fallback&quot;: option&lt;element&gt;} = &quot;&quot;
+  @module(&quot;react&quot;)
+  external make: component&lt;{
+    &quot;children&quot;: option&lt;element&gt;,
+    &quot;fallback&quot;: option&lt;element&gt;,
+  }&gt; = &quot;Suspense&quot;
+}
+
+module Experimental = {
+  module SuspenseList = {
+    type revealOrder
+    type tail
+    @obj
+    external makeProps: (
+      ~children: element=?,
+      ~revealOrder: [#forwards | #backwards | #together]=?,
+      ~tail: [#collapsed | #hidden]=?,
+      unit,
+    ) =&gt; {&quot;children&quot;: option&lt;element&gt;, &quot;revealOrder&quot;: option&lt;revealOrder&gt;, &quot;tail&quot;: option&lt;tail&gt;} =
+      &quot;&quot;
+
+    @module(&quot;react&quot;)
+    external make: component&lt;{
+      &quot;children&quot;: option&lt;element&gt;,
+      &quot;revealOrder&quot;: option&lt;revealOrder&gt;,
+      &quot;tail&quot;: option&lt;tail&gt;,
+    }&gt; = &quot;SuspenseList&quot;
+  }
+}
+
+/* HOOKS */
+
+/*
+ * Yeah, we know this api isn't great. tl;dr: useReducer instead.
+ * It's because useState can take functions or non-function values and treats
+ * them differently. Lazy initializer + callback which returns state is the
+ * only way to safely have any type of state and be able to update it correctly.
+ */
+@module(&quot;react&quot;)
+external useState: (@uncurry (unit =&gt; 'state)) =&gt; ('state, ('state =&gt; 'state) =&gt; unit) =
+  &quot;useState&quot;
+
+@module(&quot;react&quot;)
+external useReducer: (
+  @uncurry ('state, 'action) =&gt; 'state,
+  'state,
+) =&gt; ('state, 'action =&gt; unit) = &quot;useReducer&quot;
+
+@module(&quot;react&quot;)
+external useReducerWithMapState: (
+  @uncurry ('state, 'action) =&gt; 'state,
+  'initialState,
+  @uncurry ('initialState =&gt; 'state),
+) =&gt; ('state, 'action =&gt; unit) = &quot;useReducer&quot;
+
+@module(&quot;react&quot;)
+external useEffect: (@uncurry (unit =&gt; option&lt;unit =&gt; unit&gt;)) =&gt; unit = &quot;useEffect&quot;
+@module(&quot;react&quot;)
+external useEffect0: (@uncurry (unit =&gt; option&lt;unit =&gt; unit&gt;), @as(json`[]`) _) =&gt; unit =
+  &quot;useEffect&quot;
+@module(&quot;react&quot;)
+external useEffect1: (@uncurry (unit =&gt; option&lt;unit =&gt; unit&gt;), array&lt;'a&gt;) =&gt; unit = &quot;useEffect&quot;
+@module(&quot;react&quot;)
+external useEffect2: (@uncurry (unit =&gt; option&lt;unit =&gt; unit&gt;), ('a, 'b)) =&gt; unit = &quot;useEffect&quot;
+@module(&quot;react&quot;)
+external useEffect3: (@uncurry (unit =&gt; option&lt;unit =&gt; unit&gt;), ('a, 'b, 'c)) =&gt; unit =
+  &quot;useEffect&quot;
+@module(&quot;react&quot;)
+external useEffect4: (@uncurry (unit =&gt; option&lt;unit =&gt; unit&gt;), ('a, 'b, 'c, 'd)) =&gt; unit =
+  &quot;useEffect&quot;
+@module(&quot;react&quot;)
+external useEffect5: (@uncurry (unit =&gt; option&lt;unit =&gt; unit&gt;), ('a, 'b, 'c, 'd, 'e)) =&gt; unit =
+  &quot;useEffect&quot;
+@module(&quot;react&quot;)
+external useEffect6: (
+  @uncurry (unit =&gt; option&lt;unit =&gt; unit&gt;),
+  ('a, 'b, 'c, 'd, 'e, 'f),
+) =&gt; unit = &quot;useEffect&quot;
+@module(&quot;react&quot;)
+external useEffect7: (
+  @uncurry (unit =&gt; option&lt;unit =&gt; unit&gt;),
+  ('a, 'b, 'c, 'd, 'e, 'f, 'g),
+) =&gt; unit = &quot;useEffect&quot;
+
+@module(&quot;react&quot;)
+external useLayoutEffect: (@uncurry (unit =&gt; option&lt;unit =&gt; unit&gt;)) =&gt; unit = &quot;useLayoutEffect&quot;
+@module(&quot;react&quot;)
+external useLayoutEffect0: (
+  @uncurry (unit =&gt; option&lt;unit =&gt; unit&gt;),
+  @as(json`[]`) _,
+) =&gt; unit = &quot;useLayoutEffect&quot;
+@module(&quot;react&quot;)
+external useLayoutEffect1: (@uncurry (unit =&gt; option&lt;unit =&gt; unit&gt;), array&lt;'a&gt;) =&gt; unit =
+  &quot;useLayoutEffect&quot;
+@module(&quot;react&quot;)
+external useLayoutEffect2: (@uncurry (unit =&gt; option&lt;unit =&gt; unit&gt;), ('a, 'b)) =&gt; unit =
+  &quot;useLayoutEffect&quot;
+@module(&quot;react&quot;)
+external useLayoutEffect3: (@uncurry (unit =&gt; option&lt;unit =&gt; unit&gt;), ('a, 'b, 'c)) =&gt; unit =
+  &quot;useLayoutEffect&quot;
+@module(&quot;react&quot;)
+external useLayoutEffect4: (@uncurry (unit =&gt; option&lt;unit =&gt; unit&gt;), ('a, 'b, 'c, 'd)) =&gt; unit =
+  &quot;useLayoutEffect&quot;
+@module(&quot;react&quot;)
+external useLayoutEffect5: (
+  @uncurry (unit =&gt; option&lt;unit =&gt; unit&gt;),
+  ('a, 'b, 'c, 'd, 'e),
+) =&gt; unit = &quot;useLayoutEffect&quot;
+@module(&quot;react&quot;)
+external useLayoutEffect6: (
+  @uncurry (unit =&gt; option&lt;unit =&gt; unit&gt;),
+  ('a, 'b, 'c, 'd, 'e, 'f),
+) =&gt; unit = &quot;useLayoutEffect&quot;
+@module(&quot;react&quot;)
+external useLayoutEffect7: (
+  @uncurry (unit =&gt; option&lt;unit =&gt; unit&gt;),
+  ('a, 'b, 'c, 'd, 'e, 'f, 'g),
+) =&gt; unit = &quot;useLayoutEffect&quot;
+
+@module(&quot;react&quot;)
+external useMemo: (@uncurry (unit =&gt; 'any)) =&gt; 'any = &quot;useMemo&quot;
+
+@module(&quot;react&quot;)
+external useMemo0: (@uncurry (unit =&gt; 'any), @as(json`[]`) _) =&gt; 'any = &quot;useMemo&quot;
+
+@module(&quot;react&quot;)
+external useMemo1: (@uncurry (unit =&gt; 'any), array&lt;'a&gt;) =&gt; 'any = &quot;useMemo&quot;
+
+@module(&quot;react&quot;)
+external useMemo2: (@uncurry (unit =&gt; 'any), ('a, 'b)) =&gt; 'any = &quot;useMemo&quot;
+
+@module(&quot;react&quot;)
+external useMemo3: (@uncurry (unit =&gt; 'any), ('a, 'b, 'c)) =&gt; 'any = &quot;useMemo&quot;
+
+@module(&quot;react&quot;)
+external useMemo4: (@uncurry (unit =&gt; 'any), ('a, 'b, 'c, 'd)) =&gt; 'any = &quot;useMemo&quot;
+
+@module(&quot;react&quot;)
+external useMemo5: (@uncurry (unit =&gt; 'any), ('a, 'b, 'c, 'd, 'e)) =&gt; 'any = &quot;useMemo&quot;
+
+@module(&quot;react&quot;)
+external useMemo6: (@uncurry (unit =&gt; 'any), ('a, 'b, 'c, 'd, 'e, 'f)) =&gt; 'any = &quot;useMemo&quot;
+
+@module(&quot;react&quot;)
+external useMemo7: (@uncurry (unit =&gt; 'any), ('a, 'b, 'c, 'd, 'e, 'f, 'g)) =&gt; 'any = &quot;useMemo&quot;
+
+/* This is used as return values */
+type callback&lt;'input, 'output&gt; = 'input =&gt; 'output
+
+@module(&quot;react&quot;)
+external useCallback: (@uncurry ('input =&gt; 'output)) =&gt; callback&lt;'input, 'output&gt; = &quot;useCallback&quot;
+
+@module(&quot;react&quot;)
+external useCallback0: (
+  @uncurry ('input =&gt; 'output),
+  @as(json`[]`) _,
+) =&gt; callback&lt;'input, 'output&gt; = &quot;useCallback&quot;
+
+@module(&quot;react&quot;)
+external useCallback1: (@uncurry ('input =&gt; 'output), array&lt;'a&gt;) =&gt; callback&lt;'input, 'output&gt; =
+  &quot;useCallback&quot;
+
+@module(&quot;react&quot;)
+external useCallback2: (@uncurry ('input =&gt; 'output), ('a, 'b)) =&gt; callback&lt;'input, 'output&gt; =
+  &quot;useCallback&quot;
+
+@module(&quot;react&quot;)
+external useCallback3: (
+  @uncurry ('input =&gt; 'output),
+  ('a, 'b, 'c),
+) =&gt; callback&lt;'input, 'output&gt; = &quot;useCallback&quot;
+
+@module(&quot;react&quot;)
+external useCallback4: (
+  @uncurry ('input =&gt; 'output),
+  ('a, 'b, 'c, 'd),
+) =&gt; callback&lt;'input, 'output&gt; = &quot;useCallback&quot;
+
+@module(&quot;react&quot;)
+external useCallback5: (
+  @uncurry ('input =&gt; 'output),
+  ('a, 'b, 'c, 'd, 'e),
+) =&gt; callback&lt;'input, 'output&gt; = &quot;useCallback&quot;
+
+@module(&quot;react&quot;)
+external useCallback6: (
+  @uncurry ('input =&gt; 'output),
+  ('a, 'b, 'c, 'd, 'e, 'f),
+) =&gt; callback&lt;'input, 'output&gt; = &quot;useCallback&quot;
+
+@module(&quot;react&quot;)
+external useCallback7: (
+  @uncurry ('input =&gt; 'output),
+  ('a, 'b, 'c, 'd, 'e, 'f, 'g),
+) =&gt; callback&lt;'input, 'output&gt; = &quot;useCallback&quot;
+
+@module(&quot;react&quot;)
+external useContext: Context.t&lt;'any&gt; =&gt; 'any = &quot;useContext&quot;
+
+@module(&quot;react&quot;) external useRef: 'value =&gt; ref&lt;'value&gt; = &quot;useRef&quot;
+
+@module(&quot;react&quot;)
+external useImperativeHandle0: (
+  Js.Nullable.t&lt;ref&lt;'value&gt;&gt;,
+  @uncurry (unit =&gt; 'value),
+  @as(json`[]`) _,
+) =&gt; unit = &quot;useImperativeHandle&quot;
+
+@module(&quot;react&quot;)
+external useImperativeHandle1: (
+  Js.Nullable.t&lt;ref&lt;'value&gt;&gt;,
+  @uncurry (unit =&gt; 'value),
+  array&lt;'a&gt;,
+) =&gt; unit = &quot;useImperativeHandle&quot;
+
+@module(&quot;react&quot;)
+external useImperativeHandle2: (
+  Js.Nullable.t&lt;ref&lt;'value&gt;&gt;,
+  @uncurry (unit =&gt; 'value),
+  ('a, 'b),
+) =&gt; unit = &quot;useImperativeHandle&quot;
+
+@module(&quot;react&quot;)
+external useImperativeHandle3: (
+  Js.Nullable.t&lt;ref&lt;'value&gt;&gt;,
+  @uncurry (unit =&gt; 'value),
+  ('a, 'b, 'c),
+) =&gt; unit = &quot;useImperativeHandle&quot;
+
+@module(&quot;react&quot;)
+external useImperativeHandle4: (
+  Js.Nullable.t&lt;ref&lt;'value&gt;&gt;,
+  @uncurry (unit =&gt; 'value),
+  ('a, 'b, 'c, 'd),
+) =&gt; unit = &quot;useImperativeHandle&quot;
+
+@module(&quot;react&quot;)
+external useImperativeHandle5: (
+  Js.Nullable.t&lt;ref&lt;'value&gt;&gt;,
+  @uncurry (unit =&gt; 'value),
+  ('a, 'b, 'c, 'd, 'e),
+) =&gt; unit = &quot;useImperativeHandle&quot;
+
+@module(&quot;react&quot;)
+external useImperativeHandle6: (
+  Js.Nullable.t&lt;ref&lt;'value&gt;&gt;,
+  @uncurry (unit =&gt; 'value),
+  ('a, 'b, 'c, 'd, 'e, 'f),
+) =&gt; unit = &quot;useImperativeHandle&quot;
+
+@module(&quot;react&quot;)
+external useImperativeHandle7: (
+  Js.Nullable.t&lt;ref&lt;'value&gt;&gt;,
+  @uncurry (unit =&gt; 'value),
+  ('a, 'b, 'c, 'd, 'e, 'f, 'g),
+) =&gt; unit = &quot;useImperativeHandle&quot;
+
+module Uncurried = {
+  @module(&quot;react&quot;)
+  external useState: (@uncurry (unit =&gt; 'state)) =&gt; ('state, (. 'state =&gt; 'state) =&gt; unit) =
+    &quot;useState&quot;
+
+  @module(&quot;react&quot;)
+  external useReducer: (
+    @uncurry ('state, 'action) =&gt; 'state,
+    'state,
+  ) =&gt; ('state, (. 'action) =&gt; unit) = &quot;useReducer&quot;
+
+  @module(&quot;react&quot;)
+  external useReducerWithMapState: (
+    @uncurry ('state, 'action) =&gt; 'state,
+    'initialState,
+    @uncurry ('initialState =&gt; 'state),
+  ) =&gt; ('state, (. 'action) =&gt; unit) = &quot;useReducer&quot;
+
+  type callback&lt;'input, 'output&gt; = (. 'input) =&gt; 'output
+
+  @module(&quot;react&quot;)
+  external useCallback: (@uncurry ('input =&gt; 'output)) =&gt; callback&lt;'input, 'output&gt; =
+    &quot;useCallback&quot;
+
+  @module(&quot;react&quot;)
+  external useCallback0: (
+    @uncurry ('input =&gt; 'output),
+    @as(json`[]`) _,
+  ) =&gt; callback&lt;'input, 'output&gt; = &quot;useCallback&quot;
+
+  @module(&quot;react&quot;)
+  external useCallback1: (@uncurry ('input =&gt; 'output), array&lt;'a&gt;) =&gt; callback&lt;'input, 'output&gt; =
+    &quot;useCallback&quot;
+
+  @module(&quot;react&quot;)
+  external useCallback2: (@uncurry ('input =&gt; 'output), ('a, 'b)) =&gt; callback&lt;'input, 'output&gt; =
+    &quot;useCallback&quot;
+
+  @module(&quot;react&quot;)
+  external useCallback3: (
+    @uncurry ('input =&gt; 'output),
+    ('a, 'b, 'c),
+  ) =&gt; callback&lt;'input, 'output&gt; = &quot;useCallback&quot;
+
+  @module(&quot;react&quot;)
+  external useCallback4: (
+    @uncurry ('input =&gt; 'output),
+    ('a, 'b, 'c, 'd),
+  ) =&gt; callback&lt;'input, 'output&gt; = &quot;useCallback&quot;
+
+  @module(&quot;react&quot;)
+  external useCallback5: (
+    @uncurry ('input =&gt; 'output),
+    ('a, 'b, 'c, 'd, 'e),
+  ) =&gt; callback&lt;'input, 'output&gt; = &quot;useCallback&quot;
+
+  @module(&quot;react&quot;)
+  external useCallback6: (
+    @uncurry ('input =&gt; 'output),
+    ('a, 'b, 'c, 'd, 'e, 'f),
+  ) =&gt; callback&lt;'input, 'output&gt; = &quot;useCallback&quot;
+
+  @module(&quot;react&quot;)
+  external useCallback7: (
+    @uncurry ('input =&gt; 'output),
+    ('a, 'b, 'c, 'd, 'e, 'f, 'g),
+  ) =&gt; callback&lt;'input, 'output&gt; = &quot;useCallback&quot;
+}
+
+type transitionConfig = {timeoutMs: int}
+
+@module(&quot;react&quot;)
+external useTransition: (
+  ~config: transitionConfig=?,
+  unit,
+) =&gt; (callback&lt;callback&lt;unit, unit&gt;, unit&gt;, bool) = &quot;useTransition&quot;
+
+@set
+external setDisplayName: (component&lt;'props&gt;, string) =&gt; unit = &quot;displayName&quot;
+
+@get @return(nullable)
+external displayName: component&lt;'props&gt; =&gt; option&lt;string&gt; = &quot;displayName&quot;
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="basic-elements"><a class="header" href="#basic-elements">Basic Elements</a></h1>
+<h3 id="creating-elements-from-string-int-float-array--null-element-reactnull"><a class="header" href="#creating-elements-from-string-int-float-array--null-element-reactnull">Creating elements from <code>string, int, float, array</code> &amp; Null element <code>React.null</code></a></h3>
+<pre><code class="language-reasonml">let {string, int, float, array} = module(React)
+let strElement = &lt;p key=&quot;hello&quot;&gt; {&quot;Hello&quot;-&gt;string} &lt;/p&gt;
+let intElement = &lt;p key=&quot;t5&quot;&gt; {25-&gt;int} &lt;/p&gt;
+let floatElement = &lt;p key=&quot;pi&quot;&gt; {3.14-&gt;float} &lt;/p&gt;
+let elements = [strElement, intElement, floatElement]
+
+let isTired = false
+
+let basicElement = &lt;div&gt; {&quot;I'm a basic element. 😁&quot;-&gt;string} &lt;/div&gt;
+
+@react.component
+let make = () =&gt; {
+  &lt;div&gt;
+    &lt;div&gt; {elements-&gt;array} &lt;/div&gt;
+    {switch isTired {
+    | true =&gt; &lt;p&gt; {&quot;Omg!&quot;-&gt;string} &lt;/p&gt;
+    | false =&gt; React.null
+    }}
+    basicElement
+  &lt;/div&gt;
+}
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="component"><a class="header" href="#component">Component</a></h1>
+<p>A component is <code>('props) =&gt; React.element</code> or <code>React.component&lt;'props&gt;</code></p>
+<p>Component definition in <a href="https://github.com/rescript-lang/rescript-react/blob/v0.10.3/src/React.res">RescriptReact</a></p>
+<pre><code class="language-reasonml">type componentLike&lt;'props, 'return&gt; = 'props =&gt; 'return
+type component&lt;'props&gt; = componentLike&lt;'props, element&gt;
+</code></pre>
+<h3 id="jsx-component-interface"><a class="header" href="#jsx-component-interface">JSX component interface</a></h3>
+<ul>
+<li>A component is a module with: 
+<ul>
+<li><code>make : props =&gt; React.element</code></li>
+<li><code>makeProps: 'a =&gt; props</code></li>
+</ul>
+</li>
+</ul>
+<pre><code class="language-reasonml">module Movie = {
+  type props = {&quot;title&quot;: string, &quot;desc&quot;: string}
+  
+  @obj
+  external makeProps: (~title: string, ~desc: string, ~children: React.element=?, unit) =&gt; props 
+  = &quot;&quot;
+  
+  let make = (props: props) =&gt; {
+    &lt;div&gt;
+      &lt;h1&gt; {props[&quot;title&quot;]-&gt;React.string} &lt;/h1&gt;
+      &lt;p&gt; {props[&quot;desc&quot;]-&gt;React.string} &lt;/p&gt;
+    &lt;/div&gt;
+  }
+}
+
+@react.component
+let make = () =&gt; {
+  &lt;div&gt;
+    &lt;Movie title=&quot;Dark&quot; desc=&quot;The best sifi movie.&quot; /&gt;
+  &lt;/div&gt;
+}
+</code></pre>
+<h3 id="reactcomponent-decorator"><a class="header" href="#reactcomponent-decorator"><code>@react.component</code> Decorator</a></h3>
+<ul>
+<li><code>@react.component</code> decorator helps to create component more easily</li>
+</ul>
+<pre><code class="language-reasonml">module Movie = {
+  @react.component
+  let make = (~title: string, ~desc: string) =&gt; {
+    &lt;div&gt;
+      &lt;h1&gt; {title-&gt;React.string} &lt;/h1&gt;
+      &lt;p&gt; {desc-&gt;React.string} &lt;/p&gt;
+    &lt;/div&gt;
+  }
+}
+
+@react.component
+let make = () =&gt; {
+  &lt;div&gt;
+    &lt;Movie title=&quot;Looper&quot; desc=&quot;The best sifi movie.&quot; /&gt;
+  &lt;/div&gt;
+}
+</code></pre>
+<p>No need to write <code>let make = (~title: string, ~desc: string, unit)</code> cause <code>@react.component</code> helps to add it.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="low-level-apis-to-create-components"><a class="header" href="#low-level-apis-to-create-components">Low level APIs to create components</a></h1>
+<p>The following APIs are used by JSX itself to create elements.</p>
+<pre><code class="language-reasonml">React.createElement: (React.component&lt;'props&gt;, 'props) =&gt; React.elements
+
+React.createElementVariadic: 
+(React.component&lt;'props&gt;, 'props, array&lt;React.element&gt;) =&gt; React.element
+
+React.cloneElement: (React.element, 'props) =&gt; React.element
+</code></pre>
+<h3 id="reactcreateelement"><a class="header" href="#reactcreateelement"><code>React.createElement</code></a></h3>
+<pre><code class="language-reasonml">module Movie = {
+  @react.component
+  let make = (~title: string, ~desc: string) =&gt; {
+    &lt;div&gt;
+      &lt;h1&gt; {title-&gt;React.string} &lt;/h1&gt;
+      &lt;p&gt; {desc-&gt;React.string} &lt;/p&gt;
+    &lt;/div&gt;
+  }
+}
+
+@react.component
+let make = () =&gt; {
+  &lt;div&gt;
+    {React.createElement(Movie.make, {&quot;title&quot;: &quot;Lopper&quot;, &quot;desc&quot;: &quot;One of the best sifi movies.&quot;})}
+  &lt;/div&gt;
+}
+</code></pre>
+<h3 id="reactcreateelementvariadic"><a class="header" href="#reactcreateelementvariadic"><code>React.createElementVariadic</code></a></h3>
+<pre><code class="language-reasonml">module Stack = {
+    @react.component
+    let make = (~width: option&lt;string&gt;=?, ~height: option&lt;string&gt;=?, ~children: option&lt;React.element&gt;=?) =&gt; {
+        let ms = ReactDOM.Style.make
+        let style = switch (width, height) {
+            |(Some(w), Some(h)) =&gt; ms(~width=w, ~height=h, ())
+            |(Some(w), None) =&gt; ms(~width=w, ~height=&quot;auto&quot;, ())
+            |(None, Some(h)) =&gt; ms(~width=&quot;auto&quot;,~height=h, ())
+            |(None, None) =&gt; ms(~width=&quot;auto&quot;, ~height=&quot;auto&quot;, ())
+        }
+       &lt;div className=&quot;flex flex-col flex-wrap&quot; style&gt;
+       { switch children { |Some(c) =&gt; c |None =&gt; React.null } }
+       &lt;/div&gt; 
+    }
+}
+
+module Movie = {
+  @react.component
+  let make = (~title: string, ~desc: string) =&gt; {
+    &lt;div&gt;
+      &lt;h1&gt; {title-&gt;React.string} &lt;/h1&gt;
+      &lt;p&gt; {desc-&gt;React.string} &lt;/p&gt;
+    &lt;/div&gt;
+  }
+}
+
+@react.component
+let make = () =&gt; {
+  &lt;div&gt;
+    {React.createElementVariadic(Stack.make, {&quot;width&quot;: Some(&quot;100%&quot;), &quot;height&quot;: Some(&quot;50%&quot;) , &quot;children&quot;: None}, [
+        &lt;div&gt;{&quot;My List&quot;-&gt;React.string}&lt;/div&gt;,
+        &lt;Stack width=&quot;50%&quot; height=&quot;50%&quot;&gt;
+            &lt;div&gt;{&quot;Scifi Movies&quot;-&gt;React.string}&lt;/div&gt; 
+            &lt;Movie title=&quot;Dark&quot; desc=&quot;The best scifi series I've ever watched&quot;/&gt;
+        &lt;/Stack&gt; 
+    ])}
+  &lt;/div&gt;
+}
+</code></pre>
+<h3 id="reactcloneelement"><a class="header" href="#reactcloneelement"><code>React.cloneElement</code></a></h3>
+<p>Useful to add additional attributes to the original element - like data- attributes</p>
+<pre><code class="language-reasonml">let hello = &lt;div className=&quot;text-slate-900&quot;&gt; {&quot;Hello&quot;-&gt;React.string} &lt;/div&gt;
+@react.component
+let make = () =&gt; {
+  &lt;div&gt;
+    {React.cloneElement(hello, 
+     {&quot;className&quot;: &quot;text-red-900 text-xl&quot;, &quot;data-theme&quot;: &quot;red&quot;})}
+  &lt;/div&gt;
+}
+</code></pre>
+<p>generated <code>&lt;div class=&quot;text-red-900 text-xl&quot; data-theme=&quot;red&quot;&gt;Hello&lt;/div&gt;</code></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="misc"><a class="header" href="#misc">Misc</a></h1>
+<h3 id="optional-props"><a class="header" href="#optional-props">Optional Props</a></h3>
+<pre><code class="language-reasonml">// Greeting.res
+@react.component
+let make = (~name: option&lt;string&gt;=?) =&gt; {
+  let greeting = switch name {
+    | Some(name) =&gt; &quot;Hello &quot; ++ name ++ &quot;!&quot;
+    | None =&gt; &quot;Hello stranger!&quot;
+  }
+  &lt;div&gt; {React.string(greeting)} &lt;/div&gt;
+}
+
+let name = Some(&quot;Andrea&quot;)
+
+&lt;Greeting ?name /&gt; // &lt;== just ?name
+</code></pre>
+<h3 id="special-props-key-and-ref"><a class="header" href="#special-props-key-and-ref">Special Props <code>key</code> and <code>ref</code></a></h3>
+<ul>
+<li><code>key</code> and <code>ref</code> are special props, cannot define them like <code>~key</code> or <code>~ref</code></li>
+</ul>
+<h3 id="invalid-prop-names"><a class="header" href="#invalid-prop-names">Invalid Prop Names</a></h3>
+<ul>
+<li>Reserved keywords like <code>type</code> should be used like <code>type_</code></li>
+<li><code>aria-*</code> should be like <code>ariaLabel</code></li>
+<li><code>data-</code> attributes can be added using <code>React.cloneElement</code></li>
+</ul>
+<h3 id="children"><a class="header" href="#children">Children</a></h3>
+<p><code>children</code> is treated as a <code>React.Element</code>.</p>
+<h4 id="component-that-must-have-children"><a class="header" href="#component-that-must-have-children">Component that must have children</a></h4>
+<pre><code class="language-reasonml">module Comp = {
+ @react.component
+ let make = (~children: React.element) =&gt; { ...... }
+}
+</code></pre>
+<h4 id="component-that-doesnt-have-children"><a class="header" href="#component-that-doesnt-have-children">Component that doesn't have children</a></h4>
+<pre><code class="language-reasonml">module Comp = {
+ @react.component
+ let make = () =&gt; { ...... }
+}
+</code></pre>
+<h4 id="component-with-optional-children"><a class="header" href="#component-with-optional-children">Component with optional children</a></h4>
+<pre><code class="language-reasonml">module Comp = {
+ @react.component
+ let make = (~children: option&lt;React.element&gt;=?) =&gt; { ...... }
+}
+</code></pre>
+<h3 id="component-naming"><a class="header" href="#component-naming">Component Naming</a></h3>
+<pre><code class="language-reasonml">// File.res
+
+// will be named `File` in dev tools
+@react.component
+let make = ...
+
+// will be named `File$component` in dev tools
+@react.component
+let component = ...
+
+module Nested = {
+  // will be named `File$Nested` in dev tools
+  @react.component
+  let make = ...
+};
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="arrays-and-keys"><a class="header" href="#arrays-and-keys">Arrays and Keys</a></h1>
+<p>Keys help React identify which elements have been changed, added, or removed throughout each render.</p>
+<pre><code class="language-reasonml">type movie = {title: string, desc: string}
+let movies = [{title: &quot;Dark&quot;, desc: &quot;scifi&quot;}, {title: &quot;Looper&quot;, desc: &quot;scifi&quot;}]
+
+module Movie = {
+  @react.component
+  let make = (~title: string, ~desc: string) =&gt; {
+    &lt;div&gt;
+      &lt;h1&gt; {title-&gt;React.string} &lt;/h1&gt;
+      &lt;p&gt; {desc-&gt;React.string} &lt;/p&gt;
+    &lt;/div&gt;
+  }
+}
+
+@react.component
+let make = () =&gt; {
+  &lt;div&gt;
+    {
+        movies
+        -&gt;Belt.Array.map(({title, desc}) =&gt; &lt;Movie key={title} title desc /&gt;)
+        -&gt;React.array
+    }
+  &lt;/div&gt;
+}
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="refs-and-the-dom"><a class="header" href="#refs-and-the-dom">Refs and the DOM</a></h1>
+<p><code>React.ref: type t&lt;'value&gt; = { mutable current: 'value }</code></p>
+<p>When to use Refs:</p>
+<ul>
+<li>Managing state that should not trigger any re-render.</li>
+<li>Managing focus, text selection, or media playback.</li>
+<li>Triggering imperative animations.</li>
+<li>Integrating with third-party DOM libraries.</li>
+</ul>
+<h3 id="managing-state-that-should-not-trigger-an-re-render"><a class="header" href="#managing-state-that-should-not-trigger-an-re-render">Managing state that should not trigger an re-render</a></h3>
+<ul>
+<li>clicking will not update <code>click_count</code> span althought it updates document title.</li>
+</ul>
+<pre><code class="language-reasonml">@val external document: Dom.element = &quot;document&quot;
+@set external setTitle: (Dom.element, string) =&gt; unit = &quot;title&quot;
+
+@react.component
+let make = () =&gt; {
+  let clicks = React.useRef(0)
+  let onClick = _ =&gt; {
+      clicks.current = clicks.current + 1
+      setTitle(document, Js.Int.toString(clicks.current))          
+  }
+  &lt;div&gt;
+    &lt;button className=&quot;flex flex-col&quot; type_=&quot;button&quot; onClick&gt;
+      &lt;span name=&quot;click_count&quot;&gt; {clicks.current-&gt;React.int} &lt;/span&gt;
+      &lt;span&gt;{&quot;click me&quot;-&gt;React.string}&lt;/span&gt;
+    &lt;/button&gt;
+  &lt;/div&gt;
+}
+</code></pre>
+<h3 id="adding-ref-to-dom-element"><a class="header" href="#adding-ref-to-dom-element">Adding Ref to DOM Element</a></h3>
+<pre><code class="language-reasonml">@send external select: Dom.element =&gt; unit = &quot;select&quot;
+@send external focus: Dom.element =&gt; unit = &quot;focus&quot;
+
+@react.component
+let make = () =&gt; {
+  let inputRef = React.useRef(Js.Nullable.null)
+  
+  let onClick = _ =&gt; {
+    switch inputRef.current-&gt;Js.Nullable.toOption {
+    | Some(e) =&gt; select(e)
+    | None =&gt; ()
+    }
+  }
+  
+  let focus = _ =&gt; {
+    switch inputRef.current-&gt;Js.Nullable.toOption {
+    | Some(e) =&gt; focus(e)
+    | None =&gt; ()
+    }
+  }
+  
+  &lt;div className=&quot;flex flex-col p-4 gap-2&quot;&gt;
+    &lt;input type_=&quot;text&quot; ref={ReactDOM.Ref.domRef(inputRef)} className=&quot;w-full border-400&quot; /&gt;
+    &lt;button type_=&quot;button&quot; className=&quot;p-1 bg-200&quot; onClick={focus}&gt; 
+        {&quot;Focus&quot;-&gt;React.string} 
+    &lt;/button&gt;
+    &lt;button type_=&quot;button&quot; className=&quot;p-1 bg-200&quot; onClick&gt;
+        {&quot;Select Text&quot;-&gt;React.string}
+    &lt;/button&gt;
+  &lt;/div&gt;
+}
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="manage-a-list-of-refs-using-a-ref-callback"><a class="header" href="#manage-a-list-of-refs-using-a-ref-callback">Manage a list of Refs using a ref callback</a></h1>
+<ul>
+<li><code>React.Ref.callbackDomRef()</code></li>
+</ul>
+<pre><code class="language-reasonml">@send external scrollIntoView: (Dom.element, {..}) =&gt; unit = &quot;scrollIntoView&quot;
+
+let getCatList = () =&gt; {
+  let cats = []
+  for i in 0 to 10 {
+    cats-&gt;Belt.Array.push({
+      &quot;id&quot;: i,
+      &quot;url&quot;: &quot;https://placekitten.com/250/200?image=&quot; ++ Js.Int.toString(i),
+    })
+  }
+  cats
+}
+
+module CatList = {
+  let cats = getCatList()
+  @react.component
+  let make = () =&gt; {
+    let itemsRef = React.useRef(Belt.MutableMap.Int.make())
+    let scrollToId = id =&gt; {
+      let m = itemsRef.current
+      switch Belt.MutableMap.Int.get(m, id) {
+      | Some(e) =&gt;
+        scrollIntoView(
+          e,
+          {
+            &quot;behavior&quot;: &quot;smooth&quot;,
+            &quot;block&quot;: &quot;nearest&quot;,
+            &quot;inline&quot;: &quot;center&quot;,
+          },
+        )
+      | None =&gt; ()
+      }
+    }
+    &lt;&gt;
+      &lt;div className=&quot;flex flex-col p-4 items-start justify-center&quot;&gt;
+        &lt;nav className=&quot;flex gap-2 pb-2&quot;&gt;
+          &lt;button type_=&quot;button&quot; className=&quot;p-2 bg-slate-200&quot; onClick={_ =&gt; scrollToId(1)}&gt;
+            {&quot;Tome&quot;-&gt;React.string}
+          &lt;/button&gt;
+          &lt;button type_=&quot;button&quot; className=&quot;p-2 bg-slate-200&quot; onClick={_ =&gt; scrollToId(5)}&gt;
+            {&quot;Remy&quot;-&gt;React.string}
+          &lt;/button&gt;
+          &lt;button type_=&quot;button&quot; className=&quot;p-2 bg-slate-200&quot; onClick={_ =&gt; scrollToId(9)}&gt;
+            {&quot;Jack&quot;-&gt;React.string}
+          &lt;/button&gt;
+        &lt;/nav&gt;
+      &lt;/div&gt;
+      &lt;div className=&quot;flex p-4 overflow-x-auto&quot;&gt;
+        &lt;ul className=&quot;flex gap-2&quot;&gt;
+          {cats
+          -&gt;Belt.Array.map(cat =&gt; {
+            &lt;li
+              className=&quot;flex-none&quot;
+              ref={ReactDOM.Ref.callbackDomRef(element =&gt; {
+                let m = itemsRef.current
+                switch element-&gt;Js.Nullable.toOption {
+                | Some(e) =&gt; Belt.MutableMap.Int.set(m, cat[&quot;id&quot;], e)
+                | None =&gt; Belt.MutableMap.Int.remove(m, cat[&quot;id&quot;])
+                }
+              })}&gt;
+              &lt;img src={cat[&quot;url&quot;]} className=&quot;w-[20rem] h-[16rem]&quot; /&gt;
+            &lt;/li&gt;
+          })
+          -&gt;React.array}
+        &lt;/ul&gt;
+      &lt;/div&gt;
+    &lt;/&gt;
+  }
+}
+
+@react.component
+let make = () =&gt; {
+  &lt;CatList /&gt;
+}
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="forwarding-refs"><a class="header" href="#forwarding-refs">Forwarding Refs</a></h1>
+<h3 id="pass-down-via-props-recommended"><a class="header" href="#pass-down-via-props-recommended">Pass down via props (recommended)</a></h3>
+<pre><code class="language-reasonml">@send external select: Dom.element =&gt; unit = &quot;select&quot;
+@send external focus: Dom.element =&gt; unit = &quot;focus&quot;
+
+module CoolInput = {
+  @react.component
+  let make = (~inputRef: ReactDOM.domRef) =&gt; {
+    &lt;div className=&quot;w-full border-[1px] border-300 rounded bg-100 p-2 text-lg&quot;&gt;
+      &lt;input type_=&quot;text&quot; ref={inputRef} className=&quot;w-full border-0 bg-50&quot; /&gt;
+    &lt;/div&gt;
+  }
+}
+
+@react.component
+let make = () =&gt; {
+  let inputRef = React.useRef(Js.Nullable.null)
+
+  let onClick = _ =&gt; {
+    switch inputRef.current-&gt;Js.Nullable.toOption {
+    | Some(e) =&gt; select(e)
+    | None =&gt; ()
+    }
+  }
+
+  let focus = _ =&gt; {
+    switch inputRef.current-&gt;Js.Nullable.toOption {
+    | Some(e) =&gt; focus(e)
+    | None =&gt; ()
+    }
+  }
+
+  &lt;div className=&quot;flex flex-col p-4 gap-2&quot;&gt;
+    &lt;CoolInput inputRef={ReactDOM.Ref.domRef(inputRef)} /&gt;
+    &lt;button type_=&quot;button&quot; className=&quot;p-1 bg-200&quot; onClick={focus}&gt; {&quot;Focus&quot;-&gt;React.string} &lt;/button&gt;
+    &lt;button type_=&quot;button&quot; className=&quot;p-1 bg-200&quot; onClick&gt; {&quot;Select Text&quot;-&gt;React.string} &lt;/button&gt;
+  &lt;/div&gt;
+}
+</code></pre>
+<h3 id="reactforwardref-not-recommended-will-be-removed-from-react-in-future"><a class="header" href="#reactforwardref-not-recommended-will-be-removed-from-react-in-future">React.forwardRef (Not recommended, will be removed from React in future)</a></h3>
+<pre><code class="language-reasonml">module FancyInput = {
+  @react.component
+  let make = React.forwardRef((~className=?, ~children, ref_) =&gt;
+    &lt;div&gt;
+      &lt;input
+        type_=&quot;text&quot;
+        ?className
+        ref=?{Js.Nullable.toOption(ref_)-&gt;Belt.Option.map(
+          ReactDOM.Ref.domRef,
+        )}
+      /&gt;
+      children
+    &lt;/div&gt;
+  )
+}
+
+@send external focus: Dom.element =&gt; unit = &quot;focus&quot;
+
+@react.component
+let make = () =&gt; {
+  let input = React.useRef(Js.Nullable.null)
+
+  let focusInput = () =&gt;
+    input.current
+    -&gt;Js.Nullable.toOption
+    -&gt;Belt.Option.forEach(input =&gt; input-&gt;focus)
+
+  let onClick = _ =&gt; focusInput()
+
+  &lt;div&gt;
+    &lt;FancyInput className=&quot;fancy&quot; ref=input&gt;
+      &lt;button onClick&gt; {React.string(&quot;Click to focus&quot;)} &lt;/button&gt;
+    &lt;/FancyInput&gt;
+  &lt;/div&gt;
+}
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="context"><a class="header" href="#context">Context</a></h1>
+<ul>
+<li>Context provides a way to share values between components in a component tree</li>
+<li>Drawback: it renders all the components under the provider each time the context state changes
+<ul>
+<li>Should use <code>React.memo</code> for components within the provider</li>
+</ul>
+</li>
+</ul>
+<pre><code class="language-reasonml">module FunContext = {
+  let context = React.createContext(&quot;&quot;)
+
+  module Provider = {
+    let provider = React.Context.provider(context)
+    @react.component
+    let make = (~value, ~children) =&gt; {
+      React.createElement(provider, {&quot;value&quot;: value, &quot;children&quot;: children})
+    }
+  }
+}
+
+module Component1 = {
+  @react.component
+  let make = () =&gt; {
+    let fun = React.useContext(FunContext.context)
+    &lt;div className=&quot;flex flex-col items-center justify-center&quot;&gt;
+      &lt;div&gt; {Js.Date.now()-&gt;React.float} &lt;/div&gt;
+      {React.string(fun)}
+    &lt;/div&gt;
+  }
+  let make = React.memo(make) // Foo won't render when provider state changes
+}
+module Component2 = {
+  @react.component
+  let make = () =&gt; {
+    &lt;div className=&quot;flex flex-col items-center justify-center&quot;&gt;
+      &lt;div&gt; {Js.Date.now()-&gt;React.float} &lt;/div&gt;
+      &lt;Component1 /&gt;
+    &lt;/div&gt;
+  }
+  let make = React.memo(make) // Foo won't render when provider state changes
+}
+module Component3 = {
+  @react.component
+  let make = () =&gt; {
+    &lt;div className=&quot;flex flex-col items-center justify-center&quot;&gt;
+      &lt;div&gt; {Js.Date.now()-&gt;React.float} &lt;/div&gt;
+      &lt;Component2 /&gt;
+    &lt;/div&gt;
+  }
+  let make = React.memo(make) // Component 3 will be rerendered cause of the state changes
+}
+
+module Foo = {
+  @react.component
+  let make = () =&gt; {
+    &lt;div className=&quot;flex items-center justify-center&quot;&gt;
+      &lt;span&gt; {&quot;Foo &quot;-&gt;React.string} &lt;/span&gt;
+      &lt;div&gt; {Js.Date.now()-&gt;React.float} &lt;/div&gt;
+    &lt;/div&gt;
+  }
+  let make = React.memo(make) // Foo won't render when provider state changes
+}
+
+@react.component
+let make = () =&gt; {
+  let (fun, setFun) = React.useState(_ =&gt; &quot;fun&quot;)
+  &lt;FunContext.Provider value={fun}&gt;
+    &lt;div className=&quot;flex flex-col items-center justify-center&quot;&gt;
+      &lt;Component3 /&gt;
+      &lt;button type_=&quot;button&quot; className=&quot;bg-300 p-2&quot; onClick={_ =&gt; setFun(prev =&gt; prev ++ prev)}&gt;
+        {&quot;Have Fun&quot;-&gt;React.string}
+      &lt;/button&gt;
+    &lt;/div&gt;
+    &lt;Foo /&gt;
+  &lt;/FunContext.Provider&gt;
+}
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="styling"><a class="header" href="#styling">Styling</a></h1>
+<h3 id="inline-style"><a class="header" href="#inline-style">Inline style</a></h3>
+<pre><code class="language-reasonml">
+let style1 = ReactDOM.Style.make(
+    ~backgroundColor=&quot;blue&quot;,
+    ~fontSize=&quot;2rem&quot;,
+    ~color=?Some(&quot;yellow&quot;),
+    ~padding=&quot;0.5rem 1rem&quot;,
+    (),
+)
+
+let roundedStyle = ReactDOM.Style.make(~borderRadius=&quot;50px 50px&quot;, ())
+
+let combined = ReactDOM.Style.combine(style1, roundedStyle)
+
+let unsafeStyle =
+ReactDOM.Style.make(~color=&quot;red&quot;, ~padding=&quot;10px&quot;, ())
+ -&gt;ReactDOM.Style.unsafeAddProp(
+  &quot;-webkit-animation-name&quot;,
+  &quot;moveit&quot;)
+</code></pre>
+<h3 id="global-css"><a class="header" href="#global-css">Global CSS</a></h3>
+<pre><code class="language-reasonml">// in a CommonJS setup
+%%raw(&quot;require('./styles/main.css')&quot;)
+
+// or with ES6
+%%raw(&quot;import './styles/main.css'&quot;)
+</code></pre>
+<h3 id="css-modules"><a class="header" href="#css-modules">CSS Modules</a></h3>
+<pre><code class="language-reasonml">// {..} means we are handling a JS object with an unknown
+// set of attributes
+@module external styles: {..} = &quot;./styles.module.css&quot;
+
+// Use the obj[&quot;key&quot;] syntax to access any classname within our object
+let app = &lt;div className={styles[&quot;root&quot;]} /&gt;
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="resources"><a class="header" href="#resources">Resources</a></h1>
+<ul>
+<li><a href="https://rescript-lang.org/docs/manual/latest/introduction">ReScript Official Docs</a></li>
+<li><a href="https://github.com/rescript-lang/rescript-compiler">ReScript Compiler Repo</a></li>
+<li><a href="https://reasonml.github.io/">ReasonML Docs</a></li>
+<li><a href="https://jchavarri.github.io/melange-docs/">Melange Docs</a></li>
+<li><a href="https://github.com/nyinyithann/notes_on_ocaml/tree/main/notes/lang">My OCaml Notes</a></li>
+<li><a href="https://rescript-lang.org/syntax-lookup">ReScript Syntax Lookup</a></li>
+<li><a href="https://rescript-lang.org/docs/react/latest/introduction">ReScriptReact Docs</a></li>
+<li><a href="https://github.com/tinymce/rescript-webapi">rescript-webapi</a></li>
+<li><a href="https://github.com/bloodyowl/rescript-js">rescript-js</a></li>
+</ul>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+            </nav>
+
+        </div>
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        <script type="text/javascript">
+        window.addEventListener('load', function() {
+            window.setTimeout(window.print, 100);
+        });
+        </script>
+    </body>
+</html>
